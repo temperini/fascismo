@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A Jornada - A promessa e o preço</title>
+<meta name="description" content="Em 7 paradas curtas, entenda como o fascismo convenceu milhões de pessoas e o que ele entregou. Uma tela por vez, com áudio.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/jornada.css">
+</head>
+<body>
+<header class="barra">
+  <button class="bt-ic" id="bt-mapa" type="button" aria-label="Voltar ao mapa da jornada"></button>
+  <div class="prog" id="prog" role="img" aria-label="Progresso"></div>
+  <button class="bt-ic" id="bt-letra" type="button" aria-label="Aumentar ou diminuir a letra">A+</button>
+  <button class="bt-ic" id="bt-tema" type="button" aria-label="Trocar entre tema claro e escuro"></button>
+</header>
+
+<main id="palco" aria-live="polite"></main>
+
+<nav class="pe" id="pe" aria-label="Navegação da jornada">
+  <button class="bt bt-sec" id="bt-voltar" type="button"></button>
+  <button class="bt bt-som" id="bt-ouvir" type="button"></button>
+  <button class="bt bt-pri" id="bt-seguir" type="button"></button>
+</nav>
+
+<noscript><p style="padding:24px">Esta página precisa de JavaScript. Você pode ler a <a href="index.html">versão completa</a>.</p></noscript>
+<script src="js/jornada-dados.js"></script>
+<script src="js/jornada.js"></script>
+</body>
+</html>
