@@ -201,5 +201,19 @@ window.CREDITOS = [
         "autor":  "Ricardo Stuckert / Presidência da República",
         "licenca":  "CC BY 2.0",
         "pagina":  "https://commons.wikimedia.org/wiki/File:Foto_oficial_de_Luiz_In%C3%A1cio_Lula_da_Silva_(ombros)_denoise.jpg"
+    },
+    {
+        "id":  "p-bukele",
+        "nome":  "Retrato de Nayib Bukele",
+        "autor":  "AndreX",
+        "licenca":  "CC BY-SA 4.0",
+        "pagina":  "https://commons.wikimedia.org/wiki/File:Presidente_Nayib_Bukele_(cropped).jpg"
+    },
+    {
+        "id":  "p-maduro",
+        "nome":  "Retrato de Nicolás Maduro",
+        "autor":  "Palácio do Planalto",
+        "licenca":  "CC BY 2.0",
+        "pagina":  "https://commons.wikimedia.org/wiki/File:Nicol%C3%A1s_Maduro_Portrait_(3x4_cropped).jpg"
     }
 ];

@@ -29,7 +29,7 @@
   document.querySelectorAll('[data-ic]').forEach(function (el) { el.innerHTML = ic(el.dataset.ic); });
 
   document.getElementById('tabela').innerHTML =
-    '<thead><tr><th scope="col">Critério</th>' + H.pessoas.map(function (p) { return '<th scope="col"><span class="th-p">' + (p.img ? '<img src="' + p.img + '" alt="">' : '') + esc(p.nome) + '</span></th>'; }).join('') + '</tr></thead><tbody>' +
+    '<thead><tr class="grupos"><th></th><th scope="colgroup" colspan="3">Brasil</th><th scope="colgroup" colspan="3">Outros países</th></tr><tr><th scope="col">Critério</th>' + H.pessoas.map(function (p) { return '<th scope="col"><span class="th-p">' + (p.img ? '<img src="' + p.img + '" alt="">' : '') + esc(p.nome) + '</span></th>'; }).join('') + '</tr></thead><tbody>' +
     H.criterios.map(function (c) {
       return '<tr><th scope="row"><a href="#crit-' + c.n + '">' + c.n + '. ' + esc(c.t) + '</a></th>' +
         H.pessoas.map(function (p) { return '<td>' + selo(c[p.id].st) + '</td>'; }).join('') + '</tr>';
@@ -39,12 +39,14 @@
     return '<article class="crit rev" id="crit-' + c.n + '">' +
       '<header class="crit-cab"><span class="tec-ic">' + ic(c.ic) + '</span><h3>' + c.n + '. ' + esc(c.t) + '</h3>' +
       '<p><b>O que os regimes fizeram</b>' + esc(c.hist) + '</p>' + (c.regra ? '<p class="crit-regra">' + esc(c.regra) + '</p>' : '') + '</header>' +
-      '<div class="crit-col">' + H.pessoas.map(function (p) {
+      [['brasil', 'Brasil'], ['mundo', 'Outros países']].map(function (g) {
+        return '<p class="grupo-tit">' + g[1] + '</p><div class="crit-col">' + H.pessoas.filter(function (p) { return p.grupo === g[0]; }).map(function (p) {
         var d = c[p.id];
         return '<section class="crit-p"><h4>' + (p.img ? '<img class="sig" src="' + p.img + '" alt="" loading="lazy">' : '<span class="sig" aria-hidden="true">' + p.sig + '</span>') + esc(p.nome) + '</h4>' + selo(d.st) + (d.peso ? '<span class="peso">' + esc(d.peso) + '</span>' : '') +
           '<p>' + esc(d.x) + '</p><div class="mas"><b>O que pesa contra a comparação</b>' + esc(d.mas) + '</div>' +
           fonte(d.f) + fonte(d.f2) + fonte(d.f3) + fonte(d.f4) + fonte(d.f5) + '</section>';
-      }).join('') + '</div></article>';
+        }).join('') + '</div>';
+      }).join('') + '</article>';
   }).join('');
 
   var btnTema = document.getElementById('btn-tema');

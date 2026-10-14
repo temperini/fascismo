@@ -6,7 +6,7 @@ O fascismo e suas estratégias, de Mussolini a Hitler. Material educativo em lin
 
 - `index.html` - página completa: quem foram, linha do tempo de 1914 a 1975, como convenceram, os 14 sinais de alerta, o balanço de cada regime, o fim e as fontes.
 - `jornada.html` - versão guiada: 7 paradas, uma ideia por tela, com áudio e letra ampliável.
-- `hoje.html` - a mesma régua aplicada a quatro políticos de hoje, com o fato, a fonte e o que pesa contra a comparação.
+- `hoje.html` - a mesma régua aplicada a seis políticos de hoje, com o fato, a fonte e o que pesa contra a comparação.
 
 ## Como abrir
 

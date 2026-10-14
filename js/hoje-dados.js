@@ -3,10 +3,12 @@
    Cada celula: x = fato com data; mas = o que pesa contra a comparacao; f = [nome da fonte, url] */
 window.HOJE = {
   pessoas: [
-    { id: 'trump', nome: 'Donald Trump', sub: 'Presidente dos EUA', sig: 'DT', img: 'assets/p-trump.jpg' },
-    { id: 'flavio', nome: 'Flávio Bolsonaro', sub: 'Candidato a presidente do Brasil (PL)', sig: 'FB', img: 'assets/p-flavio.jpg' },
-    { id: 'jair', nome: 'Jair Bolsonaro', sub: 'Ex-presidente do Brasil (2019 a 2022), condenado em 2025, em prisão domiciliar', sig: 'JB', img: 'assets/p-jair.jpg' },
-    { id: 'lula', nome: 'Lula', sub: 'Presidente do Brasil e candidato (PT)', sig: 'L', img: 'assets/p-lula.jpg' }
+    { id: 'flavio', grupo: 'brasil', nome: 'Flávio Bolsonaro', sub: 'Candidato a presidente do Brasil (PL)', sig: 'FB', img: 'assets/p-flavio.jpg' },
+    { id: 'jair', grupo: 'brasil', nome: 'Jair Bolsonaro', sub: 'Ex-presidente do Brasil (2019 a 2022), condenado em 2025, em prisão domiciliar', sig: 'JB', img: 'assets/p-jair.jpg' },
+    { id: 'lula', grupo: 'brasil', nome: 'Lula', sub: 'Presidente do Brasil e candidato (PT)', sig: 'L', img: 'assets/p-lula.jpg' },
+    { id: 'bukele', grupo: 'mundo', nome: 'Nayib Bukele', sub: 'Presidente de El Salvador desde 2019', sig: 'NB', img: 'assets/p-bukele.jpg' },
+    { id: 'maduro', grupo: 'mundo', nome: 'Nicolás Maduro', sub: 'Presidente da Venezuela de 2013 a 2026, preso nos EUA desde 01/2026', sig: 'NM', img: 'assets/p-maduro.jpg' },
+    { id: 'trump', grupo: 'mundo', nome: 'Donald Trump', sub: 'Presidente dos EUA', sig: 'DT', img: 'assets/p-trump.jpg' }
   ],
   criterios: [
     {
@@ -33,6 +35,15 @@ window.HOJE = {
         x: 'Em 2023, chamou de "animal selvagem" um homem que hostilizou um ministro, disse que ele "não é um ser humano" e que "essa gente" do "neofascismo" tem que ser "extirpada". Em 04/2023, ao falar de violência nas escolas, citou pessoas com "desequilíbrio de parafuso". Em 09/2026, disse: "vamos enterrar o bolsonarismo". Em 30/09/2026, disse que o adversário foi eleito vereador "já apoiado pelo crime organizado".',
         mas: 'A frase "não é um ser humano" mirou uma pessoa, não um grupo. Pela fala sobre saúde mental, pediu desculpas em público: "Não vamos mais reproduzir esse estereótipo". As demais miram um campo político, não uma etnia ou religião.',
         f: ['Jornal de Brasília', 'https://jornaldebrasilia.com.br/noticias/politica-e-poder/lula-atica-oposicao-e-se-contradiz-sobre-pacificacao-com-bolsonaristas/'], f2: ['Pleno News', 'https://pleno.news/brasil/politica-nacional/lula-se-desculpa-por-fala-sobre-pessoas-com-deficiencia.html'], f3: ['Pragmatismo Político', 'https://www.pragmatismopolitico.com.br/2023/04/lula-pede-desculpas-por-declaracao-que-irritou-apresentador-marcos-mion.html'], f4: ['Imirante', 'https://m.imirante.com/noticias/brasil/2026/09/29/ipolitica-na-reta-final-das-eleicoes-lula-diz-que-quer-enterrar-o-bolsonarismo-em-comicio-no-ceara'], f5: ['Poder360', 'https://www.poder360.com.br/poder-eleicoes-2026/flavio-e-apoiado-pelo-crime-organizado-desde-os-21-anos-diz-lula/'] },
+      maduro: { st: 'ha',
+        peso: 'Adversários políticos (peso 2), com desumanização e ameaça',
+        x: 'Depois da eleição de 2024, disse "iremos por todos os criminosos, por todos os fascistas" e acusou a líder da oposição, María Corina Machado, de ter um "pacto satânico".',
+        mas: 'O alvo é a oposição política, não uma etnia ou religião.',
+        f: ['Cooperativa', 'https://cooperativa.cl/noticias/mundo/venezuela/nicolas-maduro/maduro-acuso-que-machado-actua-bajo-influencia-de-una-iglesia-satanica/2024-08-18/151404.html'], f2: ['Human Rights Watch', 'https://www.hrw.org/pt/news/2024/09/04/venezuela-brutal-crackdown-protesters-voters'] },
+      bukele: { st: 'nao',
+        x: 'Nesta pesquisa não encontrei fala dele contra um grupo por cor, origem, religião ou orientação sexual.',
+        mas: 'Não achar registro não prova que não exista. A pesquisa sobre os nomes de outros países é mais curta.',
+         }
     },
     {
       n: 2, ic: 'radio', t: 'Imprensa tratada como inimiga',
@@ -53,6 +64,14 @@ window.HOJE = {
         x: 'Em 01/01/2023, o governo criou na Advocacia-Geral da União uma Procuradoria de Defesa da Democracia para enfrentar "desinformação sobre políticas públicas". Especialistas ouvidos pela imprensa lembraram que a lei não define o que é desinformação e disseram que, dependendo do uso, há risco de perseguição.',
         mas: 'A AGU afirmou que o órgão "sob nenhuma hipótese" cerceará "opiniões, críticas", que não pode remover conteúdo e que todos os pedidos vão ao Judiciário. No ranking da Repórteres Sem Fronteiras, o Brasil subiu da 63ª posição (2025) para a 52ª (2026).',
         f: ['Poder360', 'https://www.poder360.com.br/justica/criticas-a-procuradoria-da-democracia-sao-validas-dizem-especialistas/'], f2: ['Agência Brasil', 'https://agenciabrasil.ebc.com.br/geral/noticia/2026-04/brasil-ultrapassa-eua-pela-1a-vez-em-ranking-de-liberdade-de-imprensa'] },
+      maduro: { st: 'ha',
+        x: 'O órgão regulador mandou fechar 86 emissoras de rádio só em 2022, alegando concessões vencidas. A Lei contra o Ódio, de 2017, prevê até 20 anos de prisão e o fechamento de veículos, e foi usada contra jornalistas, ativistas e opositores.',
+        mas: 'O governo dizia que os fechamentos eram administrativos. Em 09/2026, a presidente interina reconheceu "uso abusivo" da lei e propôs reformá-la.',
+        f: ['Folha de Pernambuco', 'https://www.folhape.com.br/noticias/venezuela-determina-fechamento-de-86-emissoras-de-radio-em-2022/245204/'], f2: ['Observador', 'https://observador.pt/2017/11/09/venezuela-constituinte-aprova-lei-que-condena-a-20-anos-quem-promova-odio-e-intolerancia/'], f3: ['Observador', 'https://observador.pt/2026/09/30/presidente-interina-da-venezuela-reconhece-uso-abusivo-de-lei-contra-o-odio/'] },
+      bukele: { st: 'ha',
+        x: 'Chamou de "panfleto" e "fake news" o jornal El Faro, que em 2023 mudou a sede para a Costa Rica citando campanhas do governo, vigilância e espionagem com o programa Pegasus. A associação de jornalistas do país contou 789 agressões à imprensa em 2024, e dezenas de jornalistas deixaram o país em 2025.',
+        mas: 'O governo nega perseguição e diz responder a reportagens que considera falsas.',
+        f: ['Al Jazeera', 'https://www.aljazeera.com/news/2023/4/14/criminalising-journalism-famous-salvadoran-paper-to-relocate'], f2: ['Artigo 19', 'https://articulo19.org/nayib-bukele-ataca-al-medio-el-faro-en-el-salvador-por-publicaciones-que-revelan-un-mal-manejo-de-fondos-durante-su-administracion/'], f3: ['Human Rights Watch', 'https://www.hrw.org/es/world-report/2026/country-chapters/el-salvador'] }
     },
     {
       n: 3, ic: 'balanca', t: 'Enfraquecer ou capturar quem fiscaliza',
@@ -73,6 +92,14 @@ window.HOJE = {
         x: 'Em 06/2023, indicou ao Supremo o seu advogado pessoal, Cristiano Zanin, e depois o seu ministro da Justiça, Flávio Dino. Em 12/10/2026, disse que "alguns ministros estão extrapolando em algumas decisões contra a minha campanha" no tribunal eleitoral.',
         mas: 'As indicações passam pelo Senado, que em 2026 rejeitou um indicado dele pela primeira vez desde 1894. Criticar decisão judicial não é descumprir: não encontrei registro de descumprimento.',
         f: ['Correio Braziliense', 'https://www.correiobraziliense.com.br/politica/2023/06/5099028-lula-indica-zanin-para-o-stf-alem-de-advogado-pessoal-amigo-proximo.html'], f2: ['Portal Tela', 'https://www.portaltela.com/noticias/politica/2026/04/30/messias-e-rejeitado-relembre-indicacoes-aprovadas-de-lula-para-o-stf/'], f3: ['O Tempo', 'https://www.otempo.com.br/eleicoes/2026/presidentes/2026/10/13/nunes-marques-se-encontra-com-representantes-de-lula-e-flavio-nesta-terca-feira-13-10'] },
+      maduro: { st: 'ha',
+        x: 'Em 2024, o órgão eleitoral declarou a vitória dele sem publicar os resultados por mesa, e a Justiça mandou prender o candidato da oposição, Edmundo González.',
+        mas: 'O governo afirmava que as instituições agiam com independência.',
+        f: ['Poder360', 'https://www.poder360.com.br/poder-internacional/centro-carter-apresenta-a-oea-atas-que-indicam-vitoria-de-gonzalez/'], f2: ['Wikipédia', 'https://pt.wikipedia.org/wiki/Elei%C3%A7%C3%A3o_presidencial_na_Venezuela_em_2024'] },
+      bukele: { st: 'ha',
+        x: 'Em 01/05/2021, no primeiro dia da nova Assembleia, de maioria do partido dele, os juízes da Sala Constitucional da Suprema Corte e o procurador-geral foram destituídos. A alta comissária da ONU para direitos humanos disse que a medida "debilita profundamente o Estado de direito".',
+        mas: 'A destituição foi votada pela Assembleia eleita. Os juízes declararam a decisão inconstitucional, sem efeito prático.',
+        f: ['ONU News', 'https://news.un.org/es/story/2021/05/1491602'], f2: ['CNN Español', 'https://cnnespanol.cnn.com/2021/05/02/destitucion-magistrados-corte-suprema-fiscal-general-el-salvador/'] }
     },
     {
       n: 4, ic: 'urna', t: 'Não aceitar a derrota ou os limites do cargo',
@@ -92,7 +119,15 @@ window.HOJE = {
       lula: { st: 'nao',
         x: 'Não encontrei registro de contestação de resultado eleitoral no Brasil. Disputa agora um quarto mandato, o que a lei permite.',
         mas: 'Sobre a Venezuela, disse em 08/2024 que o governo Maduro "não é uma ditadura", e sim um "regime muito desagradável". Ao mesmo tempo, não reconheceu a reeleição de Maduro e cobrou as atas.',
-        f: ['O Povo', 'https://www.opovo.com.br/noticias/mundo/2024/08/16/lula-diz-nao-concordar-com-nota-do-pt-sobre-as-eleicoes-na-venezuela.html'] }
+        f: ['O Povo', 'https://www.opovo.com.br/noticias/mundo/2024/08/16/lula-diz-nao-concordar-com-nota-do-pt-sobre-as-eleicoes-na-venezuela.html'] },
+      maduro: { st: 'ha',
+        x: 'Declarou-se vencedor da eleição de 07/2024 sem apresentar as atas por mesa. As atas reunidas pela oposição e apresentadas pelo Centro Carter à OEA indicam mais de 67% dos votos para Edmundo González. O Centro Carter disse que a eleição não pode ser considerada democrática.',
+        mas: 'Maduro prometeu apresentar as atas, mas nunca apresentou.',
+        f: ['Poder360', 'https://www.poder360.com.br/poder-internacional/centro-carter-apresenta-a-oea-atas-que-indicam-vitoria-de-gonzalez/'], f2: ['Wikipédia', 'https://pt.wikipedia.org/wiki/Elei%C3%A7%C3%A3o_presidencial_na_Venezuela_em_2024'] },
+      bukele: { st: 'ha',
+        x: 'Foi reeleito em 2024, embora a Constituição proibisse a reeleição imediata; a Sala Constitucional nomeada após 2021 autorizou a candidatura. Em 07/2025, a Assembleia aprovou em um dia a reeleição indefinida, mandato de seis anos e o fim do segundo turno. A Comissão Interamericana de Direitos Humanos chamou a reforma de "sério retrocesso".',
+        mas: 'Ele venceu as eleições no voto e tem alta aprovação popular.',
+        f: ['Human Rights Watch', 'https://www.hrw.org/es/world-report/2026/country-chapters/el-salvador'], f2: ['El Espectador', 'https://www.elespectador.com/mundo/america/exiliados-salvadorenos-denuncian-represion-y-persecucion-tras-la-reeleccion-de-bukele/'] }
     },
     {
       n: 5, ic: 'punho', t: 'Violência política perdoada',
@@ -112,7 +147,15 @@ window.HOJE = {
       lula: { st: 'nao',
         x: 'Não encontrei registro de perdão ou incentivo a violência política. Em 8 de janeiro de 2023, o governo dele foi o alvo dos ataques.',
         mas: 'Não achar registro não prova que não exista. A pesquisa foi limitada.',
-        f: ['Wikipédia', 'https://pt.wikipedia.org/wiki/Ataques_de_8_de_janeiro_em_Bras%C3%ADlia'] }
+        f: ['Wikipédia', 'https://pt.wikipedia.org/wiki/Ataques_de_8_de_janeiro_em_Bras%C3%ADlia'] },
+      maduro: { st: 'ha',
+        x: 'Na repressão aos protestos depois da eleição de 2024, a missão da ONU contou 25 mortos e 2.400 presos. A Human Rights Watch documentou abusos de forças do governo e de grupos armados pró-governo, os "colectivos". Em 2025, a ONG Foro Penal contava mais de 900 presos políticos.',
+        mas: 'Depois da queda de Maduro, o número de presos políticos contado pelo Foro Penal caiu para 324 (09/2026).',
+        f: ['Al Jazeera', 'https://www.aljazeera.com/news/2024/9/17/venezuela-intensified-repressive-machinery-after-maduro-re-election-un'], f2: ['Human Rights Watch', 'https://www.hrw.org/pt/news/2024/09/04/venezuela-brutal-crackdown-protesters-voters'], f3: ['El Diario', 'https://eldiario.com/2025/06/03/foro-penal-presos-politicos-venezuela-junio-2025/'], f4: ['El Diario', 'https://eldiario.com/2026/09/29/presos-politicos-venezuela-5/'] },
+      bukele: { st: 'nao',
+        x: 'Nesta pesquisa não encontrei perdão ou incentivo dele a violência política. As prisões em massa estão no critério 6.',
+        mas: 'Não achar registro não prova que não exista. A pesquisa sobre os nomes de outros países é mais curta.',
+         }
     },
     {
       n: 6, ic: 'sirene', t: 'Emergência e uso da força',
@@ -132,7 +175,15 @@ window.HOJE = {
       lula: { st: 'nao',
         x: 'Em 08/01/2023, decretou intervenção federal na segurança do Distrito Federal depois dos ataques às sedes dos três Poderes.',
         mas: 'A medida teve prazo curto, foi aprovada pelo Congresso e acabou no fim do mesmo mês.',
-        f: ['Wikipédia', 'https://pt.wikipedia.org/wiki/Interven%C3%A7%C3%A3o_federal_no_Distrito_Federal_em_2023'] }
+        f: ['Wikipédia', 'https://pt.wikipedia.org/wiki/Interven%C3%A7%C3%A3o_federal_no_Distrito_Federal_em_2023'] },
+      maduro: { st: 'ha',
+        x: 'Grupos civis armados pró-governo, os "colectivos", foram incorporados à Milícia Bolivariana em 2017. Na véspera da eleição de 2024, Maduro disse que "a milícia é nossa arma secreta".',
+        mas: 'O governo apresentava a milícia como defesa da soberania nacional.',
+        f: ['Semana', 'https://www.semana.com/mundo/articulo/colectivos-armados-los-ultimos-protectores-de-maduro/523396/'], f2: ['Infobae', 'https://www.infobae.com/venezuela/2024/07/28/la-amenaza-final-de-maduro-antes-de-las-elecciones-la-milicia-es-nuestra-arma-secreta/'] },
+      bukele: { st: 'ha',
+        x: 'Governa sob regime de exceção desde 03/2022, renovado todo mês pela Assembleia (mais de 50 vezes), com o direito de defesa suspenso. São mais de 93 mil presos, e organizações de direitos humanos contam mais de 500 mortes sob custódia. Em 09/02/2020, entrou na Assembleia acompanhado de soldados armados para pressionar pela aprovação de um empréstimo.',
+        mas: 'O governo diz que a medida desmontou as gangues que dominavam o país. A Constituição prevê o regime de exceção, por 30 dias de cada vez.',
+        f: ['Infobae', 'https://www.infobae.com/america/agencias/2026/09/23/prorrogan-el-regimen-de-excepcion-que-suma-mas-de-93000-arrestos-en-el-salvador/'], f2: ['Assembleia Legislativa de El Salvador', 'https://www.asamblea.gob.sv/node/13897'], f3: ['Human Rights Watch', 'https://www.hrw.org/es/world-report/2026/country-chapters/el-salvador'], f4: ['El Diario de Hoy', 'https://www.elsalvador.com/h-fotogalerias/el-dia-que-bukele-entro-con-militares-a-la-asamblea-legislativa-y-hablo-dios/1199467/2025/'] }
     },
     {
       n: 7, ic: 'moedas', t: 'Família e amigos acima das regras',
@@ -153,6 +204,14 @@ window.HOJE = {
         x: 'A Polícia Federal apura, em três inquéritos, negócios do filho dele, Fábio Luís, com uma lobista que, segundo a PF, tinha "aparente autorização" para agir em nome dele. Em 04/12/2024, Lula recebeu no Palácio o banqueiro Daniel Vorcaro, hoje preso; a Presidência diz não ter registro da reunião. Em 18/06/2026, o líder do governo no Senado, Jaques Wagner, foi alvo de operação da PF no caso do mesmo banco. Lula foi condenado na Lava Jato e teve as condenações anuladas pelo Supremo em 2021.',
         mas: 'Lula não é investigado nesses casos e diz que prometeu ao banqueiro apenas uma apuração isenta; o banco foi fechado no governo dele. A defesa do filho e o senador negam irregularidades, e o relatório sobre o senador é preliminar. As anulações de 2021 devolveram a Lula todos os direitos.',
         f: ['CNN Brasil', 'https://www.cnnbrasil.com.br/blogs/elijonasmaia/politica/lobista-tinha-aparente-autorizacao-para-agir-em-nome-de-lulinha-diz-pf/'], f2: ['ND Mais', 'https://ndmais.com.br/politica/lula-encontro-vorcaro-planalto-master/'], f3: ['CNN Brasil', 'https://www.cnnbrasil.com.br/politica/pf-indica-que-jaques-wagner-teria-dinheiro-investido-no-banco-master/'], f4: ['Agência Brasil', 'https://agenciabrasil.ebc.com.br/politica/noticia/2026-02/cpmi-do-inss-aprova-quebra-de-sigilo-de-lulinha-e-convoca-andre-moura'] },
+      maduro: { st: 'ha',
+        x: 'Dois sobrinhos da mulher dele, Cilia Flores, foram condenados nos EUA em 2016 por conspirar para traficar 800 kg de cocaína; foram soltos em 2022 numa troca de presos. Desde 01/2026, Maduro e a mulher respondem em Nova York por narcoterrorismo e, desde 10/2026, por conspiração para tortura.',
+        mas: 'Os dois se declaram inocentes e ainda não houve julgamento.',
+        f: ['ISTOÉ', 'https://istoe.com.br/venezuela-afirma-que-sobrinhos-da-primeira-dama-condenados-nao-tinham-passaporte-diplomatico/'], f2: ['NPR', 'https://npr.org/2026/01/05/nx-s1-5667078/maduro-indictment-hearing-underway'], f3: ['Departamento de Justiça dos EUA', 'https://www.justice.gov/opa/pr/nicolas-maduro-moros-and-cilia-adela-flores-de-maduro-charged-torture'] },
+      bukele: { st: 'ha',
+        x: 'Os irmãos Karim, Ibrajim e Yusef são seus principais assessores sem ocupar cargo oficial; outro irmão, Yamil, foi nomeado por ele para presidir o instituto nacional de esportes. Reportagens revelaram compras milionárias de imóveis pela família durante o governo.',
+        mas: 'Não há processo contra eles, e a família nega irregularidades.',
+        f: ['La Tercera', 'https://www.latercera.com/la-tercera-pm/noticia/los-hermanos-bukele-el-anillo-de-poder-mas-influyente-en-torno-al-presidente-salvadoreno/OTSW7OTWNZHMFPG57YCQPX3PZY/'], f2: ['Focos', 'https://focostv.com/bukele-cia-la-nueva-familia-terrateniente-de-el-salvador/'] }
     },
     {
       n: 8, ic: 'repetir', t: 'Informação falsa repetida',
@@ -173,6 +232,14 @@ window.HOJE = {
         x: 'Na campanha de 2026, checagens apontaram falas falsas dele: disse que o PIB só voltou a crescer mais de 3% no seu governo (cresceu em 2011, 2021 e 2022) e negou ter encontrado uma lobista sócia do filho, embora haja registros públicos. Em 10/2026, o tribunal eleitoral suspendeu uma propaganda dele que ligava o adversário ao caso do Banco Master e proibiu a campanha de pagar para espalhar anúncios contra o adversário.',
         mas: 'A Lupa calcula que seis em cada dez falas de políticos checadas em campanhas têm algum grau de distorção. O tribunal também mandou o adversário apagar conteúdo. Não é exclusividade dele.',
         f: ['Aos Fatos', 'https://www.aosfatos.org/noticias/checamos-entrevista-lula-globo/'], f2: ['Estado de Minas', 'https://em.com.br/politica/2026/10/7518817-tse-suspende-propaganda-de-lula-que-associa-flavio-bolsonaro-ao-caso-master.html'], f3: ['Imirante', 'https://m.imirante.com/noticias/brasil/2026/10/11/tse-proibe-campanha-lula-impulsionar-anuncios-contra-flavio-bolsonaro'] },
+      maduro: { st: 'parte',
+        x: 'Acusou a líder da oposição de agir sob influência de uma "igreja satânica" e prometeu apresentar as atas da eleição de 2024, o que nunca fez.',
+        mas: 'Não encontrei contagem de agências de checagem sobre ele comparável às dos outros nomes.',
+        f: ['Cooperativa', 'https://cooperativa.cl/noticias/mundo/venezuela/nicolas-maduro/maduro-acuso-que-machado-actua-bajo-influencia-de-una-iglesia-satanica/2024-08-18/151404.html'], f2: ['Poder360', 'https://www.poder360.com.br/poder-internacional/centro-carter-apresenta-a-oea-atas-que-indicam-vitoria-de-gonzalez/'] },
+      bukele: { st: 'nao',
+        x: 'Nesta pesquisa não encontrei contagem de agências de checagem sobre ele.',
+        mas: 'Não achar registro não prova que não exista. A pesquisa sobre os nomes de outros países é mais curta.',
+         }
     },
     {
       n: 9, ic: 'megafone', t: 'Trabalhadores sem voz',
@@ -193,6 +260,14 @@ window.HOJE = {
         x: 'Apoia a proposta que reduz a jornada máxima de 44 para 40 horas por semana, com dois dias de descanso e sem corte de salário. Começou a vida pública como líder sindical.',
         mas: 'Não encontrei registro de medida dele contra sindicatos ou greves. Não achar registro não prova que não exista.',
         f: ['Band', 'https://www.band.com.br/politica/eleicoes/pec-do-fim-da-escala-6x1-o-que-defendem-lula-e-flavio-bolsonaro'] },
+      maduro: { st: 'parte',
+        x: 'Sindicatos denunciaram perseguição a trabalhadores. O salário mínimo está congelado desde 03/2022, e o governo trocou reajustes por bônus que não contam para direitos trabalhistas.',
+        mas: 'Os sindicatos seguem existindo e protestando.',
+        f: ['Telemundo', 'https://www.telemundo51.com/noticias/venezuela/sindicatos-marcharan-a-embajada-de-eeuu-para-denunciar-persecucion-en-venezuela/2779336/'], f2: ['Infobae', 'https://www.infobae.com/america/agencias/2026/10/13/sindicalistas-venezolanos-exigen-la-restitucion-de-derechos-laborales-y-mejora-de-ingresos/'] },
+      bukele: { st: 'parte',
+        x: 'Uma entidade de trabalhadores contou 47.124 servidores públicos demitidos em seis anos de governo, e sindicalistas foram presos sob o regime de exceção.',
+        mas: 'Os números são de entidades sindicais, não oficiais. O governo apresenta os cortes como enxugamento do Estado.',
+        f: ['El Diario de Hoy', 'https://www.eldiariodehoy.com/noticias/nacionales/organizacion-laboral-registra-47124-despidos-durante-gobierno-bukele/92216/2026/'], f2: ['La Nación', 'https://www.nacion.com/el-mundo/politica/brp-denuncia-14000-despidos-de-empleados-publicos/T3NTETCBPVCGBNI5NTTTFEEBSM/story/'] }
     },
     {
       n: 10, ic: 'igreja', t: 'Religião misturada ao governo',
@@ -213,6 +288,14 @@ window.HOJE = {
         x: 'O governo apoiou na Câmara a proposta que amplia a isenção de impostos para templos, com custo estimado pelo próprio governo em pelo menos R$ 10 bilhões por ano. Na campanha de 2026, lançou cartas dirigidas a eleitores evangélicos e católicos.',
         mas: 'A isenção vale para templos de qualquer religião, e cartas a eleitores religiosos são comuns em campanhas.',
         f: ['O Tempo', 'https://www.otempo.com.br/politica/2026/6/13/isencao-para-igrejas-na-reforma-tributaria-pode-custar-r-50-bi-aos-cofres-publicos'], f2: ['Folha de Pernambuco', 'https://www.folhape.com.br/politica/proposta-que-amplia-isencao-tributaria-para-igrejas-ganha-forca-na/262466/'], f3: ['Poder360', 'https://www.poder360.com.br/poder-eleicoes/campanha-de-lula-lanca-cartas-direcionadas-a-evangelicos-e-catolicos/'] },
+      maduro: { st: 'parte',
+        x: 'Em 2019, criou o Dia do Pastor e anunciou uma universidade teológica evangélica. Em 2025, decretou feriado nacional o "Dia da Marcha para Jesus".',
+        mas: 'Não houve proibição a outras religiões.',
+        f: ['Vida Nueva', 'https://www.vidanuevadigital.com/2025/01/30/nicolas-maduro-pacta-con-evangelicos-y-decreta-el-dia-nacional-de-marcha-para-jesus/'], f2: ['Infobae', 'https://www.infobae.com/america/venezuela/2019/12/09/lideres-evangelicos-desconocen-al-movimiento-de-pastores-que-respaldo-a-nicolas-maduro/'] },
+      bukele: { st: 'parte',
+        x: 'Em 09/02/2020, sentou-se na cadeira do presidente da Assembleia, cercado de soldados, rezou e, ao sair, disse que Deus lhe pediu "paciência" com os deputados.',
+        mas: 'Foi um episódio, sem medida de governo ligada a uma religião.',
+        f: ['El Diario de Hoy', 'https://www.elsalvador.com/h-fotogalerias/el-dia-que-bukele-entro-con-militares-a-la-asamblea-legislativa-y-hablo-dios/1199467/2025/'], f2: ['Diario Co Latino', 'https://www.diariocolatino.com/ore-a-dios-y-el-me-dijo-paciencia-nayib-bukele/'] }
     }
   ]
 };
