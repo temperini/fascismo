@@ -42,7 +42,7 @@
         var d = c[p.id];
         return '<section class="crit-p"><h4><span class="sig" aria-hidden="true">' + p.sig + '</span>' + esc(p.nome) + '</h4>' + selo(d.st) +
           '<p>' + esc(d.x) + '</p><div class="mas"><b>O que pesa contra a comparação</b>' + esc(d.mas) + '</div>' +
-          fonte(d.f) + fonte(d.f2) + fonte(d.f3) + '</section>';
+          fonte(d.f) + fonte(d.f2) + fonte(d.f3) + fonte(d.f4) + '</section>';
       }).join('') + '</div></article>';
   }).join('');
 
