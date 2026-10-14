@@ -5,7 +5,7 @@ window.HOJE = {
   pessoas: [
     { id: 'trump', nome: 'Donald Trump', sub: 'Presidente dos EUA', sig: 'DT', img: 'assets/p-trump.jpg' },
     { id: 'flavio', nome: 'Flávio Bolsonaro', sub: 'Candidato a presidente do Brasil (PL)', sig: 'FB', img: 'assets/p-flavio.jpg' },
-    { id: 'jair', nome: 'Jair Bolsonaro', sub: 'Ex-presidente do Brasil (2019 a 2022), condenado em 2025', sig: 'JB', img: 'assets/p-jair.jpg' },
+    { id: 'jair', nome: 'Jair Bolsonaro', sub: 'Ex-presidente do Brasil (2019 a 2022), condenado em 2025 e cumprindo pena', sig: 'JB', img: 'assets/p-jair.jpg' },
     { id: 'lula', nome: 'Lula', sub: 'Presidente do Brasil e candidato (PT)', sig: 'L', img: 'assets/p-lula.jpg' }
   ],
   criterios: [
@@ -81,9 +81,9 @@ window.HOJE = {
         mas: 'No dia seguinte, disse que falava de emendas que já defende, como a redução da maioridade penal, e que tem "total respeito" à Constituição. Emendas exigem três quintos do Congresso. Ele também disse que aceitará o resultado das urnas.',
         f: ['SBT News', 'https://sbtnews.sbt.com.br/noticia/politica/flavio-bolsonaro-diz-que-vai-mudar-a-constituicao-federal'], f2: ['Estado de Minas', 'https://www.em.com.br/politica/2026/10/7516424-apos-propor-mudanca-flavio-bolsonaro-diz-respeitar-constituicao.html'], f3: ['Migalhas', 'https://www.migalhas.com.br/quentes/466039/flavio-promete-mudar-constituicao-entenda-caminhos-e-limites'] },
       jair: { st: 'ha',
-        x: 'Em 07/2022, numa reunião com embaixadores no Palácio da Alvorada, transmitida pela TV pública, pôs em dúvida as urnas eletrônicas sem provas; em 06/2023 o tribunal eleitoral o declarou inelegível por oito anos. Em 11/09/2025, o Supremo o condenou por tentativa de golpe para impedir a posse do eleito.',
-        mas: 'Nega os crimes e chama os processos de perseguição. Na condenação, um dos cinco ministros votou pela absolvição.',
-        f: ['Correio Braziliense', 'https://www.correiobraziliense.com.br/politica/2023/10/5137039-bolsonaro-critica-stf-e-decisao-do-tse-que-o-tornou-inelegivel.html'], f2: ['Gazeta do Povo', 'https://www.gazetadopovo.com.br/republica/primeira-turma-do-stf-condena-bolsonaro-a-27-anos-e-3-meses-de-prisao-mais-multa/'] },
+        x: 'Em 07/2022, numa reunião com embaixadores no Palácio da Alvorada, transmitida pela TV pública, pôs em dúvida as urnas eletrônicas sem provas; em 06/2023 o tribunal eleitoral o declarou inelegível por oito anos. Em 11/09/2025, o Supremo o condenou por tentativa de golpe para impedir a posse do eleito. Em 22/11/2025, durante a prisão domiciliar, tentou romper a tornozeleira eletrônica com um ferro de solda; a domiciliar foi revogada e ele foi levado à Polícia Federal.',
+        mas: 'Nega os crimes e chama os processos de perseguição. Na condenação, um dos cinco ministros votou pela absolvição. A defesa atribuiu o episódio da tornozeleira ao efeito de medicamentos. Desde 03/2026 ele cumpre a pena em casa, por motivo de saúde.',
+        f: ['Correio Braziliense', 'https://www.correiobraziliense.com.br/politica/2023/10/5137039-bolsonaro-critica-stf-e-decisao-do-tse-que-o-tornou-inelegivel.html'], f2: ['Gazeta do Povo', 'https://www.gazetadopovo.com.br/republica/primeira-turma-do-stf-condena-bolsonaro-a-27-anos-e-3-meses-de-prisao-mais-multa/'], f3: ['CNN Brasil', 'https://www.cnnbrasil.com.br/politica/jair-bolsonaro-completa-um-ano-preso-relembre-os-principais-acontecimentos/'] },
       lula: { st: 'nao',
         x: 'Não encontrei registro de contestação de resultado eleitoral no Brasil. Disputa agora um quarto mandato, o que a lei permite.',
         mas: 'Sobre a Venezuela, disse em 08/2024 que o governo Maduro "não é uma ditadura", e sim um "regime muito desagradável". Ao mesmo tempo, não reconheceu a reeleição de Maduro e cobrou as atas.',
