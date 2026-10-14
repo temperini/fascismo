@@ -519,3 +519,6 @@ img.sig { width: 38px; height: 38px; border-radius: 50%; object-fit: cover; obje
   .menu-guia { padding: 0 6px; }
   .menu-guia .t-curto { display: none; }
 }
+
+.crit-regra { margin-top: 10px; padding: 10px 12px; border-radius: 10px; background: rgba(255, 255, 255, .07); border-left: 3px solid var(--sol); font-size: .9rem !important; opacity: 1 !important; }
+.peso { display: block; font-size: .8rem; font-weight: 700; color: var(--muted); }

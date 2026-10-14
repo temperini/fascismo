@@ -17,7 +17,8 @@
     sirene: 'M7 18v-6a5 5 0 0 1 10 0v6 M5 21h14v-3H5z M12 2v2 M4 5l1.5 1.5 M20 5l-1.5 1.5 M2 12h2 M20 12h2',
     moedas: 'M9 3a6 6 0 1 0 0 12A6 6 0 0 0 9 3z M15.5 9.5a6 6 0 1 1-6 6',
     repetir: 'M17 2l4 4-4 4 M3 11V9a3 3 0 0 1 3-3h15 M7 22l-4-4 4-4 M21 13v2a3 3 0 0 1-3 3H3',
-    megafone: 'M3 10v4l11 5V5z M14 8a4 4 0 0 1 0 8 M6 15v4h3v-3'
+    megafone: 'M3 10v4l11 5V5z M14 8a4 4 0 0 1 0 8 M6 15v4h3v-3',
+    igreja: 'M12 2v6 M9.5 4.5h5 M6 21V12l6-4 6 4v9z M10 21v-4a2 2 0 0 1 4 0v4'
   };
   function ic(n) { return '<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="' + (ICONES[n] || ICONES.info) + '"/></svg>'; }
   function esc(s) { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); }
@@ -37,12 +38,12 @@
   document.getElementById('lista-crit').innerHTML = H.criterios.map(function (c) {
     return '<article class="crit rev" id="crit-' + c.n + '">' +
       '<header class="crit-cab"><span class="tec-ic">' + ic(c.ic) + '</span><h3>' + c.n + '. ' + esc(c.t) + '</h3>' +
-      '<p><b>O que os regimes fizeram</b>' + esc(c.hist) + '</p></header>' +
+      '<p><b>O que os regimes fizeram</b>' + esc(c.hist) + '</p>' + (c.regra ? '<p class="crit-regra">' + esc(c.regra) + '</p>' : '') + '</header>' +
       '<div class="crit-col">' + H.pessoas.map(function (p) {
         var d = c[p.id];
-        return '<section class="crit-p"><h4>' + (p.img ? '<img class="sig" src="' + p.img + '" alt="" loading="lazy">' : '<span class="sig" aria-hidden="true">' + p.sig + '</span>') + esc(p.nome) + '</h4>' + selo(d.st) +
+        return '<section class="crit-p"><h4>' + (p.img ? '<img class="sig" src="' + p.img + '" alt="" loading="lazy">' : '<span class="sig" aria-hidden="true">' + p.sig + '</span>') + esc(p.nome) + '</h4>' + selo(d.st) + (d.peso ? '<span class="peso">' + esc(d.peso) + '</span>' : '') +
           '<p>' + esc(d.x) + '</p><div class="mas"><b>O que pesa contra a comparação</b>' + esc(d.mas) + '</div>' +
-          fonte(d.f) + fonte(d.f2) + fonte(d.f3) + fonte(d.f4) + '</section>';
+          fonte(d.f) + fonte(d.f2) + fonte(d.f3) + fonte(d.f4) + fonte(d.f5) + '</section>';
       }).join('') + '</div></article>';
   }).join('');
 
