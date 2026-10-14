@@ -8,6 +8,8 @@ window.HOJE = {
     { id: 'lula', grupo: 'brasil', nome: 'Lula', sub: 'Presidente do Brasil e candidato (PT)', sig: 'L', img: 'assets/p-lula.jpg' },
     { id: 'bukele', grupo: 'mundo', nome: 'Nayib Bukele', sub: 'Presidente de El Salvador desde 2019', sig: 'NB', img: 'assets/p-bukele.jpg' },
     { id: 'maduro', grupo: 'mundo', nome: 'Nicolás Maduro', sub: 'Presidente da Venezuela de 2013 a 2026, preso nos EUA desde 01/2026', sig: 'NM', img: 'assets/p-maduro.jpg' },
+    { id: 'milei', grupo: 'mundo', nome: 'Javier Milei', sub: 'Presidente da Argentina desde 2023', sig: 'JM', img: 'assets/p-milei.jpg' },
+    { id: 'ortega', grupo: 'mundo', nome: 'Daniel Ortega', sub: 'Presidente da Nicarágua desde 2007 (e de 1985 a 1990), copresidente com a mulher desde 2025', sig: 'DO', img: 'assets/p-ortega.jpg' },
     { id: 'trump', grupo: 'mundo', nome: 'Donald Trump', sub: 'Presidente dos EUA', sig: 'DT', img: 'assets/p-trump.jpg' }
   ],
   criterios: [
@@ -43,7 +45,17 @@ window.HOJE = {
       bukele: { st: 'nao',
         x: 'Nesta pesquisa não encontrei fala dele contra um grupo por cor, origem, religião ou orientação sexual.',
         mas: 'Não achar registro não prova que não exista. A pesquisa sobre os nomes de outros países é mais curta.',
-         }
+         },
+      milei: { st: 'ha',
+        peso: 'Pessoas LGBT, grupo pelo que são (peso 3), com acusação sem prova',
+        x: 'No Fórum de Davos, em 23/01/2025, disse que a ideologia de gênero, "em suas versões mais extremas", é abuso infantil e que quem a apoia é pedófilo. Como exemplo, citou um casal gay dos EUA condenado por abusar dos filhos adotivos. A agência Chequeado concluiu que não existe evidência de que pessoas homossexuais cometam mais abusos contra crianças.',
+        mas: 'Ele diz que o alvo é a ideologia de gênero. Nenhuma lei contra pessoas LGBT saiu dessa fala. Um deputado o denunciou à Justiça por incitação ao ódio.',
+        f: ['Chequeado', 'https://chequeado.com/el-explicador/que-dijo-javier-milei-sobre-la-ideologia-de-genero/'], f2: ['La Capital', 'https://www.lacapital.com.ar/politica/un-diputado-rosarino-denuncio-milei-incitacion-al-odio-su-polemico-discurso-davos-n10175859.html'] },
+      ortega: { st: 'ha',
+        peso: 'Adversários políticos (peso 2), com acusação sem prova e medida de governo',
+        x: 'Chama opositores e críticos de "terroristas" e "golpistas". Em 12/2018, disse que bispos católicos aderiram a um "golpe terrorista". Em 2023, o governo tirou a nacionalidade de mais de 300 opositores, declarados "traidores da pátria".',
+        mas: 'O alvo é a oposição política e a parte da Igreja que o critica, não uma etnia.',
+        f: ['ACI Prensa', 'https://www.aciprensa.com/noticias/73153/presidente-de-nicaragua-ataca-a-obispos-tienen-mentalidad-terrorista-y-criminal'], f2: ['La Patilla (EFE)', 'https://lapatilla.com/2026/08/01/daniel-ortega-terroristas-y-golpistas-no-tendran-espacio-en-las-elecciones-en-nicaragua/'], f3: ['Observador', 'https://observador.cr/de-candidatos-presidenciales-a-exprimeras-damas-estos-son-los-222-presos-politicos-liberados-por-dictadura-de-daniel-ortega/'] }
     },
     {
       n: 2, ic: 'radio', t: 'Imprensa tratada como inimiga',
@@ -71,7 +83,15 @@ window.HOJE = {
       bukele: { st: 'ha',
         x: 'Chamou de "panfleto" e "fake news" o jornal El Faro, que em 2023 mudou a sede para a Costa Rica citando campanhas do governo, vigilância e espionagem com o programa Pegasus. A associação de jornalistas do país contou 789 agressões à imprensa em 2024, e dezenas de jornalistas deixaram o país em 2025.',
         mas: 'O governo nega perseguição e diz responder a reportagens que considera falsas.',
-        f: ['Al Jazeera', 'https://www.aljazeera.com/news/2023/4/14/criminalising-journalism-famous-salvadoran-paper-to-relocate'], f2: ['Artigo 19', 'https://articulo19.org/nayib-bukele-ataca-al-medio-el-faro-en-el-salvador-por-publicaciones-que-revelan-un-mal-manejo-de-fondos-durante-su-administracion/'], f3: ['Human Rights Watch', 'https://www.hrw.org/es/world-report/2026/country-chapters/el-salvador'] }
+        f: ['Al Jazeera', 'https://www.aljazeera.com/news/2023/4/14/criminalising-journalism-famous-salvadoran-paper-to-relocate'], f2: ['Artigo 19', 'https://articulo19.org/nayib-bukele-ataca-al-medio-el-faro-en-el-salvador-por-publicaciones-que-revelan-un-mal-manejo-de-fondos-durante-su-administracion/'], f3: ['Human Rights Watch', 'https://www.hrw.org/es/world-report/2026/country-chapters/el-salvador'] },
+      milei: { st: 'ha',
+        x: 'Repete nas redes a sigla NOLSALP, "não odiamos o suficiente os jornalistas", e chama repórteres de "basuras repugnantes". Em 23/04/2026, o governo fechou a sala de imprensa da Casa Rosada e suspendeu a credencial de todos os jornalistas, alegando espionagem.',
+        mas: 'A sala reabriu em 04/05/2026, com regras de acesso mais duras, depois de um pedido na Justiça.',
+        f: ['La Nación', 'https://www.lanacion.com.ar/politica/desde-que-cerro-la-sala-de-periodistas-de-la-casa-rosada-javier-milei-multiplico-sus-ataques-a-la-nid29042026/'], f2: ['El Espectador', 'https://www.elespectador.com/mundo/america/ni-en-tiempos-de-videla-milei-veta-a-la-prensa-de-la-casa-rosada-por-primera-vez/'], f3: ['Ámbito', 'https://www.ambito.com/politica/ante-la-inminencia-un-fallo-adverso-ahora-el-gobierno-reabre-la-sala-periodistas-la-rosada-n6272841/amp'] },
+      ortega: { st: 'ha',
+        x: 'Em 08/2021, a polícia ocupou a sede do jornal La Prensa e prendeu o gerente-geral, e o prédio foi confiscado. As redações de Confidencial e 100% Noticias também foram tomadas, e o diretor do canal ficou quase seis meses preso. Centenas de jornalistas foram para o exílio desde 2018.',
+        mas: 'Os veículos seguem publicando na internet, a partir de outros países.',
+        f: ['Confidencial', 'https://confidencial.digital/english/dictatorship-confiscates-la-prensas-assets-and-building/'], f2: ['Vanguardia', 'https://www.vanguardia.com/mundo/2024/02/22/periodistas-exiliados-y-cierre-de-medios-la-dura-realidad-del-periodismo-en-nicaragua/'], f3: ['Excélsior', 'https://www.excelsior.com.mx/global/nicaragua-embarga-instalaciones-de-diario-opositor-la-prensa/1535046'] }
     },
     {
       n: 3, ic: 'balanca', t: 'Enfraquecer ou capturar quem fiscaliza',
@@ -99,7 +119,15 @@ window.HOJE = {
       bukele: { st: 'ha',
         x: 'Em 01/05/2021, no primeiro dia da nova Assembleia, de maioria do partido dele, os juízes da Sala Constitucional da Suprema Corte e o procurador-geral foram destituídos. A alta comissária da ONU para direitos humanos disse que a medida "debilita profundamente o Estado de direito".',
         mas: 'A destituição foi votada pela Assembleia eleita. Os juízes declararam a decisão inconstitucional, sem efeito prático.',
-        f: ['ONU News', 'https://news.un.org/es/story/2021/05/1491602'], f2: ['CNN Español', 'https://cnnespanol.cnn.com/2021/05/02/destitucion-magistrados-corte-suprema-fiscal-general-el-salvador/'] }
+        f: ['ONU News', 'https://news.un.org/es/story/2021/05/1491602'], f2: ['CNN Español', 'https://cnnespanol.cnn.com/2021/05/02/destitucion-magistrados-corte-suprema-fiscal-general-el-salvador/'] },
+      milei: { st: 'parte',
+        x: 'Em 02/2025, nomeou por decreto dois juízes da Suprema Corte, sem passar pelo Senado. Em 12/2023, mudou 366 artigos de leis com um único decreto de necessidade e urgência, o DNU 70/2023.',
+        mas: 'A Constituição argentina permite a nomeação temporária, e outro presidente já a usou em 2016. O Senado rejeitou os dois juízes em 04/2025 e também rejeitou o decreto em 03/2024.',
+        f: ['El Economista', 'https://eleconomista.com.ar/politica/doble-derrota-gobierno-camara-alta-milei-furioso-palm-beach-n83590'], f2: ['Tiempo de San Juan', 'https://www.tiempodesanjuan.com/politica/corte-suprema-el-senado-rechazo-los-pliegos-ariel-lijo-y-manuel-garcia-mansilla-n399032'], f3: ['Bloomberg Línea', 'https://www.bloomberglinea.com/latinoamerica/argentina/senado-rechazo-el-mega-decreto-de-milei-y-discusion-se-traslada-a-diputados/'] },
+      ortega: { st: 'ha',
+        x: 'A reforma da Constituição de 01/2025 trocou "poderes" por "órgãos" e deu à Presidência a tarefa de "coordenar" o Legislativo, o Judiciário, o órgão eleitoral e o de fiscalização. Também criou a copresidência para a mulher dele, Rosario Murillo.',
+        mas: 'A reforma foi aprovada pela Assembleia, onde o partido dele tem maioria ampla.',
+        f: ['El Espectador', 'https://www.elespectador.com/mundo/america/congreso-de-nicaragua-aprobo-una-reforma-que-da-poder-total-a-daniel-ortega-y-su-esposa-rosario-murillo/'], f2: ['Swissinfo (EFE)', 'https://www.swissinfo.ch/spa/el-parlamento-de-nicaragua-aprob%c3%b3-en-2025-la-reforma-que-da-poder-total-a-ortega-y-murillo/90696343'] }
     },
     {
       n: 4, ic: 'urna', t: 'Não aceitar a derrota ou os limites do cargo',
@@ -127,7 +155,15 @@ window.HOJE = {
       bukele: { st: 'ha',
         x: 'Foi reeleito em 2024, embora a Constituição proibisse a reeleição imediata; a Sala Constitucional nomeada após 2021 autorizou a candidatura. Em 07/2025, a Assembleia aprovou em um dia a reeleição indefinida, mandato de seis anos e o fim do segundo turno. A Comissão Interamericana de Direitos Humanos chamou a reforma de "sério retrocesso".',
         mas: 'Ele venceu as eleições no voto e tem alta aprovação popular.',
-        f: ['Human Rights Watch', 'https://www.hrw.org/es/world-report/2026/country-chapters/el-salvador'], f2: ['El Espectador', 'https://www.elespectador.com/mundo/america/exiliados-salvadorenos-denuncian-represion-y-persecucion-tras-la-reeleccion-de-bukele/'] }
+        f: ['Human Rights Watch', 'https://www.hrw.org/es/world-report/2026/country-chapters/el-salvador'], f2: ['El Espectador', 'https://www.elespectador.com/mundo/america/exiliados-salvadorenos-denuncian-represion-y-persecucion-tras-la-reeleccion-de-bukele/'] },
+      milei: { st: 'nao',
+        x: 'Em 07/09/2025, depois de perder a eleição na província de Buenos Aires, disse que "hay que aceptarlo" e reconheceu "uma clara derrota".',
+        mas: 'Não achar registro não prova que não exista. A pesquisa sobre os nomes de outros países é mais curta.',
+        f: ['24 Horas', 'https://www.24horas.cl/internacional/noticias/milei-reconoce-clara-derrota-en-elecciones-provinciales-'], f2: ['Radio Agricultura', 'https://www.radioagricultura.cl/noticias/internacional/hay-que-aceptarlo-milei-reconoce-clara-derrota-en-elecciones-legislativas-de-buenos-aires_20250908/'] },
+      ortega: { st: 'ha',
+        x: 'Antes da eleição de 2021, sete pré-candidatos de oposição foram presos, entre eles Cristiana Chamorro, e ele venceu sem adversários competitivos. Governa desde 2007, e a reforma de 2025 aumentou o mandato para seis anos. Em 08/2026, disse que "terroristas e golpistas" não poderão disputar eleições.',
+        mas: 'O governo afirma que os presos cometeram crimes de traição à pátria.',
+        f: ['Observador', 'https://observador.cr/de-candidatos-presidenciales-a-exprimeras-damas-estos-son-los-222-presos-politicos-liberados-por-dictadura-de-daniel-ortega/'], f2: ['La Patilla (EFE)', 'https://lapatilla.com/2026/08/01/daniel-ortega-terroristas-y-golpistas-no-tendran-espacio-en-las-elecciones-en-nicaragua/'], f3: ['El Espectador', 'https://www.elespectador.com/mundo/america/reforma-constitucional-en-nicaragua-ortega-y-murillo-consagran-su-poder-absoluto/'] }
     },
     {
       n: 5, ic: 'punho', t: 'Violência política perdoada',
@@ -155,7 +191,15 @@ window.HOJE = {
       bukele: { st: 'nao',
         x: 'Nesta pesquisa não encontrei perdão ou incentivo dele a violência política. As prisões em massa estão no critério 6.',
         mas: 'Não achar registro não prova que não exista. A pesquisa sobre os nomes de outros países é mais curta.',
-         }
+         },
+      milei: { st: 'nao',
+        x: 'Nesta pesquisa não encontrei perdão ou incentivo dele a grupos violentos. A repressão a protestos está no critério 6.',
+        mas: 'Não achar registro não prova que não exista. A pesquisa sobre os nomes de outros países é mais curta.',
+         },
+      ortega: { st: 'ha',
+        x: 'Nos protestos de 2018, a Comissão Interamericana de Direitos Humanos (CIDH) contou 355 mortos, com ação da polícia e de grupos armados pró-governo. Em 06/2019, a Assembleia aprovou uma lei de anistia que também protege agentes do Estado. A então alta comissária da ONU, Michelle Bachelet, lembrou que anistia para graves violações de direitos humanos é proibida pelo direito internacional.',
+        mas: 'O governo reconhece cerca de 200 mortos, entre eles policiais, e diz que houve uma tentativa de golpe.',
+        f: ['La Prensa', 'https://www.laprensani.com/2021/11/15/politica/2911265-cifra-de-muertes-por-la-represion-en-nicaragua-en-2018-sube-a-355-segun-cidh'], f2: ['Emol', 'https://www.emol.com/noticias/Internacional/2019/06/08/950610/Bachelet-manifiesta-su-preocupacion-por-Ley-de-Amnistia-aprobada-en-Nicaragua-y-recuerda-que-esta-prohibida-para-delitos-contra-los-DDHH.html'], f3: ['Semana', 'https://www.semana.com/mundo/articulo/nicaragua-libera-a-50-opositores-presos-bajo-polemica-nueva-ley-de-amnistia/619211'] }
     },
     {
       n: 6, ic: 'sirene', t: 'Emergência e uso da força',
@@ -183,7 +227,15 @@ window.HOJE = {
       bukele: { st: 'ha',
         x: 'Governa sob regime de exceção desde 03/2022, renovado todo mês pela Assembleia (mais de 50 vezes), com o direito de defesa suspenso. São mais de 93 mil presos, e organizações de direitos humanos contam mais de 500 mortes sob custódia. Em 09/02/2020, entrou na Assembleia acompanhado de soldados armados para pressionar pela aprovação de um empréstimo.',
         mas: 'O governo diz que a medida desmontou as gangues que dominavam o país. A Constituição prevê o regime de exceção, por 30 dias de cada vez.',
-        f: ['Infobae', 'https://www.infobae.com/america/agencias/2026/09/23/prorrogan-el-regimen-de-excepcion-que-suma-mas-de-93000-arrestos-en-el-salvador/'], f2: ['Assembleia Legislativa de El Salvador', 'https://www.asamblea.gob.sv/node/13897'], f3: ['Human Rights Watch', 'https://www.hrw.org/es/world-report/2026/country-chapters/el-salvador'], f4: ['El Diario de Hoy', 'https://www.elsalvador.com/h-fotogalerias/el-dia-que-bukele-entro-con-militares-a-la-asamblea-legislativa-y-hablo-dios/1199467/2025/'] }
+        f: ['Infobae', 'https://www.infobae.com/america/agencias/2026/09/23/prorrogan-el-regimen-de-excepcion-que-suma-mas-de-93000-arrestos-en-el-salvador/'], f2: ['Assembleia Legislativa de El Salvador', 'https://www.asamblea.gob.sv/node/13897'], f3: ['Human Rights Watch', 'https://www.hrw.org/es/world-report/2026/country-chapters/el-salvador'], f4: ['El Diario de Hoy', 'https://www.elsalvador.com/h-fotogalerias/el-dia-que-bukele-entro-con-militares-a-la-asamblea-legislativa-y-hablo-dios/1199467/2025/'] },
+      milei: { st: 'parte',
+        x: 'O governo adotou um protocolo contra bloqueios de rua. Em 12/03/2025, numa marcha de aposentados, o fotógrafo Pablo Grillo teve o crânio fraturado por uma bomba de gás lançada por um gendarme. A então ministra da Segurança, Patricia Bullrich, disse que o agente agiu "segundo os protocolos".',
+        mas: 'Não houve estado de exceção nem Exército nas ruas. A Justiça ainda não julgou o caso.',
+        f: ['La Capital', 'https://www.lacapital.com.ar/informacion-general/camarazo-pablo-grillo-el-fotografo-herido-el-congreso-no-queremos-otro-cabezas-n10184398.html'], f2: ['BAE Negocios', 'https://www.baenegocios.com/amp/Pablo-Grillo-fue-dado-de-alta-tras-casi-tres-meses-en-terapia-intensiva-20250603-0054/'], f3: ['La Nación', 'https://www.lanacion.com.ar/politica/familiares-de-pablo-grillo-el-fotografo-herido-por-un-gendarme-protestaron-contra-patricia-bullrich-nid26102025/'] },
+      ortega: { st: 'ha',
+        x: 'A reforma de 2025 criou uma "polícia voluntária" e "forças de reserva patriótica", que a oposição vê como milícias legalizadas. Em 2025, a polícia avisou que não permitirá a repetição dos protestos de 2018.',
+        mas: 'Não há estado de emergência formal declarado.',
+        f: ['Swissinfo (EFE)', 'https://www.swissinfo.ch/spa/el-parlamento-de-nicaragua-aprob%c3%b3-en-2025-la-reforma-que-da-poder-total-a-ortega-y-murillo/90696343'], f2: ['El Heraldo', 'https://www.elheraldo.hn/mundo/policia-nicaragua-no-permitiran-horror-barbarie-2018-MP23978510'] }
     },
     {
       n: 7, ic: 'moedas', t: 'Família e amigos acima das regras',
@@ -211,7 +263,15 @@ window.HOJE = {
       bukele: { st: 'ha',
         x: 'Os irmãos Karim, Ibrajim e Yusef são seus principais assessores sem ocupar cargo oficial; outro irmão, Yamil, foi nomeado por ele para presidir o instituto nacional de esportes. Reportagens revelaram compras milionárias de imóveis pela família durante o governo.',
         mas: 'Não há processo contra eles, e a família nega irregularidades.',
-        f: ['La Tercera', 'https://www.latercera.com/la-tercera-pm/noticia/los-hermanos-bukele-el-anillo-de-poder-mas-influyente-en-torno-al-presidente-salvadoreno/OTSW7OTWNZHMFPG57YCQPX3PZY/'], f2: ['Focos', 'https://focostv.com/bukele-cia-la-nueva-familia-terrateniente-de-el-salvador/'] }
+        f: ['La Tercera', 'https://www.latercera.com/la-tercera-pm/noticia/los-hermanos-bukele-el-anillo-de-poder-mas-influyente-en-torno-al-presidente-salvadoreno/OTSW7OTWNZHMFPG57YCQPX3PZY/'], f2: ['Focos', 'https://focostv.com/bukele-cia-la-nueva-familia-terrateniente-de-el-salvador/'] },
+      milei: { st: 'ha',
+        x: 'Em 12/2023, mudou por decreto a regra contra o nepotismo para nomear a irmã, Karina Milei, secretária-geral da Presidência. Em 08/2025, áudios atribuídos ao chefe da agência de deficiência citaram um suposto repasse de 3% em compras de remédios para ela. Em 11/2025, uma comissão do Congresso concluiu que os dois irmãos têm responsabilidade política no caso da criptomoeda $LIBRA, que ele promoveu.',
+        mas: 'Karina nega e não foi indiciada. O autor dos áudios diz que foram adulterados. A comissão tinha maioria de oposição, e a Justiça ainda não decidiu os casos.',
+        f: ['Folha Vitória', 'https://www.folhavitoria.com.br/geral/na-argentina-milei-altera-decreto-sobre-nepotismo-e-torna-irma-secretaria-geral-da-presidencia/'], f2: ['Buenos Aires Times', 'https://batimes.com.ar/news/argentina/disabled-body-chief-fired-after-audios-allege-government-corruption.phtml'], f3: ['La Nación', 'https://www.lanacion.com.ar/politica/causa-libra-punto-por-punto-a-que-conclusion-llego-la-comision-investigadora-nid16032026/'] },
+      ortega: { st: 'ha',
+        x: 'A mulher, Rosario Murillo, foi vice-presidente e virou copresidente em 2025. Os filhos do casal têm cargos no governo: Laureano cuida de investimentos e da relação com Rússia e China, e Camila coordena a comissão de economia criativa. A Constituição proíbe nomear parentes até o quarto grau.',
+        mas: 'A copresidência foi criada por reforma aprovada pela Assembleia.',
+        f: ['Voz de América', 'https://www.vozdeamerica.com/a/los-hijos-de-ortega-y-sus-roles-en-la-politica-de-nicaragua-/7074762.html'], f2: ['Revista E&N', 'https://www.revistaeyn.com/centroamericaymundo/daniel-ortega-coloca-a-siete-de-sus-hijos-en-cargos-clave-en-ALEN990077'] }
     },
     {
       n: 8, ic: 'repetir', t: 'Informação falsa repetida',
@@ -239,7 +299,15 @@ window.HOJE = {
       bukele: { st: 'nao',
         x: 'Nesta pesquisa não encontrei contagem de agências de checagem sobre ele.',
         mas: 'Não achar registro não prova que não exista. A pesquisa sobre os nomes de outros países é mais curta.',
-         }
+         },
+      milei: { st: 'parte',
+        x: 'A fala de Davos que ligou homossexuais a abuso infantil não tem evidência, segundo a agência Chequeado. A sigla contra jornalistas é repetida dezenas de vezes por dia nas redes.',
+        mas: 'Não encontrei contagem de checagens sobre ele comparável às de Trump e Flávio.',
+        f: ['Chequeado', 'https://chequeado.com/el-explicador/que-dijo-javier-milei-sobre-la-ideologia-de-genero/'], f2: ['La Nación', 'https://www.lanacion.com.ar/politica/desde-que-cerro-la-sala-de-periodistas-de-la-casa-rosada-javier-milei-multiplico-sus-ataques-a-la-nid29042026/'] },
+      ortega: { st: 'ha',
+        x: 'Há anos repete, sem apresentar provas, que os protestos de 2018 foram um golpe financiado pelos EUA, e diz que só policiais e simpatizantes do governo foram mortos e torturados. Investigadores nomeados pela CIDH apontaram a repressão do Estado como responsável pela maioria das mortes.',
+        mas: 'Não encontrei contagem de agências de checagem sobre ele.',
+        f: ['Observador', 'https://observador.cr/daniel-ortega-niega-ante-embajadores-matanza-contra-opositores-en-2018/'], f2: ['La Opinión', 'https://laopinion.com/?p=2027654'] }
     },
     {
       n: 9, ic: 'megafone', t: 'Trabalhadores sem voz',
@@ -267,7 +335,15 @@ window.HOJE = {
       bukele: { st: 'parte',
         x: 'Uma entidade de trabalhadores contou 47.124 servidores públicos demitidos em seis anos de governo, e sindicalistas foram presos sob o regime de exceção.',
         mas: 'Os números são de entidades sindicais, não oficiais. O governo apresenta os cortes como enxugamento do Estado.',
-        f: ['El Diario de Hoy', 'https://www.eldiariodehoy.com/noticias/nacionales/organizacion-laboral-registra-47124-despidos-durante-gobierno-bukele/92216/2026/'], f2: ['La Nación', 'https://www.nacion.com/el-mundo/politica/brp-denuncia-14000-despidos-de-empleados-publicos/T3NTETCBPVCGBNI5NTTTFEEBSM/story/'] }
+        f: ['El Diario de Hoy', 'https://www.eldiariodehoy.com/noticias/nacionales/organizacion-laboral-registra-47124-despidos-durante-gobierno-bukele/92216/2026/'], f2: ['La Nación', 'https://www.nacion.com/el-mundo/politica/brp-denuncia-14000-despidos-de-empleados-publicos/T3NTETCBPVCGBNI5NTTTFEEBSM/story/'] },
+      milei: { st: 'parte',
+        x: 'A reforma trabalhista aprovada em 02/2026 limitou o direito de greve e as assembleias sindicais e abriu caminho para cancelar o registro de sindicatos. Em 30/03/2026, a pedido da central sindical CGT, um juiz suspendeu 82 dos 218 artigos, entre eles os que limitam a greve.',
+        mas: 'A suspensão é provisória e o governo pode recorrer. Os sindicatos seguem existindo e fazendo greves.',
+        f: ['El Mostrador', 'https://www.elmostrador.cl/noticias/mundo/2026/03/30/justicia-argentina-suspende-82-articulos-de-la-reforma-laboral-de-milei-tras-recurso-de-la-cgt/'], f2: ['CNN Chile', 'https://www.cnnchile.com/mundo/justicia-argentina-suspende-parcialmente-aplicacion-reforma-laboral-milei_20260330/'] },
+      ortega: { st: 'parte',
+        x: 'Em 02/2025, anunciou a saída do país da Organização Internacional do Trabalho (OIT), que investiga uma queixa sobre liberdade sindical. Até o fim de 2024, mais de 5.500 entidades, inclusive ONGs e câmaras empresariais, perderam o registro.',
+        mas: 'A queixa na OIT foi apresentada por empregadores. Não encontrei contagem própria de sindicatos de trabalhadores fechados.',
+        f: ['La Prensa', 'https://www.laprensani.com/2026/09/15/economia/3786417-oit-investigacion-ortega-derechos-laborales'], f2: ['La Prensa', 'https://www.laprensani.com/2025/03/20/politica/3449814-una-nueva-comision-de-encuesta-para-un-viejo-infractor'] }
     },
     {
       n: 10, ic: 'igreja', t: 'Religião misturada ao governo',
@@ -295,7 +371,15 @@ window.HOJE = {
       bukele: { st: 'parte',
         x: 'Em 09/02/2020, sentou-se na cadeira do presidente da Assembleia, cercado de soldados, rezou e, ao sair, disse que Deus lhe pediu "paciência" com os deputados.',
         mas: 'Foi um episódio, sem medida de governo ligada a uma religião.',
-        f: ['El Diario de Hoy', 'https://www.elsalvador.com/h-fotogalerias/el-dia-que-bukele-entro-con-militares-a-la-asamblea-legislativa-y-hablo-dios/1199467/2025/'], f2: ['Diario Co Latino', 'https://www.diariocolatino.com/ore-a-dios-y-el-me-dijo-paciencia-nayib-bukele/'] }
+        f: ['El Diario de Hoy', 'https://www.elsalvador.com/h-fotogalerias/el-dia-que-bukele-entro-con-militares-a-la-asamblea-legislativa-y-hablo-dios/1199467/2025/'], f2: ['Diario Co Latino', 'https://www.diariocolatino.com/ore-a-dios-y-el-me-dijo-paciencia-nayib-bukele/'] },
+      milei: { st: 'nao',
+        x: 'Nesta pesquisa não encontrei medida de governo dele que favoreça uma religião.',
+        mas: 'Não achar registro não prova que não exista. A pesquisa sobre os nomes de outros países é mais curta.',
+         },
+      ortega: { st: 'ha',
+        x: 'O lema do governo chama a Nicarágua de "cristã, socialista e solidária". Ao mesmo tempo, persegue a parte da Igreja Católica que o critica: em 02/2023, o bispo Rolando Álvarez foi condenado a 26 anos de prisão por "traição à pátria".',
+        mas: 'O bispo foi solto e mandado ao Vaticano em 01/2024.',
+        f: ['Reason', 'https://reason.com/?p=164744'], f2: ['RPP', 'https://rpp.pe/mundo/actualidad/rolando-alvarez-nicaragua-obispo-que-se-nego-a-ser-desterrado-por-daniel-ortega-es-condenado-a-26-anos-de-prision-noticia-1466114'], f3: ['ACI Prensa', 'https://www.aciprensa.com/noticias/73153/presidente-de-nicaragua-ataca-a-obispos-tienen-mentalidad-terrorista-y-criminal'] }
     }
   ]
 };

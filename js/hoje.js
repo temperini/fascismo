@@ -29,7 +29,7 @@
   document.querySelectorAll('[data-ic]').forEach(function (el) { el.innerHTML = ic(el.dataset.ic); });
 
   document.getElementById('tabela').innerHTML =
-    '<thead><tr class="grupos"><th></th><th scope="colgroup" colspan="3">Brasil</th><th scope="colgroup" colspan="3">Outros países</th></tr><tr><th scope="col">Critério</th>' + H.pessoas.map(function (p) { return '<th scope="col"><span class="th-p">' + (p.img ? '<img src="' + p.img + '" alt="">' : '') + esc(p.nome) + '</span></th>'; }).join('') + '</tr></thead><tbody>' +
+    '<thead><tr class="grupos"><th></th><th scope="colgroup" colspan="3">Brasil</th><th scope="colgroup" colspan="5">Outros países</th></tr><tr><th scope="col">Critério</th>' + H.pessoas.map(function (p) { return '<th scope="col"><span class="th-p">' + (p.img ? '<img src="' + p.img + '" alt="">' : '') + esc(p.nome) + '</span></th>'; }).join('') + '</tr></thead><tbody>' +
     H.criterios.map(function (c) {
       return '<tr><th scope="row"><a href="#crit-' + c.n + '">' + c.n + '. ' + esc(c.t) + '</a></th>' +
         H.pessoas.map(function (p) { return '<td>' + selo(c[p.id].st) + '</td>'; }).join('') + '</tr>';

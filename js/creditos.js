@@ -215,5 +215,19 @@ window.CREDITOS = [
         "autor":  "Palácio do Planalto",
         "licenca":  "CC BY 2.0",
         "pagina":  "https://commons.wikimedia.org/wiki/File:Nicol%C3%A1s_Maduro_Portrait_(3x4_cropped).jpg"
+    },
+    {
+        "id":  "p-milei",
+        "nome":  "Retrato oficial de Javier Milei",
+        "autor":  "Gobierno Argentino",
+        "licenca":  "CC BY 4.0",
+        "pagina":  "https://commons.wikimedia.org/wiki/File:Retrato_oficial_del_Presidente_Javier_(cropped).jpeg"
+    },
+    {
+        "id":  "p-ortega",
+        "nome":  "Retrato de Daniel Ortega",
+        "autor":  "Duma Estatal da Federação Russa",
+        "licenca":  "CC BY 4.0",
+        "pagina":  "https://commons.wikimedia.org/wiki/File:Daniel_Ortega_on_July_20,_2024_(cropped).jpg"
     }
 ];
