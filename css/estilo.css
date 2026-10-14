@@ -535,3 +535,7 @@ img.sig { width: 38px; height: 38px; border-radius: 50%; object-fit: cover; obje
 .quadro tr.grupos th { background: color-mix(in srgb, var(--hero-bg) 85%, #000); font-family: var(--sans); font-size: .74rem; letter-spacing: .1em; text-transform: uppercase; color: var(--sol); padding: 8px 14px; }
 .quadro tr.grupos th + th + th { border-left: 2px solid var(--sol); }
 .quadro thead tr:last-child th:nth-child(5), .quadro tbody td:nth-child(5) { border-left: 2px solid var(--line); }
+
+/* Listas dentro dos cards de "Em volta" */
+.volta-lista { margin: 0; padding-left: 1.1em; display: grid; gap: 10px; }
+.volta-lista li { line-height: 1.5; }
