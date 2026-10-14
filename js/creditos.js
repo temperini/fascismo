@@ -166,5 +166,12 @@ window.CREDITOS = [
         "autor":  "Gagum",
         "licenca":  "CC BY 2.0",
         "pagina":  "https://commons.wikimedia.org/wiki/File:Campo_de_Concentra%C3%A7%C3%A3o_do_Tarrafal_-_Port%C3%A3o.jpg"
+    },
+    {
+        "id":  "braschi-1934",
+        "nome":  "Palazzo Braschi, Roma, 1934",
+        "autor":  "Autor desconhecido",
+        "licenca":  "Domínio público",
+        "pagina":  "https://commons.wikimedia.org/wiki/File:Palazzo_Braschi_Fascist_Poster,_1934.png"
     }
 ];

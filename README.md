@@ -1,5 +1,7 @@
 # A promessa e o preço
 
+No ar em: https://fascismo.vercel.app/
+
 O fascismo e suas estratégias, de Mussolini a Hitler. Material educativo em linguagem simples.
 
 - `index.html` - página completa: quem foram, linha do tempo de 1914 a 1975, como convenceram, os 14 sinais de alerta, o balanço de cada regime, o fim e as fontes.
@@ -8,7 +10,7 @@ O fascismo e suas estratégias, de Mussolini a Hitler. Material educativo em lin
 
 ## Como abrir
 
-É um site estático, sem instalação. Abra `index.html` ou `jornada.html` no navegador.
+É um site estático, sem instalação. Abra `index.html`, `jornada.html` ou `hoje.html` no navegador. A publicação é automática na Vercel a cada envio para a branch `main`.
 
 ## Estrutura
 
