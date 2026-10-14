@@ -173,5 +173,33 @@ window.CREDITOS = [
         "autor":  "Autor desconhecido",
         "licenca":  "Domínio público",
         "pagina":  "https://commons.wikimedia.org/wiki/File:Palazzo_Braschi_Fascist_Poster,_1934.png"
+    },
+    {
+        "id":  "p-trump",
+        "nome":  "Retrato oficial de Donald Trump, 2025",
+        "autor":  "Daniel Torok / Casa Branca",
+        "licenca":  "Domínio público",
+        "pagina":  "https://commons.wikimedia.org/wiki/File:Donald_Trump_official_portrait,_2025_(cropped_headshot).jpg"
+    },
+    {
+        "id":  "p-flavio",
+        "nome":  "Foto oficial de Flávio Bolsonaro",
+        "autor":  "Agência Senado",
+        "licenca":  "Atribuição",
+        "pagina":  "https://commons.wikimedia.org/wiki/File:Foto_oficial_do_senador_Fl%C3%A1vio_Bolsonaro_(v._AgSen)_(3x4).jpg"
+    },
+    {
+        "id":  "p-jair",
+        "nome":  "Retrato oficial de Jair Bolsonaro, 2019",
+        "autor":  "Alan Santos / Presidência da República",
+        "licenca":  "CC BY 3.0 BR",
+        "pagina":  "https://commons.wikimedia.org/wiki/File:2019-01-10_Retrato_Oficial_do_Presidente_da_Rep%C3%BAblica_-_Jair_Messias_Bolsonaro_(cropped).jpg"
+    },
+    {
+        "id":  "p-lula",
+        "nome":  "Foto oficial de Lula",
+        "autor":  "Ricardo Stuckert / Presidência da República",
+        "licenca":  "CC BY 2.0",
+        "pagina":  "https://commons.wikimedia.org/wiki/File:Foto_oficial_de_Luiz_In%C3%A1cio_Lula_da_Silva_(ombros)_denoise.jpg"
     }
 ];

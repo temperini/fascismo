@@ -150,7 +150,8 @@
       '<div class="bloco diz"><b>O que diziam</b>' + esc(t.diziam) + '</div>' +
       '<div class="bloco faz"><b>O que faziam</b>' + esc(t.faziam) + '</div>' +
       '<div class="tec-pe"><div class="liga"><span>Liga com:</span>' + t.sinais.map(function (n) {
-        return '<a href="#sinal-' + n + '" data-sinal="' + n + '">Sinal ' + n + '</a>';
+        var nome = (D.sinais.filter(function (x) { return x.n === n; })[0] || {}).t || '';
+        return '<a href="#sinal-' + n + '" data-sinal="' + n + '" data-nome="' + esc(nome) + '" aria-label="Sinal ' + n + ': ' + esc(nome) + '">Sinal ' + n + '</a>';
       }).join('') + '</div><span>' + esc(t.autor) + '</span></div></article>';
   }).join('');
 

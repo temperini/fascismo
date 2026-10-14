@@ -426,3 +426,35 @@ h1 span { display: inline-block; margin-top: .08em; padding: 0 .16em .06em; back
 .hoje-txt { font-size: 1rem; opacity: .92; }
 .hoje-ir { display: inline-flex; align-items: center; gap: 4px; font-weight: 700; color: var(--sol); }
 .volta { align-items: start; }
+
+/* Versao guiada em destaque */
+.menu a.menu-guia { background: var(--sol); color: #141a2b; }
+.menu a.menu-guia:hover { background: color-mix(in srgb, var(--sol) 85%, #fff); color: #141a2b; }
+.guia-btn { display: grid; grid-template-columns: 52px 1fr 24px; gap: 14px; align-items: center; margin-top: 28px; max-width: 560px; padding: 14px 18px 14px 14px; border-radius: 18px; background: #fff; color: #141a2b; text-decoration: none; box-shadow: 0 10px 30px rgba(0, 0, 0, .25); transition: transform .2s; }
+.guia-btn:hover { transform: translateY(-2px); }
+.guia-ic { width: 52px; height: 52px; border-radius: 14px; background: var(--sol); display: grid; place-items: center; }
+.guia-ic svg { width: 28px; height: 28px; }
+.guia-txt b { display: block; font-family: var(--serif); font-size: 1.2rem; line-height: 1.2; }
+.guia-txt small { display: block; font-size: .95rem; color: #566074; margin-top: 2px; }
+.guia-seta { color: #141a2b; }
+.hero .hero-acoes { margin-top: 16px; }
+
+/* Rostos no destaque do E hoje? */
+.hoje-rostos { display: flex; flex-wrap: wrap; gap: 14px 18px; margin: 8px 0 4px; }
+.rosto { display: grid; justify-items: center; gap: 6px; width: 92px; text-align: center; font-size: .82rem; font-weight: 600; line-height: 1.2; }
+.rosto img { width: 72px; height: 72px; border-radius: 50%; object-fit: cover; object-position: 50% 20%; border: 2px solid var(--sol); background: #222; }
+
+/* Nome do sinal no mouse over */
+.liga a { position: relative; }
+.liga a::after { content: attr(data-nome); position: absolute; bottom: calc(100% + 8px); left: 50%; transform: translate(-50%, 4px); background: var(--hero-bg); color: var(--hero-ink); padding: 6px 10px; border-radius: 8px; font-size: .8rem; font-weight: 600; white-space: nowrap; opacity: 0; pointer-events: none; transition: opacity .15s, transform .15s; z-index: 5; box-shadow: 0 6px 18px rgba(0, 0, 0, .25); }
+.liga a:hover::after, .liga a:focus-visible::after { opacity: 1; transform: translate(-50%, 0); }
+
+/* Quatro colunas no comparativo */
+.crit-col { gap: 1px; background: var(--line); }
+.crit-p, .crit-p + .crit-p { border: 0; background: var(--surface); }
+@media (min-width: 760px) { .crit-col { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1180px) { .crit-col { grid-template-columns: repeat(4, 1fr); } }
+img.sig { width: 38px; height: 38px; border-radius: 50%; object-fit: cover; object-position: 50% 20%; padding: 0; }
+.th-p { display: inline-flex; align-items: center; gap: 8px; }
+.th-p img { width: 30px; height: 30px; border-radius: 50%; object-fit: cover; object-position: 50% 20%; border: 1.5px solid var(--sol); }
+@media (max-width: 760px) { .th-p { flex-direction: column; gap: 4px; } }
