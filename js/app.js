@@ -308,18 +308,13 @@
     revs.forEach(function (r) { r.classList.add('on'); });
   }
 
-  /* Barra de progresso e menu ativo */
+  /* Barra de progresso */
   var barra = $('barra');
-  var links = document.querySelectorAll('.menu a');
-  var secs = [].map.call(links, function (a) { return document.querySelector(a.getAttribute('href')); });
   var marcado = false;
   function aoRolar() {
     marcado = false;
     var h = doc.scrollHeight - window.innerHeight;
     barra.style.width = (h > 0 ? window.scrollY / h * 100 : 0) + '%';
-    var atual = -1;
-    secs.forEach(function (s, i) { if (s && s.getBoundingClientRect().top < window.innerHeight * 0.4) atual = i; });
-    links.forEach(function (a, i) { a.classList.toggle('ativo', i === atual); });
   }
   window.addEventListener('scroll', function () {
     if (!marcado) { marcado = true; requestAnimationFrame(aoRolar); }
