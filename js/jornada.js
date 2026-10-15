@@ -109,7 +109,7 @@
       '<div class="aviso"><p data-fala><strong>Antes de começar.</strong> Esta história fala de violência e morte, mas não mostra imagens fortes.</p>' +
       '<p><strong>O que é este material.</strong> Um trabalho pessoal, informal e apartidário, sem ligação com partido, candidato, empresa ou governo. Só entram fatos com data e fonte.</p>' +
       '<p><strong>Feito com ajuda de inteligência artificial.</strong> Pode conter erros: as fontes estão na versão completa.</p></div>' +
-      '<p class="links"><a href="index.html">Versão completa, com linha do tempo</a><a href="index.html#balanco">O balanço de cada regime</a><a href="hoje.html">E hoje? A mesma régua para seis políticos</a><a href="index.html#fontes">Fontes</a></p>' +
+      '<p class="links"><a href="index.html">Versão completa, com linha do tempo</a><a href="index.html#balanco">O balanço de cada regime</a><a href="hoje.html">E hoje? A mesma régua para oito políticos</a><a href="index.html#fontes">Fontes</a></p>' +
       '</section>';
   }
 
