@@ -774,3 +774,20 @@ img.sig { width: 38px; height: 38px; border-radius: 50%; object-fit: cover; obje
 .q-res .st { padding: 5px; background: transparent; }
 .q-res .st i { width: 12px; height: 12px; }
 .q-res small { flex-basis: 100%; padding-left: 4px; text-transform: none; letter-spacing: 0; font-weight: 600; font-size: .82rem; }
+
+/* Cards de "Em volta": blocos com titulo, fatos em lista e nomes em etiquetas */
+.volta-item[open] .volta-corpo { grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr)); align-items: start; }
+.volta-corpo > :not(.vb) { grid-column: 1 / -1; }
+.vb { display: grid; gap: 8px; padding: 12px 14px 14px; border-radius: 12px; background: var(--bg-alt); border: 1px solid var(--line); }
+.vb-tit { margin: 0; font-family: var(--sans); font-size: .78rem; font-weight: 800; letter-spacing: .07em; text-transform: uppercase; color: var(--muted); }
+.vb-lista { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.vb-lista li { position: relative; padding-left: 16px; font-size: .98rem; line-height: 1.5; }
+.vb-lista li::before { content: ''; position: absolute; left: 1px; top: .62em; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
+.vb-lista li.vb-com-chips { padding-left: 0; display: grid; gap: 6px; }
+.vb-lista li.vb-com-chips::before { display: none; }
+.vb-rot { font-weight: 700; font-size: .92rem; }
+.vb-chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.vb-chip { display: inline-block; padding: 4px 10px; border-radius: 999px; background: var(--surface); border: 1px solid var(--line); font-size: .9rem; line-height: 1.35; }
+.vb-chip small { color: var(--muted); font-size: .8rem; }
+.vb:has(.vb-com-chips) { grid-column: 1 / -1; }
+.volta-fontes { display: grid; gap: 6px; }

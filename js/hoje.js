@@ -177,6 +177,57 @@
     todos.setAttribute('aria-pressed', abrir ? 'true' : 'false');
     todos.textContent = abrir ? 'Fechar todos' : 'Abrir todos';
   });
+  /* Cards de "Em volta": cada paragrafo vira um bloco com titulo, um fato por linha e listas de nomes em etiquetas. O texto nao muda. */
+  function frasesV(s) {
+    var fs = frases(s), o = [];
+    fs.forEach(function (f) { if (o.length && /(\b(Jr|Sr|Sra|Dr|Dra|Prof)|\b[A-Z])\.$/.test(o[o.length - 1])) o[o.length - 1] += ' ' + f; else o.push(f); });
+    return o;
+  }
+  function itensLista(s) {
+    var it = [], cur = '', dep = 0;
+    for (var i = 0; i < s.length; i++) {
+      var ch = s[i];
+      if (ch === '(') dep++; else if (ch === ')') dep--;
+      if (ch === ',' && dep === 0) { it.push(cur.trim()); cur = ''; } else cur += ch;
+    }
+    it.push(cur.trim());
+    var ult = it.pop(), d = 0, corte = -1;
+    for (var k = 0; k < ult.length; k++) { var c = ult[k]; if (c === '(') d++; else if (c === ')') d--; else if (d === 0 && ult.substr(k, 3) === ' e ') corte = k; }
+    if (corte > 0) { it.push(ult.slice(0, corte).trim()); it.push(ult.slice(corte + 3).trim()); } else it.push(ult);
+    return it;
+  }
+  function chip(t) { var m = t.match(/^([^(]+?)\s*(\(.+\))$/); return '<span class="vb-chip">' + (m ? m[1] + ' <small>' + m[2] + '</small>' : t) + '</span>'; }
+  function itemVolta(f) {
+    var m = f.match(/^([^:()]{3,60}):\s+(.+?)\.?$/) || f.match(/^(Ficaram de fora)\s+(.+?)\.?$/);
+    if (m) { var its = itensLista(m[2]); if (its.length >= 2) return '<li class="vb-com-chips"><span class="vb-rot">' + m[1] + '</span><span class="vb-chips">' + its.map(chip).join('') + '</span></li>'; }
+    return '<li>' + f + '</li>';
+  }
+  [].forEach.call(document.querySelectorAll('.volta-corpo > p:not(.mas)'), function (p) {
+    var html = p.innerHTML.trim(), tit = '', m = html.match(/^<b>([^<]+)<\/b>\s*/);
+    if (m) { tit = m[1].replace(/[.:]\s*$/, ''); html = html.slice(m[0].length); }
+    var fs = frasesV(html);
+    if (!tit && fs.length < 2) return;
+    var sec = document.createElement('section');
+    sec.className = 'vb';
+    sec.innerHTML = (tit ? '<h4 class="vb-tit">' + tit + '</h4>' : '') + '<ul class="vb-lista">' + fs.map(itemVolta).join('') + '</ul>';
+    p.parentNode.replaceChild(sec, p);
+  });
+  [].forEach.call(document.querySelectorAll('.volta-corpo'), function (c) {
+    var fs = [].filter.call(c.children, function (e) { return e.matches('a.fonte'); });
+    if (fs.length < 2) return;
+    var box = document.createElement('div'), vis = document.createElement('div');
+    box.className = 'volta-fontes'; vis.className = 'fontes-cel';
+    c.insertBefore(box, fs[0]); box.appendChild(vis);
+    fs.slice(0, fs.length > 4 ? 3 : 4).forEach(function (a) { vis.appendChild(a); });
+    if (fs.length > 4) {
+      var det = document.createElement('details'), resto = document.createElement('div');
+      det.className = 'fontes-mais'; resto.className = 'fontes-cel';
+      det.innerHTML = '<summary>Ver todas as ' + fs.length + ' fontes</summary>';
+      fs.slice(3).forEach(function (a) { resto.appendChild(a); });
+      det.appendChild(resto); box.appendChild(det);
+    }
+  });
+
   function abreDoEndereco() { var d = location.hash && document.querySelector(location.hash); if (d && d.tagName === 'DETAILS') d.open = true; }
   window.addEventListener('hashchange', abreDoEndereco); abreDoEndereco();
 })();
