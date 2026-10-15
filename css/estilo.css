@@ -619,3 +619,21 @@ img.sig { width: 38px; height: 38px; border-radius: 50%; object-fit: cover; obje
 .regua-nota .volta-item { background: var(--surface); border: 1px solid var(--line); border-radius: var(--raio); }
 .regua-nota .volta-item .volta-corpo { background: none; border: 0; border-radius: 0; padding: 0 16px 16px; gap: 10px; }
 @media (max-width: 640px) { .regua-nota.volta { grid-template-columns: 1fr; } }
+.volta-mais { display: inline-flex; align-items: center; gap: 6px; justify-self: start; padding: 10px 14px; border-radius: 10px; background: var(--hero-bg); color: var(--sol); font-weight: 700; text-decoration: none; line-height: 1.3; }
+.volta-mais::after { content: " ↗"; }
+.volta-mais:focus-visible, .volta-mais:hover { outline: 2px solid var(--sol); outline-offset: 2px; }
+
+/* Bloco de economia */
+.eco-rol { overflow-x: auto; position: relative; }
+.eco { width: 100%; border-collapse: separate; border-spacing: 0; background: var(--surface); border: 1px solid var(--line); border-radius: var(--raio); overflow: hidden; font-size: .98rem; }
+.eco-cap { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.eco th, .eco td { padding: 14px 16px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); line-height: 1.55; }
+.eco tr:last-child th, .eco tr:last-child td { border-bottom: 0; }
+.eco thead th { background: var(--hero-bg); color: var(--hero-ink); font-family: var(--serif); }
+.eco tbody th { font-weight: 700; width: 24%; }
+.eco tbody th small { display: block; font-weight: 500; color: var(--muted); font-size: .82rem; margin-top: 2px; }
+.eco td b { display: inline-block; margin-top: 4px; }
+.eco-nota { margin-top: 18px; grid-template-columns: 1fr; }
+.eco-fontes { display: flex; flex-wrap: wrap; gap: 6px 14px; margin-top: 8px; }
+.eco-fontes .fonte { margin-top: 0; }
+@media (max-width: 640px) { .eco { font-size: .9rem; } .eco th, .eco td { padding: 10px 10px; } .eco tbody th { width: 30%; } }

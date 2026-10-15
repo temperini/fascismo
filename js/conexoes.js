@@ -34,7 +34,10 @@
     palocci: ['Antonio Palocci', 1130, 470],
     dilma: ['Dilma Rousseff', 990, 735],
     cunha: ['Eduardo Cunha', 940, 615],
-    canella: ['Márcio Canella', 430, 880]
+    canella: ['Márcio Canella', 430, 880],
+    frias: ['Mario Frias', 700, 905],
+    zettel: ['Fabiano Zettel', 640, 505],
+    tomaz: ['Willer Tomaz', 250, 900]
   };
   /* [de, para, tipo, texto, posicao do numero na linha (opcional, 0 a 1), fonte (opcional, para fatos que nao estao no resto da pagina)] */
   var L = [
@@ -43,12 +46,12 @@
     ['jair', 'carlos', 'familia', 'Pai e filho. Carlos foi eleito senador em 2026.'],
     ['jair', 'michelle', 'familia', 'Marido e mulher. Michelle foi eleita senadora em 2026.'],
     ['flavio', 'vorcaro', 'dinheiro', 'Cerca de R$ 62 milhões do banqueiro para o filme sobre Jair; a PF investiga Flávio desde 07/2026.'],
-    ['jair', 'vorcaro', 'dinheiro', 'O cunhado de Vorcaro foi o maior doador da campanha de Jair em 2022 (R$ 2 milhões).'],
-    ['vorcaro', 'moraes', 'dinheiro', 'Contratos de cerca de R$ 129 milhões com o escritório da mulher do ministro; ele chama as mensagens de mentiras.'],
+    ['jair', 'zettel', 'dinheiro', 'Fabiano Zettel, cunhado de Vorcaro, foi o maior doador da campanha de Jair em 2022 (R$ 2 milhões). Está preso desde 03/2026.'],
+    ['vorcaro', 'moraes', 'dinheiro', 'Contratos de cerca de R$ 129 milhões com o escritório da mulher do ministro, Viviane Barci; em 08/2025, o casal usou um jato do qual uma empresa de Vorcaro era cotista. Ele chama as mensagens de mentiras.'],
     ['vorcaro', 'toffoli', 'dinheiro', 'Empresa de que Toffoli é sócio vendeu parte de um resort a empresa ligada ao cunhado de Vorcaro.'],
     ['vorcaro', 'kassio', 'dinheiro', 'Mensagens citam "Kassio" numa festa de Vorcaro; consultoria paga pelo banco pagou o filho do ministro. Ele nega.'],
     ['vorcaro', 'mendonca', 'poder', 'Mendonça admitiu ter se encontrado com Vorcaro em 2025 e nega ter tratado do banco.'],
-    ['vorcaro', 'nikolas', 'dinheiro', 'Vorcaro escreveu que pagou "todos os voos" do deputado; Nikolas nega proximidade.'],
+    ['vorcaro', 'nikolas', 'dinheiro', 'Vorcaro escreveu que pagou "todos os voos" do deputado. Em 2024, o pastor André Valadão, da Lagoinha, intermediou um pedido de desculpas de Nikolas a Vorcaro. Nikolas nega proximidade.'],
     ['vorcaro', 'lula', 'poder', 'Lula recebeu Vorcaro no Palácio em 12/2024, sem irregularidade apontada.'],
     ['jair', 'kassio', 'poder', 'Jair indicou Kassio ao STF em 2020.', 0.3],
     ['jair', 'mendonca', 'poder', 'Jair indicou Mendonça ao STF em 2021, como "terrivelmente evangélico".'],
@@ -83,6 +86,9 @@
     ['maduro', 'ortega', 'poder', 'Aliados: em 2021, Maduro saudou a reeleição de Ortega, feita com os sete principais rivais presos.', 0.5, ['RPP', 'https://rpp.pe/mundo/actualidad/nicaragua-tiene-quien-la-defienda-nicolas-maduro-saluda-la-segura-reeleccion-de-daniel-ortega-noticia-1367976']],
     ['lula', 'ortega', 'rompe', 'Ortega ignorou o pedido de Lula pela libertação de um bispo preso; em 08/2024, os dois países expulsaram os embaixadores um do outro.', 0.5, ['SBT News', 'https://sbtnews.sbt.com.br/noticia/politica/em-retaliacao-a-ortega-governo-lula-expulsa-embaixadora-da-nicaragua']],
     ['flavio', 'canella', 'poder', 'Flávio apoiou Canella ao Senado em 2026, com a própria mãe como suplente; Canella foi preso duas vezes na operação Unha e Carne e nega os crimes.', 0.5, ['Jornal do Brasil', 'https://www.jb.com.br/brasil/politica/2026/07/1060205-preso-pela-pf-canella-e-o-candidato-ao-senado-de-flavio-bolsonaro-no-rj.html']],
+    ['frias', 'vorcaro', 'dinheiro', 'O deputado e ator Mario Frias (PL), reeleito em 2026, criou a história do filme sobre Jair e agradeceu a Vorcaro pelo apoio; a produtora nega ter recebido dinheiro do banqueiro.', 0.16, ['O Povo (BBC)', 'https://www.opovo.com.br/agencia/bbc/2026/05/27/de-baixissimo-orcamento-a-milhoes-pedidos-a-vorcaro-os-bastidores-do-filme-sobre-bolsonaro.html']],
+    ['vorcaro', 'zettel', 'familia', 'Cunhado e, segundo a PF, operador financeiro de Vorcaro. A igreja Lagoinha de Belo Horizonte recebeu R$ 19,2 milhões dele entre 2024 e 2025, segundo o Coaf.', 0.5, ['Correio Braziliense', 'https://www.correiobraziliense.com.br/economia/2026/01/7343481-church-bank-banco-master-lagoinha-e-as-conexoes-sob-investigacao.html']],
+    ['flavio', 'tomaz', 'dinheiro', 'A PF aponta Flávio como "usuário master" da conta de uma empresa do advogado Willer Tomaz, dona de um terço do jato também usado por Vorcaro; Tomaz é investigado na fraude do INSS. Flávio nega e diz que o vínculo foi um erro corrigido.', 0.75, ['BPMoney', 'https://bpmoney.com.br/politica/flavio-bolsonaro-usuario-master-offshore-jato-vorcaro/']],
     ['flavio', 'bukele', 'poder', 'Flávio e Eduardo foram a El Salvador em 11/2025 estudar o modelo de segurança de Bukele e se reuniram com o ministro da Segurança dele.', 0.5, ['CNN Brasil', 'https://www.cnnbrasil.com.br/politica/flavio-e-eduardo-vao-a-el-salvador-encontrar-bukele/']]
   ];
   var TIPOS = { familia: 'Família', dinheiro: 'Dinheiro ou negócios', poder: 'Poder e alianças', justica: 'Justiça e investigação', rompe: 'Rompimento ou conflito' };
