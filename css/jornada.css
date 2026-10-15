@@ -171,3 +171,11 @@ svg.ic { width: 1.3em; height: 1.3em; fill: none; stroke: currentColor; stroke-w
   .carta[aria-pressed="true"] .carta-in { transform: none; }
   .carta[aria-pressed="true"] .verso { transform: none; }
 }
+
+/* Ponte para o "E hoje?" no fim da jornada */
+.ponte-hoje { display: grid; gap: 6px; width: 100%; text-align: left; padding: 18px 20px; border-radius: 20px; background: var(--surface); border: 2px solid var(--sol); color: var(--ink); text-decoration: none; box-shadow: 0 6px 18px rgba(0, 0, 0, .12); }
+.ponte-hoje .olho { font-size: .72em; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+.ponte-hoje b { font-family: var(--serif); font-size: 1.5em; line-height: 1.1; }
+.ponte-hoje b::after { content: ' \2192'; color: var(--acc); }
+.ponte-hoje span:last-child { font-size: .95em; line-height: 1.45; }
+.ponte-hoje:hover, .ponte-hoje:focus-visible { outline: 3px solid var(--sol); outline-offset: 3px; }

@@ -178,6 +178,7 @@
       '<h1 class="tit" data-fala>Você completou a jornada</h1>' +
       '<p class="txt" data-fala>Sete luzes acesas. Eles prometeram trabalho, ordem e orgulho. Entregaram guerra, prisão e morte. Agora você sabe como começou.</p>' +
       (meu ? '<p class="olho">O sinal que você escolheu guardar</p><p class="compromisso" data-fala>' + esc(meu) + '</p>' : '') +
+      '<a class="ponte-hoje" href="hoje.html"><span class="olho">Próximo passo</span><b data-fala>E hoje?</b><span data-fala>A mesma régua aplicada a oito políticos de hoje: Lula, Flávio, Jair, Trump, Milei, Bukele, Maduro e Ortega. Com o quadro dos 10 critérios, o mapa de quem se liga a quem e cada fato com fonte.</span></a>' +
       '<button class="bt bt-pri bt-grande" type="button" data-acao="compartilhar">Compartilhar com alguém</button>' +
       '<p class="nota" id="msg-comp" role="status"></p>' +
       '<a class="bt bt-grande" href="index.html#balanco">Ver os números de cada regime</a>' +
