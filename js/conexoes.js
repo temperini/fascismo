@@ -234,9 +234,9 @@
     if (b || p) { ev.preventDefault(); ev.target.dispatchEvent(new MouseEvent('click', { bubbles: true })); }
   });
   balao.addEventListener('click', function (ev) {
-    if (ev.target.closest('.r-fecha')) { fecha(); return; }
+    if (ev.target.closest('.r-fecha')) { ev.stopPropagation(); fecha(); return; }
     var it = ev.target.closest('.r-item');
-    if (it) { var n = +it.dataset.n; var badge = svg.querySelector('.r-b[data-n="' + n + '"]'); balaoLigacao(n, badge); return; }
+    if (it) { ev.stopPropagation(); var n = +it.dataset.n; var badge = svg.querySelector('.r-b[data-n="' + n + '"]'); balaoLigacao(n, badge); return; }
     var a = ev.target.closest('.r-b-ir');
     if (a) { fecha(false); }
   });
