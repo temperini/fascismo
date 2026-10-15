@@ -432,5 +432,47 @@ window.CREDITOS = [
         "autor":  "Agência Senado",
         "licenca":  "CC BY 2.0",
         "pagina":  "https://commons.wikimedia.org/wiki/File:Frederick_Wassef_(cropped).jpg"
+    },
+    {
+        "id":  "guerra-1918",
+        "nome":  "Soldados voltam da guerra, Berlim, 1918",
+        "autor":  "Underwood and Underwood / Arquivo Nacional dos EUA",
+        "licenca":  "Domínio público",
+        "pagina":  "https://commons.wikimedia.org/wiki/File:Enemy_Activities_-_German_Revolution_Continued_-_German_soldiers_return_to_Berlin._German_troops_just_back_from_war,_already_loyal_supporters_of_Ebert_Government,_passing_through_Brandenburger_Gate_on_Paris_Squar(...)_-_NARA_-_31478547.jpg"
+    },
+    {
+        "id":  "inflacao-1923",
+        "nome":  "Notas de dinheiro como papel de parede, Alemanha, 1923",
+        "autor":  "Georg Pahl / Arquivo Federal da Alemanha",
+        "licenca":  "CC BY-SA 3.0 de",
+        "pagina":  "https://commons.wikimedia.org/wiki/File:Bundesarchiv_Bild_102-00104,_Inflation,_Tapezieren_mit_Geldscheinen.jpg"
+    },
+    {
+        "id":  "boicote-1933",
+        "nome":  "Boicote às lojas judaicas, Berlim, 1933",
+        "autor":  "Georg Pahl / Arquivo Federal da Alemanha",
+        "licenca":  "CC BY-SA 3.0 de",
+        "pagina":  "https://commons.wikimedia.org/wiki/File:Bundesarchiv_Bild_102-14468,_Berlin,_NS-Boykott_gegen_j%C3%BCdische_Gesch%C3%A4fte_crop.jpg"
+    },
+    {
+        "id":  "sindicatos-1933",
+        "nome":  "Placa sobre a invasão da sede dos sindicatos em 1933, Hamburgo",
+        "autor":  "Ajepbah",
+        "licenca":  "CC BY-SA 3.0",
+        "pagina":  "https://commons.wikimedia.org/wiki/File:Gedenktafel_Besenbinderhof_60_(Hamburg-St._Georg).jpg"
+    },
+    {
+        "id":  "leis-1935",
+        "nome":  "Quadro das Leis de Nuremberg, 1935",
+        "autor":  "Governo alemão, 1935",
+        "licenca":  "Domínio público",
+        "pagina":  "https://commons.wikimedia.org/wiki/File:Nuremberg_laws_Racial_Chart.jpg"
+    },
+    {
+        "id":  "stolpersteine",
+        "nome":  "Pedras de tropeço em Berlim",
+        "autor":  "Leonhard Lenz",
+        "licenca":  "CC0",
+        "pagina":  "https://commons.wikimedia.org/wiki/File:Stolpersteine_Handjerystra%C3%9Fe_37_Berlin-Friedenau_01.jpg"
     }
 ];
