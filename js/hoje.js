@@ -62,9 +62,14 @@
   /* Celulas longas: o texto vira lista de fatos, com os primeiros visiveis e o resto atras de um botao */
   function frases(s) { return String(s).replace(/([.!?]["\u201d]?)\s+(?=["\u201c(]?[A-Z\u00c0-\u00dd])/g, '$1|#|').split('|#|'); }
   var nFatos = 0;
+  function contra(s) {
+    var fs = frasesV(s);
+    return fs.length < 3 ? esc(s) : '<ul class="mas-lista">' + fs.map(function (f) { return '<li>' + esc(f) + '</li>'; }).join('') + '</ul>';
+  }
   function fatos(x) {
-    var fs = frases(x);
-    if (x.length < 380 || fs.length < 3) return '<p>' + esc(x) + '</p>';
+    var fs = frasesV(x);
+    if (fs.length < 2) return '<p>' + esc(x) + '</p>';
+    if (x.length < 380 || fs.length < 3) return '<ul class="fatos">' + fs.map(function (f) { return '<li>' + esc(f) + '</li>'; }).join('') + '</ul>';
     var id = 'fatos-' + (++nFatos), vis = 2;
     return '<ul class="fatos" id="' + id + '">' + fs.map(function (f, i) { return '<li' + (i >= vis ? ' class="fato-mais" hidden' : '') + '>' + esc(f) + '</li>'; }).join('') + '</ul>' +
       (fs.length > vis ? '<button type="button" class="fatos-btn" aria-controls="' + id + '" aria-expanded="false" data-n="' + (fs.length - vis) + '">Ver mais ' + (fs.length - vis) + (fs.length - vis === 1 ? ' fato' : ' fatos') + '</button>' : '');
@@ -90,7 +95,7 @@
         return '<p class="grupo-tit">' + g[1] + '</p><div class="crit-col">' + H.pessoas.filter(function (p) { return p.grupo === g[0]; }).map(function (p) {
         var d = c[p.id];
         return '<section class="crit-p" id="crit-' + c.n + '-' + p.id + '"><h4>' + (p.img ? '<img class="sig" src="' + p.img + '" alt="" loading="lazy">' : '<span class="sig" aria-hidden="true">' + p.sig + '</span>') + esc(p.nome) + '</h4>' + selo(d.st) + (d.peso ? '<span class="peso">' + esc(d.peso) + '</span>' : '') +
-          fatos(d.x) + '<div class="mas"><b>O que pesa contra a comparação</b>' + esc(d.mas) + '</div>' +
+          fatos(d.x) + '<div class="mas"><b>O que pesa contra a comparação</b>' + contra(d.mas) + '</div>' +
           fontes(d) + '</section>';
         }).join('') + '</div>';
       }).join('') + '</article>';

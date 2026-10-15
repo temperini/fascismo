@@ -791,3 +791,6 @@ img.sig { width: 38px; height: 38px; border-radius: 50%; object-fit: cover; obje
 .vb-chip small { color: var(--muted); font-size: .8rem; }
 .vb:has(.vb-com-chips) { grid-column: 1 / -1; }
 .volta-fontes { display: grid; gap: 6px; }
+.mas-lista { list-style: none; margin: 4px 0 0; padding: 0; display: grid; gap: 6px; }
+.mas-lista li { position: relative; padding-left: 14px; }
+.mas-lista li::before { content: ''; position: absolute; left: 1px; top: .62em; width: 5px; height: 5px; border-radius: 50%; background: currentColor; opacity: .6; }
