@@ -35,6 +35,29 @@
         H.pessoas.map(function (p) { return '<td>' + selo(c[p.id].st) + '</td>'; }).join('') + '</tr>';
     }).join('') + '</tbody>';
 
+  /* Quadro do celular: o nome do criterio em linha propria e os oito simbolos alinhados sob os rostos fixos no topo */
+  var qm = document.getElementById('quadro-m');
+  if (qm) {
+    var curto = function (p) { var w = p.nome.split(' '); return p.grupo === 'brasil' ? w[0] : w[w.length - 1]; };
+    var celulas = function (fn) { var o = '', ant = null; H.pessoas.forEach(function (p) { if (ant && ant !== p.grupo) o += '<span class="qm-sep" aria-hidden="true"></span>'; ant = p.grupo; o += fn(p); }); return o; };
+    qm.innerHTML =
+      '<div class="qm-cab"><div class="qm-grade qm-gt"><span style="grid-column:1/4">Brasil</span><span style="grid-column:5/10">Outros países</span></div>' +
+      '<div class="qm-grade">' + celulas(function (p) { return '<button type="button" class="qm-p" data-p="' + p.id + '" aria-pressed="false"><img src="' + p.img + '" alt=""><span>' + esc(curto(p)) + '</span></button>'; }) + '</div></div>' +
+      '<ol class="qm-lista">' + H.criterios.map(function (c) {
+        return '<li><a class="qm-t" href="#crit-' + c.n + '">' + c.n + '. ' + esc(c.t) + '</a><div class="qm-grade">' +
+          celulas(function (p) { return '<a class="qm-c" data-p="' + p.id + '" href="#crit-' + c.n + '" aria-label="' + esc(p.nome) + ': ' + ROT[c[p.id].st] + '">' + selo(c[p.id].st) + '</a>'; }) + '</div></li>';
+      }).join('') + '</ol>';
+    qm.addEventListener('click', function (ev) {
+      var b = ev.target.closest('.qm-p'); if (!b) return;
+      var id = b.getAttribute('aria-pressed') === 'true' ? null : b.dataset.p;
+      qm.classList.toggle('qm-foco', !!id);
+      [].forEach.call(qm.querySelectorAll('[data-p]'), function (e) {
+        var on = e.dataset.p === id; e.classList.toggle('on', on);
+        if (e.classList.contains('qm-p')) e.setAttribute('aria-pressed', on ? 'true' : 'false');
+      });
+    });
+  }
+
   document.getElementById('lista-crit').innerHTML = H.criterios.map(function (c) {
     return '<article class="crit rev" id="crit-' + c.n + '">' +
       '<header class="crit-cab"><span class="tec-ic">' + ic(c.ic) + '</span><h3>' + c.n + '. ' + esc(c.t) + '</h3>' +
@@ -78,4 +101,16 @@
   }
   window.addEventListener('scroll', function () { if (!marcado) { marcado = true; requestAnimationFrame(aoRolar); } }, { passive: true });
   aoRolar();
+
+  /* "Em volta": abrir/fechar todos e abrir o card quando o endereco aponta para ele */
+  var todos = document.getElementById('volta-todos');
+  var itensVolta = [].slice.call(document.querySelectorAll('.volta-item'));
+  if (todos) todos.addEventListener('click', function () {
+    var abrir = todos.getAttribute('aria-pressed') !== 'true';
+    itensVolta.forEach(function (d) { d.open = abrir; });
+    todos.setAttribute('aria-pressed', abrir ? 'true' : 'false');
+    todos.textContent = abrir ? 'Fechar todos' : 'Abrir todos';
+  });
+  function abreDoEndereco() { var d = location.hash && document.querySelector(location.hash); if (d && d.tagName === 'DETAILS') d.open = true; }
+  window.addEventListener('hashchange', abreDoEndereco); abreDoEndereco();
 })();

@@ -36,6 +36,7 @@
         <li><a href="#como-ler">Como ler</a></li>
         <li><a href="#quadro">O quadro</a></li>
         <li><a href="#em-volta">Em volta das campanhas</a></li>
+        <li><a href="#conexoes">Quem se liga a quem</a></li>
         <li><a href="#criterios">Os 10 critérios</a></li>
       </ul>
       <div class="menu-mais" id="menu-mais" hidden>
@@ -114,6 +115,8 @@
     <li><span class="st st-nao"><i></i><span class="st-t">Não encontrei registro</span></span></li>
   </ul>
   <div class="quadro-rol"><table class="quadro" id="tabela"></table></div>
+  <p class="qm-dica">Toque num rosto para destacar a coluna daquela pessoa. Toque num símbolo ou no nome do critério para ler os fatos.</p>
+  <div class="quadro-m" id="quadro-m"></div>
 </section>
 
 <section class="sec" id="em-volta">
@@ -122,9 +125,11 @@
     <h2>Em volta das campanhas</h2>
     <p class="sec-lead">Fatos de partidos, aliados, familiares e autoridades ligados às campanhas. Não contam nas notas do quadro, que medem só os atos de cada candidato. Ficam registrados porque dizem respeito ao tema desta página.</p>
   </div>
+  <p class="volta-acoes"><button type="button" class="volta-todos" id="volta-todos" aria-pressed="false">Abrir todos</button> <span class="volta-dica">ou toque num título para abrir só aquele assunto.</span></p>
   <div class="regua-nota volta">
-    <div class="rev">
-      <b>A imagem comparada a um cartaz de Mussolini</b>
+    <details class="rev volta-item" id="volta-1">
+      <summary><span class="volta-n">1</span><span class="volta-tit">A imagem comparada a um cartaz de Mussolini</span><svg class="ic volta-seta" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+      <div class="volta-corpo">
       <figure class="volta-foto">
         <img src="assets/braschi-1934.png" alt="Fachada de um prédio em Roma coberta pela palavra SI repetida dezenas de vezes, com um rosto enorme de Mussolini no centro" loading="lazy" width="458" height="417">
         <figcaption>Sede do Partido Fascista em Roma (Palazzo Braschi), 1934: o rosto de Mussolini cercado pela palavra "Sì" ("sim"), na campanha do plebiscito daquele ano. Autor desconhecido, domínio público, via <a href="https://commons.wikimedia.org/wiki/File:Palazzo_Braschi_Fascist_Poster,_1934.png" target="_blank" rel="noopener">Wikimedia Commons</a>.</figcaption>
@@ -133,17 +138,21 @@
       <p class="mas"><b>O que o partido respondeu</b>A imagem foi apagada. O PL atribuiu a arte à sua ala jovem, que disse ter se inspirado em "peças gráficas da antiguidade", e pediu desculpas "pelo equívoco e por qualquer interpretação decorrente dessa coincidência". A reportagem não registra comentário do candidato.</p>
       <a class="fonte" href="https://www.jb.com.br/brasil/politica/2026/10/1061196-coincidencia-diz-pl-sobre-propaganda-de-flavio-bolsonaro-copiada-de-mussolini.html" target="_blank" rel="noopener">Fonte: Jornal do Brasil</a>
       <a class="fonte" href="https://agendadopoder.com.br/pl-apaga-propaganda-de-flavio-bolsonaro-apos-comparacao-com-mussolini/" target="_blank" rel="noopener">Fonte: Agenda do Poder</a>
-    </div>
-    <div class="rev">
-      <b>O canal "Exército do Lula"</b>
+      </div>
+    </details>
+    <details class="rev volta-item" id="volta-2">
+      <summary><span class="volta-n">2</span><span class="volta-tit">O canal "Exército do Lula"</span><svg class="ic volta-seta" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+      <div class="volta-corpo">
       <p>Um deputado aliado de Lula, André Janones, criou e administra um canal de WhatsApp com esse nome, com mais de 3 milhões de seguidores. Em 11/10/2026, o presidente do tribunal eleitoral mandou suspender o canal, a pedido da campanha de Flávio, que o acusa de espalhar desinformação e coordenar ataques.</p>
       <p class="mas"><b>O que veio depois</b>Em 13/10/2026, o presidente do tribunal liberou o canal depois que a campanha de Lula o registrou como endereço oficial, com volta marcada para 48 horas depois. O deputado nega espalhar desinformação. Em resposta, um deputado aliado de Flávio criou o canal "Tropa do Flávio".</p>
       <a class="fonte" href="https://agenciabrasil.ebc.com.br/justica/noticia/2026-10/tse-atende-flavio-e-manda-suspender-canal-do-whatsapp-exercito-do-lula" target="_blank" rel="noopener">Fonte: Agência Brasil</a>
       <a class="fonte" href="https://www.metropoles.com/brasil/exercito-do-lula-apos-registro-no-tse-nunes-marques-autoriza-canal" target="_blank" rel="noopener">Fonte: Metrópoles</a>
       <a class="fonte" href="https://www.gazetadopovo.com.br/republica/nunes-marques-se-reune-com-campanhas-de-lula-e-flavio-em-meio-a-criticas-ao-tse/" target="_blank" rel="noopener">Fonte: Gazeta do Povo</a>
-    </div>
-    <div class="rev">
-      <b>A campanha de Flávio e a sanção dos EUA a Moraes</b>
+      </div>
+    </details>
+    <details class="rev volta-item" id="volta-3">
+      <summary><span class="volta-n">3</span><span class="volta-tit">A campanha de Flávio e a sanção dos EUA a Moraes</span><svg class="ic volta-seta" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+      <div class="volta-corpo">
       <p>Em 07/2025, Trump ligou a tarifa de 50% sobre produtos brasileiros à "caça às bruxas" contra Jair Bolsonaro, e o governo dos EUA aplicou a Lei Magnitsky ao ministro Alexandre de Moraes, depois de meses de pedidos de Eduardo Bolsonaro. A sanção foi retirada em 12/2025, e Flávio disse que a retirada era um "gesto gigantesco" pela anistia. Em 05/2026, Flávio chefiou uma comitiva a Washington e foi recebido por Trump; nas reuniões, os dois aliados que viajaram com ele, o irmão Eduardo e Paulo Figueiredo, pediram a volta da sanção.</p>
       <p class="mas"><b>O que eles dizem</b>Figueiredo afirma que o pedido foi dele e de Eduardo, e que Flávio preferiu não tratar do tema. Flávio diz que a decisão é das autoridades americanas. Eduardo foi condenado pelo STF por coação no curso do processo.</p>
       <a class="fonte" href="https://www.infomoney.com.br/politica/eduardo-bolsonaro-agradece-tarifa-de-trump-e-pede-apoio-de-sancoes-contra-moraes/" target="_blank" rel="noopener">Fonte: InfoMoney</a>
@@ -151,9 +160,11 @@
       <a class="fonte" href="https://www.cnnbrasil.com.br/blogs/priscila-yazbek/politica/flavio-bolsonaro-se-reune-com-donald-trump-na-casa-branca/" target="_blank" rel="noopener">Fonte: CNN Brasil</a>
       <a class="fonte" href="https://jornaldebrasilia.com.br/noticias/politica-e-poder/alem-de-cv-e-pcc-como-terroristas-aliados-de-flavio-pediram-a-trump-volta-de-magnitsky-a-moraes/" target="_blank" rel="noopener">Fonte: Jornal de Brasília (Folha)</a>
       <a class="fonte" href="https://noticias.stf.jus.br/postsnoticias/stf-condena-eduardo-bolsonaro-por-coacao-no-curso-do-processo-sobre-tentativa-de-golpe/" target="_blank" rel="noopener">Fonte: STF</a>
-    </div>
-    <div class="rev">
-      <b>O caso Master: quem aparece</b>
+      </div>
+    </details>
+    <details class="rev volta-item" id="volta-4">
+      <summary><span class="volta-n">4</span><span class="volta-tit">O caso Master: quem aparece</span><svg class="ic volta-seta" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+      <div class="volta-corpo">
       <p>O banco de Daniel Vorcaro, preso desde 11/2025, tocou pessoas de todos os lados. Aparecer em mensagens não prova crime. Abaixo, o que está documentado e a resposta de cada um.</p>
       <ul class="volta-lista"><li><b>Alexandre de Moraes</b> (STF, indicado por Temer): o escritório da mulher dele teve contratos de cerca de R$ 129 milhões com Vorcaro, e mensagens de Vorcaro falam em "dívida de vida" com o ministro. A PF não concluiu que houve crime. Ele chama as mensagens de "criminosas mentiras".</li><li><b>Dias Toffoli</b> (STF, indicado por Lula): é sócio de uma empresa que vendeu parte de um resort a uma empresa ligada ao cunhado de Vorcaro. Nega ter recebido dinheiro dele.</li><li><b>André Mendonça</b> (STF, indicado por Jair): admitiu ter se encontrado com Vorcaro em 2025. Nega ter tratado do banco.</li><li><b>Lula</b> (PT): recebeu Vorcaro no Palácio, sem irregularidade apontada. Um áudio sobre R$ 30 milhões para um documentário sobre ele é negado pela PGR, pela PF e pelos advogados de Vorcaro.</li><li><b>Jair Bolsonaro e Tarcísio de Freitas</b> (PL e Republicanos): o cunhado de Vorcaro foi o maior doador das campanhas deles em 2022, com R$ 2 milhões e R$ 3 milhões. As doações foram declaradas.</li><li><b>Nikolas Ferreira</b> (PL): chamou Vorcaro de "lindão" e pediu ajuda para um negócio de um ex-assessor; Vorcaro escreveu "banquei todos os voos dele". Confirma as mensagens e nega proximidade.</li><li><b>Ciro Nogueira</b> (PP): trocou mensagens com Vorcaro, e a PF apura se recebeu pagamentos. Nega irregularidade.</li></ul>
       <p class="mas"><b>Para ler com cuidado</b>As ligações de Flávio Bolsonaro com Vorcaro estão no critério 7 do quadro. Investigação não é condenação, e boa parte do processo está em sigilo.</p>
@@ -162,9 +173,11 @@
       <a class="fonte" href="https://diariodonordeste.verdesmares.com.br/pontopoder/moraes-nega-favorecimento-a-vorcaro-e-chama-investigacao-de-farsa-e-vinganca-1.3791536" target="_blank" rel="noopener">Fonte: Diário do Nordeste</a>
       <a class="fonte" href="https://www.cnnbrasil.com.br/eleicoes/vorcaro-cita-r-30-milhoes-a-filme-de-lula-o-que-sabemos-ate-agora/" target="_blank" rel="noopener">Fonte: CNN Brasil</a>
       <a class="fonte" href="https://www.gazetadopovo.com.br/republica/nikolas-ferreira-nega-relacao-proximidade-vorcaro/" target="_blank" rel="noopener">Fonte: Gazeta do Povo</a>
-    </div>
-    <div class="rev">
-      <b>Kassio Nunes Marques, presidente do tribunal eleitoral</b>
+      </div>
+    </details>
+    <details class="rev volta-item" id="volta-5">
+      <summary><span class="volta-n">5</span><span class="volta-tit">Kassio Nunes Marques, presidente do tribunal eleitoral</span><svg class="ic volta-seta" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+      <div class="volta-corpo">
       <p>Indicado ao STF por Jair Bolsonaro, preside o tribunal eleitoral nesta eleição. No celular de Vorcaro, a PF encontrou mensagens sobre uma festa no triplex dele em São Paulo, em 28/02/2025, que custou R$ 62,3 mil e teve ordem para recolher os celulares dos convidados. Às 20h56, um funcionário relatou ter cedido um quarto a um "ministro com 5 meninas". Dias depois, a mulher que levou as convidadas cobrou R$ 10 mil e disse que uma delas ficou com "Kassio".</p>
       <p>Segundo o Coaf, uma consultoria que recebeu R$ 6,6 milhões do Master pagou R$ 281 mil ao advogado Kevin Marques, filho do ministro; mensagens de Vorcaro citam ainda um pagamento de R$ 500 mil a ele, não confirmado. A PF prepara para o presidente do STF um relatório com todas as menções a ministros.</p>
       <p class="mas"><b>O que ele responde</b>Kassio nega proximidade com Vorcaro, diz que nunca autorizou ninguém a falar em nome dele e que votou para mantê-lo preso. As mensagens não trazem o nome completo dele, e ele não respondeu se esteve na festa. O filho diz que os pagamentos são de trabalho de advocacia e que não prestou serviço ao Master.</p>
@@ -174,9 +187,11 @@
       <a class="fonte" href="https://www.gazetadopovo.com.br/republica/filho-nunes-marques-teria-recebido-500-mil-master-aponta-pf/" target="_blank" rel="noopener">Fonte: Gazeta do Povo</a>
       <a class="fonte" href="https://sbtnews.sbt.com.br/colunas/coluna-da-carla/pf-entregara-a-fachin-pente-fino-de-arquivos-sobre-ministros" target="_blank" rel="noopener">Fonte: SBT News</a>
       <a class="fonte" href="https://www.poder360.com.br/poder-justica/kassio-nega-relacao-com-master-e-diz-ter-absoluta-isencao/" target="_blank" rel="noopener">Fonte: Poder360</a>
-    </div>
-    <div class="rev">
-      <b>As mulheres dos candidatos</b>
+      </div>
+    </details>
+    <details class="rev volta-item" id="volta-6">
+      <summary><span class="volta-n">6</span><span class="volta-tit">As mulheres dos candidatos</span><svg class="ic volta-seta" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+      <div class="volta-corpo">
       <p>Mulher de candidato não recebe nota. Entra aqui quando o fato envolve cargo público ou o próprio candidato.</p>
       <ul class="volta-lista"><li><b>Michelle Bolsonaro</b>, eleita senadora pelo Distrito Federal em 04/10/2026. Em 08/2022, num culto, disse que o Palácio do Planalto "já foi consagrado a demônios" e hoje é "consagrado ao Senhor Jesus". No mesmo mês, compartilhou um vídeo de Lula com lideranças da umbanda e do candomblé que ligava essas religiões às "trevas"; o Ministério Público Federal arquivou a denúncia por racismo religioso, por entender que era liberdade de expressão. Em 10/2021, joias de diamante de R$ 16,5 milhões, presente do governo saudita, foram apreendidas em Guarulhos na mochila de um assessor do ministro Bento Albuquerque, sem declaração à Receita; o ministro disse que eram "para a primeira-dama". A PF indiciou Jair no caso; Michelle não foi indiciada e diz que não sabia das joias.</li><li><b>Janja</b>, mulher de Lula. O Tribunal de Contas da União arquivou por unanimidade, em 04/2026, todos os processos sobre gastos dela em viagens, sem achar irregularidade. Em 04/2026, publicou vídeo preparando carne de paca, roedor silvestre de caça proibida; disse que veio de criador legalizado, e a venda de criadouros autorizados pelo Ibama é permitida. Ambientalistas criticaram, e a origem não foi comprovada publicamente.</li><li><b>Fernanda Bolsonaro</b>, mulher de Flávio: a compra da mansão do casal com financiamento do BRB está no critério 7 do quadro.</li><li><b>Melania Trump</b> e <b>Rosario Murillo</b>, mulher de Ortega e copresidente da Nicarágua, estão no critério 7.</li><li><b>Gabriela Rodríguez</b>, mulher de Bukele, coordenou programas sociais sem cargo eletivo. Não achei fato que se encaixe nos critérios.</li></ul>
       <p class="mas"><b>Para ler com cuidado</b>Fatos de cônjuges não contam nas notas dos candidatos. A paca não está na lista de espécies ameaçadas de extinção; o risco para ela é a caça ilegal.</p>
@@ -188,18 +203,22 @@
       <a class="fonte" href="https://www.cnnbrasil.com.br/politica/janja-diz-que-criticas-sobre-gastos-no-exterior-sao-misoginia-pura/" target="_blank" rel="noopener">Fonte: CNN Brasil</a>
       <a class="fonte" href="https://www.gazetadopovo.com.br/vida-e-cidadania/ibama-silencia-paca-janja-lula-ativistas-criticam/" target="_blank" rel="noopener">Fonte: Gazeta do Povo</a>
       <a class="fonte" href="https://atarde.com.br/agro/comer-paca-e-crime-o-que-diz-lei-sobre-consumo-de-animais-silvestres-1385224" target="_blank" rel="noopener">Fonte: A Tarde</a>
-    </div>
-    <div class="rev">
-      <b>Os outros filhos de Jair</b>
+      </div>
+    </details>
+    <details class="rev volta-item" id="volta-7">
+      <summary><span class="volta-n">7</span><span class="volta-tit">Os outros filhos de Jair</span><svg class="ic volta-seta" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+      <div class="volta-corpo">
       <ul class="volta-lista"><li><b>Carlos Bolsonaro</b>, eleito senador em 2026. Em 2024, o Ministério Público do Rio denunciou sete pessoas do gabinete dele na Câmara Municipal por desviar ao menos R$ 1,7 milhão em "rachadinha", mas arquivou a parte dele. Em 02/2026, o caso foi reaberto: a revisão apontou que o arquivamento deixou de lado um saque de cofre bancário e a compra de um apartamento por ele.</li><li><b>Eduardo Bolsonaro</b>: fez nos EUA o pedido de sanções a Moraes (ver o card acima) e foi condenado pelo STF, em 06/2026, a 4 anos e 2 meses por coação no curso do processo; ainda cabe recurso.</li><li><b>Jair Renan Bolsonaro</b>: a PF investigou se ele fez tráfico de influência para empresários que lhe deram um carro de R$ 90 mil, e encerrou o caso em 2022 sem indiciá-lo.</li></ul>
       <p class="mas"><b>O que eles dizem</b>Carlos não comentou a reabertura. Os filhos negam irregularidades e chamam as investigações de perseguição.</p>
       <a class="fonte" href="https://agenciabrasil.ebc.com.br/justica/noticia/2024-09/mp-denuncia-7-por-rachadinha-no-gabinete-do-vereador-carlos-bolsonaro" target="_blank" rel="noopener">Fonte: Agência Brasil</a>
       <a class="fonte" href="https://diariodorio.com/mp-reabre-investigacoes-contra-carlos-bolsonaro-por-rachadinha" target="_blank" rel="noopener">Fonte: Diário do Rio</a>
       <a class="fonte" href="https://www.nexojornal.com.br/extra/2022/08/31/policia-federal-encerra-investigacao-sobre-jair-renan-bolsonaro" target="_blank" rel="noopener">Fonte: Nexo</a>
       <a class="fonte" href="https://noticias.stf.jus.br/postsnoticias/stf-condena-eduardo-bolsonaro-por-coacao-no-curso-do-processo-sobre-tentativa-de-golpe/" target="_blank" rel="noopener">Fonte: STF</a>
-    </div>
-    <div class="rev">
-      <b>Ex-aliados: o que disseram e o que fazem hoje</b>
+      </div>
+    </details>
+    <details class="rev volta-item" id="volta-8">
+      <summary><span class="volta-n">8</span><span class="volta-tit">Ex-aliados: o que disseram e o que fazem hoje</span><svg class="ic volta-seta" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+      <div class="volta-corpo">
       <p><b>Major Olímpio.</b> Eleito senador por São Paulo em 2018 na onda de Bolsonaro, virou líder do PSL no Senado. Em 05/2020, num áudio a policiais, disse que o presidente rompeu com ele "para proteger filho bandido" e afirmou: "ladrão de direita também é ladrão". Defendia a vacinação e morreu de covid em 18/03/2021; no mesmo dia, colegas divulgaram um vídeo dele a favor da vacina. Em 04/2021, o Senado aprovou a "PEC Major Olímpio", que isenta vacinas de impostos, ideia dele.</p>
       <p><b>Sergio Moro.</b> Deixou o Ministério da Justiça em 24/04/2020 acusando o presidente de "interferência política" na Polícia Federal. Em 01/2022, escreveu que Bolsonaro "mentiu sobre vacinas" e que "assim como Lula, Bolsonaro mente"; Bolsonaro o chamou de "palhaço", "mentiroso" e "traíra". Em 2026, filiou-se ao PL ao lado de Flávio, foi eleito governador do Paraná no 1º turno, com 50,1% dos votos, e faz campanha por Flávio no 2º turno.</p>
       <p class="mas"><b>Para ler com cuidado</b>O áudio de Olímpio fala em "filho bandido" sem dizer o nome. A PF concluiu em 2022 que não houve interferência na PF, e o inquérito foi reaberto em 10/2025.</p>
@@ -212,11 +231,83 @@
       <a class="fonte" href="https://www.poder360.com.br/governo/moro-e-palhaco-esta-mentindo-e-nao-tem-carater-diz-bolsonaro/" target="_blank" rel="noopener">Fonte: Poder360</a>
       <a class="fonte" href="https://www.tse.jus.br/comunicacao/noticias/2026/Outubro/sergio-moro-pl-e-eleito-governador-do-parana-no-1o-turno" target="_blank" rel="noopener">Fonte: TSE</a>
       <a class="fonte" href="https://www.folhadelondrina.com.br/politica/moro-reune-230-prefeitos-e-quase-3-mil-pessoas-em-evento-pro-flavio-em-curitiba-3328533e.html" target="_blank" rel="noopener">Fonte: Folha de Londrina</a>
-    </div>
+      </div>
+    </details>
+    <details class="rev volta-item" id="volta-9">
+      <summary><span class="volta-n">9</span><span class="volta-tit">O impeachment de Dilma (2016) e quem estava nele</span><svg class="ic volta-seta" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+      <div class="volta-corpo">
+      <p>Em 12/2015, o então presidente da Câmara, Eduardo Cunha, abriu o processo de impeachment de Dilma Rousseff, acusada de manobras nas contas do governo, as "pedaladas fiscais". Em 03/2016, Dilma nomeou Lula ministro da Casa Civil; o ministro Gilmar Mendes suspendeu a posse por ver tentativa de dar a Lula foro no STF e atrasar a Lava Jato. O áudio de Dilma e Lula que motivou a crise foi divulgado pelo juiz Sergio Moro, e o STF considerou a divulgação ilegal e anulou a gravação.</p>
+      <p>Em 04/2016, Jair Bolsonaro dedicou seu voto pelo impeachment ao torturador Brilhante Ustra (ver critério 5). O Senado tirou Dilma do cargo em 31/08/2016. Em 09/2016, Cunha foi cassado pelos colegas e, em 2017, condenado por Moro a 15 anos por corrupção na Lava Jato; as condenações foram anuladas em 2021 e 2023. Em 2026, Flávio gravou vídeo de apoio à candidatura de Cunha a deputado federal, dizendo que ele "derrubou a Dilma"; Cunha declarou apoio a Flávio.</p>
+      <p class="mas"><b>Para ler com cuidado</b>O impeachment seguiu o rito da Constituição e foi aprovado pelo Congresso. A suspensão da posse de Lula foi uma decisão provisória que nunca chegou a ser julgada pelo plenário. A anulação das condenações de Cunha não foi uma absolvição.</p>
+      <a class="fonte" href="https://www.conjur.com.br/2016-mar-18/gilmar-mendes-suspende-nomeacao-lula-casa-civil//?print=1" target="_blank" rel="noopener">Fonte: Consultor Jurídico</a>
+      <a class="fonte" href="https://www.gazetadopovo.com.br/vida-publica/apos-anular-grampo-teori-devolve-inquerito-contra-lula-e-dilma-a-pgr-12g0dwcevf4ep0flw12py91fm" target="_blank" rel="noopener">Fonte: Gazeta do Povo</a>
+      <a class="fonte" href="https://en.wikipedia.org/wiki/Eduardo_Cunha" target="_blank" rel="noopener">Fonte: Wikipédia (Cunha)</a>
+      <a class="fonte" href="https://www.cnnbrasil.com.br/eleicoes/flavio-bolsonaro-apoia-candidatura-de-eduardo-cunha-como-deputado-por-mg/" target="_blank" rel="noopener">Fonte: CNN Brasil</a>
+      <a class="fonte" href="https://www.metropoles.com/brasil/flavio-bolsonaro-grava-video-em-apoio-a-candidatura-de-eduardo-cunha" target="_blank" rel="noopener">Fonte: Metrópoles</a>
+      </div>
+    </details>
+    <details class="rev volta-item" id="volta-10">
+      <summary><span class="volta-n">10</span><span class="volta-tit">Crime organizado e a política do Rio: as operações Unha e Carne e Magen</span><svg class="ic volta-seta" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+      <div class="volta-corpo">
+      <p><b>Unha e Carne.</b> Desde 12/2025, a Polícia Federal investiga, com autorização do STF, o vazamento de operações contra o Comando Vermelho e a lavagem de dinheiro em postos de combustíveis. O então presidente da Assembleia do Rio, Rodrigo Bacellar (União, filiado ao PL de 2022 a 2024), foi preso duas vezes, suspeito de vazar informações a alvos ligados à facção. Na 6ª fase, em 07/2026, foi preso Márcio Canella (União), com um fuzil no carro; ele era o pré-candidato ao Senado apoiado por Flávio Bolsonaro, e a mãe de Flávio, Rogéria, era suplente da chapa. Depois da prisão, Rogéria saiu da chapa e Canella desistiu do Senado. Em 15/10/2026, Canella, já eleito deputado estadual, foi preso de novo: a PF diz que o esquema de postos movimentou R$ 7,6 bilhões em seis anos.</p>
+      <p><b>Magen.</b> Em 10/2026, a PF e o Ministério Público prenderam policiais e ex-policiais acusados de vender fuzis e vazar informações a Peixão, chefe do Terceiro Comando Puro no Complexo de Israel. O grupo se apresenta como evangélico, e o próprio Peixão é investigado por ordenar ataques a terreiros. Dois presos tinham trabalhado em gabinetes da Assembleia do Rio.</p>
+      <p class="mas"><b>Para ler com cuidado</b>Canella e Bacellar negam os crimes, e não há condenação. Não achei investigação que ligue Flávio aos crimes apurados: a ligação documentada é o apoio político a Canella. Na Magen, os deputados dos gabinetes onde os presos trabalharam não são investigados, e não encontrei ligação de Peixão com os políticos comparados nesta página.</p>
+      <a class="fonte" href="https://www.cnnbrasil.com.br/nacional/sudeste/rj/pf-prende-marcio-canella-segundo-deputado-estadual-mais-votado-do-rj/" target="_blank" rel="noopener">Fonte: CNN Brasil</a>
+      <a class="fonte" href="https://www.metropoles.com/colunas/mirelle-pinheiro/unha-e-carne-deputado-marcio-canella-e-delegado-sao-presos-pela-pf" target="_blank" rel="noopener">Fonte: Metrópoles</a>
+      <a class="fonte" href="https://diariocarioca.com/2026/03/27/politica/rodrigo-bacellar-preso-operacao-unha-e-carne-pf/" target="_blank" rel="noopener">Fonte: Diário Carioca</a>
+      <a class="fonte" href="https://www.jb.com.br/brasil/politica/2026/07/1060205-preso-pela-pf-canella-e-o-candidato-ao-senado-de-flavio-bolsonaro-no-rj.html" target="_blank" rel="noopener">Fonte: Jornal do Brasil</a>
+      <a class="fonte" href="https://www.metropoles.com/brasil/aliado-de-flavio-no-rio-canella-desiste-de-candidatura-ao-senado" target="_blank" rel="noopener">Fonte: Metrópoles</a>
+      <a class="fonte" href="https://www.cnnbrasil.com.br/nacional/sudeste/rj/ex-policiais-sao-presos-em-operacao-contra-venda-de-armas-para-o-tcp-no-rj/" target="_blank" rel="noopener">Fonte: CNN Brasil</a>
+      <a class="fonte" href="https://diariodorio.com/seguranca/2026/10/07/ex-funcionarios-da-alerj-e-do-detran-estao-entre-presos-em-operacao-sobre-venda-de-armas-para-peixao.html" target="_blank" rel="noopener">Fonte: Diário do Rio</a>
+      <a class="fonte" href="https://www.gazetadopovo.com.br/republica/lider-de-faccao-do-rio-pode-ser-classificado-como-terrorista-por-usar-motivacao-religiosa/" target="_blank" rel="noopener">Fonte: Gazeta do Povo</a>
+      </div>
+    </details>
+    <details class="rev volta-item" id="volta-11">
+      <summary><span class="volta-n">11</span><span class="volta-tit">Os EUA, as facções brasileiras e as terras raras</span><svg class="ic volta-seta" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+      <div class="volta-corpo">
+      <p><b>Facções como terroristas.</b> Em 28/05/2026, o governo Trump classificou o PCC e o Comando Vermelho como terroristas, dois dias depois de receber Flávio Bolsonaro na Casa Branca. Flávio disse ter pedido isso a Trump, e o gabinete dele entregou a um grupo ligado a Trump um dossiê ligando as facções a atos terroristas. O governo brasileiro já tinha recusado o mesmo pedido dos EUA e reagiu dizendo que "a soberania nacional é inegociável". Foi com o mesmo rótulo de terrorismo, aplicado a um grupo venezuelano, que o governo Trump justificou desde 09/2025 ataques militares a barcos no Caribe, antes da operação que prendeu Maduro.</p>
+      <p><b>Terras raras.</b> Depois de se reunir com Trump, Flávio disse que, se eleito, fará "parcerias estratégicas de longo prazo" com os EUA para explorar terras raras e minerais críticos brasileiros. Um documento de 22 páginas escrito por André Marinho (Novo), aliado dele, propõe tornar o Brasil o "principal fornecedor" desses minerais alinhado ao Ocidente. A campanha de Lula pediu ao TSE e ao STF que investiguem o que chama de interferência dos EUA em troca desses minérios.</p>
+      <p class="mas"><b>Para ler com cuidado</b>A classificação tem efeito sobretudo financeiro, de bloqueio de bens, e não há sinal de plano militar dos EUA contra o Brasil; o temor de intervenção é uma leitura de críticos, baseada no precedente venezuelano. Não achei proposta de acordo exclusivo com os EUA. Marinho diz que escreveu o documento por conta própria, e a campanha de Flávio não respondeu se o encomendou.</p>
+      <a class="fonte" href="https://agenciabrasil.ebc.com.br/internacional/noticia/2026-05/eua-passam-designar-cv-e-pcc-como-organizacoes-terroristas" target="_blank" rel="noopener">Fonte: Agência Brasil</a>
+      <a class="fonte" href="https://www.cnnbrasil.com.br/internacional/eua-classificam-pcc-e-comando-vermelho-como-terroristas/" target="_blank" rel="noopener">Fonte: CNN Brasil</a>
+      <a class="fonte" href="https://www.poder360.com.br/poder-brasil/leia-a-nota-do-governo-depois-dos-eua-chamarem-cv-e-pcc-de-terroristas/" target="_blank" rel="noopener">Fonte: Poder360 (nota do governo)</a>
+      <a class="fonte" href="https://www.conjur.com.br/2026-mai-29/classificar-cv-e-pcc-como-terroristas-afeta-soberania-e-gera-riscos-afirma-governo/" target="_blank" rel="noopener">Fonte: Consultor Jurídico</a>
+      <a class="fonte" href="https://www.pbs.org/newshour/world/a-timeline-of-u-s-military-strikes-on-boats-off-south-america-and-what-congress-has-said" target="_blank" rel="noopener">Fonte: PBS</a>
+      <a class="fonte" href="https://www.cnnbrasil.com.br/politica/terras-raras-se-eleito-flavio-diz-que-fara-parcerias-estrategias-com-eua/" target="_blank" rel="noopener">Fonte: CNN Brasil</a>
+      <a class="fonte" href="https://www.bnews.com.br/noticias/politica/documento-mostra-como-flavio-bolsonaro-iria-ceder-terras-raras-para-serem-exploradas-pelos-eua.html" target="_blank" rel="noopener">Fonte: Bnews</a>
+      <a class="fonte" href="https://conjur.com.br/2026-set-24/interferencia-dos-eua-envolve-promessa-por-terras-raras-segundo-pt-e-lula/" target="_blank" rel="noopener">Fonte: Consultor Jurídico</a>
+      </div>
+    </details>
+    <details class="rev volta-item" id="volta-12">
+      <summary><span class="volta-n">12</span><span class="volta-tit">A "PEC das Praias"</span><svg class="ic volta-seta" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+      <div class="volta-corpo">
+      <p>Flávio é o relator, no Senado, da PEC 3/2022, que veio da Câmara, e deu parecer favorável. A proposta transfere os "terrenos de marinha", faixa do litoral que hoje pertence à União, aos ocupantes, mediante pagamento, e a estados e municípios, de graça. São 584,7 mil terrenos no país. Críticos e convidados de uma audiência no Senado alertaram para o risco de restringir o acesso às praias, de conflitos por terra e de dano ambiental. A votação na Comissão de Constituição e Justiça está parada desde 12/2024.</p>
+      <p class="mas"><b>O que ele diz</b>Flávio afirma que a PEC acaba com a insegurança jurídica e a taxa cobrada de quem ocupa esses terrenos, e que as praias continuam públicas. Uma lei de 1988 (7.661, art. 10) já garante o acesso livre às praias.</p>
+      <a class="fonte" href="https://www12.senado.leg.br/noticias/materias/2024/12/04/ccj-concede-vista-para-pec-das-praias" target="_blank" rel="noopener">Fonte: Senado Notícias</a>
+      <a class="fonte" href="https://www.extraclasse.org.br/?p=110720" target="_blank" rel="noopener">Fonte: Extra Classe</a>
+      <a class="fonte" href="https://www.folhavitoria.com.br/politica/pec-das-praias-pedido-de-vista-adia-votacao-na-ccj-do-senado/" target="_blank" rel="noopener">Fonte: Folha Vitória</a>
+      </div>
+    </details>
   </div>
 </section>
 
-<section class="sec sec-alt" id="criterios">
+<section class="sec sec-alt" id="conexoes">
+  <div class="sec-cab">
+    <p class="olho">O mapa</p>
+    <h2>Quem se liga a quem</h2>
+    <p class="sec-lead">As pessoas desta página e as ligações entre elas. Cada número no mapa corresponde a um item da lista abaixo. Uma ligação não é acusação: ela resume um fato que está, com fonte, nos critérios, nos cards acima ou no próprio item da lista.</p>
+  </div>
+  <ul class="rede-leg" aria-label="Tipos de ligação">
+    <li class="r-familia">Família</li><li class="r-dinheiro">Dinheiro ou negócios</li><li class="r-poder">Poder e alianças</li><li class="r-justica">Justiça e investigação</li><li class="r-rompe">Rompimento ou conflito</li>
+  </ul>
+  <div class="rede-rol" tabindex="0" aria-label="Mapa de ligações. Role para os lados no celular. A lista abaixo traz o mesmo conteúdo em texto.">
+    <svg id="rede-svg" viewBox="0 0 1200 920" role="img" aria-label="Mapa de ligações entre as pessoas citadas na página; o conteúdo está na lista numerada abaixo"></svg>
+  </div>
+  <p class="rede-baixar">Baixar o mapa como imagem: <a href="assets/conexoes.jpg" download="quem-se-liga-a-quem.jpg">horizontal</a> ou <a href="assets/conexoes-vertical.jpg" download="quem-se-liga-a-quem-vertical.jpg">vertical, para status e Instagram</a></p>
+  <ol class="rede-lista" id="rede-lista"></ol>
+</section>
+
+<section class="sec" id="criterios">
   <div class="sec-cab">
     <p class="olho">Fato por fato</p>
     <h2>Os 10 critérios</h2>
@@ -241,6 +332,7 @@
 
 <script src="js/hoje-dados.js"></script>
 <script src="js/hoje.js"></script>
+<script src="js/conexoes.js"></script>
 <script src="js/menu.js"></script>
 </body>
 </html>
