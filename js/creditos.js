@@ -390,5 +390,12 @@ window.CREDITOS = [
         "autor":  "Senado Federal",
         "licenca":  "CC BY 2.0",
         "pagina":  "https://commons.wikimedia.org/wiki/File:Willer_Tomaz_de_Souza.jpg"
+    },
+    {
+        "id":  "p-queiroz",
+        "nome":  "Fabrício Queiroz, foto de candidatura, 2022",
+        "autor":  "TSE (dados abertos)",
+        "licenca":  "CC BY 4.0",
+        "pagina":  "https://dadosabertos.tse.jus.br/dataset/candidatos-2022"
     }
 ];
