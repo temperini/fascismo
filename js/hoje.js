@@ -32,7 +32,7 @@
     '<thead><tr class="grupos"><th></th><th scope="colgroup" colspan="3">Brasil</th><th scope="colgroup" colspan="5">Outros países</th></tr><tr><th scope="col">Critério</th>' + H.pessoas.map(function (p) { return '<th scope="col"><span class="th-p">' + (p.img ? '<img src="' + p.img + '" alt="">' : '') + esc(p.nome) + '</span></th>'; }).join('') + '</tr></thead><tbody>' +
     H.criterios.map(function (c) {
       return '<tr><th scope="row"><a href="#crit-' + c.n + '">' + c.n + '. ' + esc(c.t) + '</a></th>' +
-        H.pessoas.map(function (p) { return '<td>' + selo(c[p.id].st) + '</td>'; }).join('') + '</tr>';
+        H.pessoas.map(function (p) { return '<td><button type="button" class="q-cel" data-c="' + c.n + '" data-p="' + p.id + '" aria-haspopup="dialog" aria-label="' + esc(p.nome) + ', critério ' + c.n + ': ' + ROT[c[p.id].st] + '. Ver resumo">' + selo(c[p.id].st) + '</button></td>'; }).join('') + '</tr>';
     }).join('') + '</tbody>';
 
   /* Quadro do celular: o nome do criterio em linha propria e os oito simbolos alinhados sob os rostos fixos no topo */
@@ -45,7 +45,7 @@
       '<div class="qm-grade">' + celulas(function (p) { return '<button type="button" class="qm-p" data-p="' + p.id + '" aria-pressed="false"><img src="' + p.img + '" alt=""><span>' + esc(curto(p)) + '</span></button>'; }) + '</div></div>' +
       '<ol class="qm-lista">' + H.criterios.map(function (c) {
         return '<li><a class="qm-t" href="#crit-' + c.n + '">' + c.n + '. ' + esc(c.t) + '</a><div class="qm-grade">' +
-          celulas(function (p) { return '<a class="qm-c" data-p="' + p.id + '" href="#crit-' + c.n + '" aria-label="' + esc(p.nome) + ': ' + ROT[c[p.id].st] + '">' + selo(c[p.id].st) + '</a>'; }) + '</div></li>';
+          celulas(function (p) { return '<button type="button" class="qm-c q-cel" data-c="' + c.n + '" data-p="' + p.id + '" aria-haspopup="dialog" aria-label="' + esc(p.nome) + ', critério ' + c.n + ': ' + ROT[c[p.id].st] + '. Ver resumo">' + selo(c[p.id].st) + '</button>'; }) + '</div></li>';
       }).join('') + '</ol>';
     qm.addEventListener('click', function (ev) {
       var b = ev.target.closest('.qm-p'); if (!b) return;
@@ -89,7 +89,7 @@
       [['brasil', 'Brasil'], ['mundo', 'Outros países']].map(function (g) {
         return '<p class="grupo-tit">' + g[1] + '</p><div class="crit-col">' + H.pessoas.filter(function (p) { return p.grupo === g[0]; }).map(function (p) {
         var d = c[p.id];
-        return '<section class="crit-p"><h4>' + (p.img ? '<img class="sig" src="' + p.img + '" alt="" loading="lazy">' : '<span class="sig" aria-hidden="true">' + p.sig + '</span>') + esc(p.nome) + '</h4>' + selo(d.st) + (d.peso ? '<span class="peso">' + esc(d.peso) + '</span>' : '') +
+        return '<section class="crit-p" id="crit-' + c.n + '-' + p.id + '"><h4>' + (p.img ? '<img class="sig" src="' + p.img + '" alt="" loading="lazy">' : '<span class="sig" aria-hidden="true">' + p.sig + '</span>') + esc(p.nome) + '</h4>' + selo(d.st) + (d.peso ? '<span class="peso">' + esc(d.peso) + '</span>' : '') +
           fatos(d.x) + '<div class="mas"><b>O que pesa contra a comparação</b>' + esc(d.mas) + '</div>' +
           fontes(d) + '</section>';
         }).join('') + '</div>';
@@ -97,6 +97,48 @@
   }).join('');
 
   var btnTema = document.getElementById('btn-tema');
+
+  /* Janelinha do quadro: toque numa bolinha mostra pessoa, criterio, resultado e um resumo */
+  var RES = window.HOJE_RES || {}, qb = document.createElement('div'), qOrigem = null, qY = 0;
+  qb.className = 'r-balao q-balao'; qb.hidden = true; qb.setAttribute('role', 'dialog'); qb.setAttribute('aria-modal', 'false');
+  document.body.appendChild(qb);
+  function pessoa(id) { return H.pessoas.filter(function (p) { return p.id === id; })[0]; }
+  function crit(n) { return H.criterios.filter(function (c) { return c.n === n; })[0]; }
+  function qAbre(bt) {
+    var c = crit(+bt.dataset.c), p = pessoa(bt.dataset.p), d = c[p.id], r = (RES[c.n] || {})[p.id] || frases(d.x)[0];
+    qb.innerHTML = '<button type="button" class="r-fecha" aria-label="Fechar">×</button>' +
+      '<div class="r-p-cab"><img src="' + p.img + '" alt=""><div><p class="r-b-tit">' + esc(p.nome) + '</p><p class="r-p-papel">' + esc(p.sub) + '</p></div></div>' +
+      '<p class="q-crit">Critério ' + c.n + ': ' + esc(c.t) + '</p>' +
+      '<p class="q-res st-' + d.st + '"><span class="st st-' + d.st + '"><i></i></span>' + ROT[d.st] + (d.peso ? '<small>' + esc(d.peso) + '</small>' : '') + '</p>' +
+      '<p class="r-b-res">' + esc(r) + '</p>' +
+      '<a class="r-b-ir" href="#crit-' + c.n + '-' + p.id + '">Ver os fatos, o contraponto e as fontes</a>';
+    qb.setAttribute('aria-label', p.nome + ', critério ' + c.n);
+    qb.hidden = false; qOrigem = bt; qY = window.scrollY;
+    [].forEach.call(document.querySelectorAll('.q-cel.q-on'), function (e) { e.classList.remove('q-on'); }); bt.classList.add('q-on');
+    var a = bt.getBoundingClientRect(), b = qb.getBoundingClientRect();
+    var x = a.left + a.width / 2 - b.width / 2; x = Math.max(8, Math.min(x, window.innerWidth - b.width - 8));
+    var y = a.bottom + 8; if (y + b.height > window.innerHeight - 8) y = Math.max(64, a.top - b.height - 8);
+    qb.style.left = x + 'px'; qb.style.top = y + 'px';
+    qb.querySelector('.r-fecha').focus({ preventScroll: true });
+  }
+  function qFecha(volta) {
+    if (qb.hidden) return; qb.hidden = true;
+    if (qOrigem) { qOrigem.classList.remove('q-on'); if (volta !== false) qOrigem.focus({ preventScroll: true }); }
+    qOrigem = null;
+  }
+  document.addEventListener('click', function (ev) {
+    var bt = ev.target.closest('.q-cel');
+    if (bt) { ev.stopPropagation(); if (qOrigem === bt && !qb.hidden) qFecha(); else qAbre(bt); return; }
+    if (qb.hidden) return;
+    if (ev.target.closest('.q-balao .r-fecha')) { qFecha(); return; }
+    if (ev.target.closest('.q-balao .r-b-ir')) { qFecha(false); return; }
+    if (!qb.contains(ev.target)) qFecha(false);
+  });
+  document.addEventListener('keydown', function (ev) { if (ev.key === 'Escape') qFecha(); });
+  window.addEventListener('resize', function () { qFecha(false); });
+  window.addEventListener('scroll', function () { if (Math.abs(window.scrollY - qY) > 60) qFecha(false); }, { passive: true });
+  [].forEach.call(document.querySelectorAll('.quadro-rol'), function (r) { r.addEventListener('scroll', function () { qFecha(false); }, { passive: true }); });
+
   function aplicaTema(t) { doc.setAttribute('data-theme', t); btnTema.innerHTML = ic(t === 'dark' ? 'sol' : 'lua'); }
   var salvo = null;
   try { salvo = localStorage.getItem('tema'); } catch (e) {}

@@ -229,5 +229,166 @@ window.CREDITOS = [
         "autor":  "Duma Estatal da Federação Russa",
         "licenca":  "CC BY 4.0",
         "pagina":  "https://commons.wikimedia.org/wiki/File:Daniel_Ortega_on_July_20,_2024_(cropped).jpg"
+    },
+    {
+        "id":  "p-melania",
+        "nome":  "Retrato de Melania Trump",
+        "autor":  "@FLOTUS",
+        "licenca":  "Domínio público",
+        "pagina":  "https://commons.wikimedia.org/wiki/File:Melania_Trump%E2%80%99s_Official_White_House_Portrait_(2025)_(further_cropped).jpg"
+    },
+    {
+        "id":  "p-karina",
+        "nome":  "Retrato de Karina Milei",
+        "autor":  "Gobierno Argentino",
+        "licenca":  "CC BY 4.0",
+        "pagina":  "https://commons.wikimedia.org/wiki/File:Karina_Milei.jpg"
+    },
+    {
+        "id":  "p-murillo",
+        "nome":  "Retrato de Rosario Murillo",
+        "autor":  "Gabinete da Presidência de Taiwan",
+        "licenca":  "CC BY 2.0",
+        "pagina":  "https://commons.wikimedia.org/wiki/File:2017_Rosario_Murillo_(cropped).jpg"
+    },
+    {
+        "id":  "p-eduardo",
+        "nome":  "Retrato de Eduardo Bolsonaro",
+        "autor":  "Gage Skidmore",
+        "licenca":  "CC BY-SA 3.0",
+        "pagina":  "https://commons.wikimedia.org/wiki/File:Eduardo_Bolsonaro_by_Gage_Skidmore.jpg"
+    },
+    {
+        "id":  "p-carlos",
+        "nome":  "Retrato de Carlos Bolsonaro",
+        "autor":  "Palácio do Planalto",
+        "licenca":  "CC BY 2.0",
+        "pagina":  "https://commons.wikimedia.org/wiki/File:Carlos_Bolsonaro_durante_Encontro_Brasil-R%C3%BAssia_em_2022.jpg"
+    },
+    {
+        "id":  "p-michelle",
+        "nome":  "Retrato de Michelle Bolsonaro",
+        "autor":  "Isac Nóbrega / PR",
+        "licenca":  "CC BY 2.0",
+        "pagina":  "https://commons.wikimedia.org/wiki/File:Michelle_Bolsonaro,_primeira-dama_do_Brasil.jpg"
+    },
+    {
+        "id":  "p-moro",
+        "nome":  "Retrato de Sergio Moro",
+        "autor":  "Agência Senado",
+        "licenca":  "CC BY 2.0",
+        "pagina":  "https://commons.wikimedia.org/wiki/File:Senadores_da_57%C2%AA_Legislatura_(52689302414)_(cropped_-_3x4).jpg"
+    },
+    {
+        "id":  "p-olimpio",
+        "nome":  "Retrato de Major Olímpio",
+        "autor":  "Agência Senado",
+        "licenca":  "Atribuição",
+        "pagina":  "https://commons.wikimedia.org/wiki/File:Senador_Major_Ol%C3%ADmpio.jpg"
+    },
+    {
+        "id":  "p-vorcaro",
+        "nome":  "Retrato de Daniel Vorcaro",
+        "autor":  "Márcio Gustavo Vasconcelos",
+        "licenca":  "CC0",
+        "pagina":  "https://commons.wikimedia.org/wiki/File:Daniel_Vorcaro_-_2024_(cropped).jpg"
+    },
+    {
+        "id":  "p-moraes",
+        "nome":  "Retrato de Alexandre de Moraes",
+        "autor":  "Isac Nóbrega",
+        "licenca":  "CC BY 2.0",
+        "pagina":  "https://commons.wikimedia.org/wiki/File:Ministro_Alexandre_de_Moraes_como_presidente_do_TSE.jpg"
+    },
+    {
+        "id":  "p-toffoli",
+        "nome":  "Retrato de Dias Toffoli",
+        "autor":  "Nelson Jr.",
+        "licenca":  "Atribuição",
+        "pagina":  "https://commons.wikimedia.org/wiki/File:Dias_Toffoli_em_outubro_de_2019.jpg"
+    },
+    {
+        "id":  "p-kassio",
+        "nome":  "Retrato de Kassio Nunes Marques",
+        "autor":  "TSE",
+        "licenca":  "Domínio público",
+        "pagina":  "https://commons.wikimedia.org/wiki/File:Nunes_Marques,_February_2025_(cropped).jpg"
+    },
+    {
+        "id":  "p-mendonca",
+        "nome":  "Retrato de André Mendonça",
+        "autor":  "Rosinei Coutinho/STF",
+        "licenca":  "Atribuição",
+        "pagina":  "https://commons.wikimedia.org/wiki/File:Ministro_Andr%C3%A9_Mendon%C3%A7a_em_outubro_de_2025_(3x4).jpg"
+    },
+    {
+        "id":  "p-nikolas",
+        "nome":  "Retrato de Nikolas Ferreira",
+        "autor":  "Pablo Valadares / Câmara dos Deputados",
+        "licenca":  "CC BY 3.0",
+        "pagina":  "https://commons.wikimedia.org/wiki/File:Nikolas_Ferreira_in_2023_(cropped).jpg"
+    },
+    {
+        "id":  "p-careca",
+        "nome":  "Antônio Carlos Camilo Antunes, o \"Careca do INSS\", na CPMI do INSS, 2025",
+        "autor":  "Agência Senado",
+        "licenca":  "CC BY-SA 4.0",
+        "pagina":  "https://commons.wikimedia.org/wiki/File:CPMI_-_INSS_-_Comiss%C3%A3o_Parlamentar_Mista_de_Inqu%C3%A9rito_do_INSS_-_2025_(54811232041)_(cropped).jpg"
+    },
+    {
+        "id":  "p-dirceu",
+        "nome":  "Retrato de José Dirceu",
+        "autor":  "José Cruz / Agência Brasil",
+        "licenca":  "CC BY 3.0 BR",
+        "pagina":  "https://commons.wikimedia.org/wiki/File:Jos%C3%A9_Dirceu.jpg"
+    },
+    {
+        "id":  "p-palocci",
+        "nome":  "Retrato de Antonio Palocci",
+        "autor":  "Fundo Monetário Internacional",
+        "licenca":  "Domínio público",
+        "pagina":  "https://commons.wikimedia.org/wiki/File:Antonio_Palloci.jpg"
+    },
+    {
+        "id":  "p-dilma",
+        "nome":  "Retrato de Dilma Rousseff",
+        "autor":  "Roberto Stuckert Filho/Presidência da República",
+        "licenca":  "Atribuição",
+        "pagina":  "https://commons.wikimedia.org/wiki/File:Dilma_Rousseff_-_foto_oficial_2011-01-09.jpg"
+    },
+    {
+        "id":  "p-cunha",
+        "nome":  "Retrato de Eduardo Cunha",
+        "autor":  "Jonas Pereira/Agência Senado",
+        "licenca":  "CC BY 2.0",
+        "pagina":  "https://commons.wikimedia.org/wiki/File:Eduardo_Cunha_em_1%C2%BA_de_junho_de_2015.jpg"
+    },
+    {
+        "id":  "p-canella",
+        "nome":  "Retrato de Márcio Canella",
+        "autor":  "TSE (dados abertos)",
+        "licenca":  "CC BY 4.0",
+        "pagina":  "https://commons.wikimedia.org/wiki/File:2024_M%C3%81RCIO_CANELLA_CANDIDATO_PREFEITO_RJ_BELFORD_ROXO_TSE_(190002028900).jpg"
+    },
+    {
+        "id":  "p-frias",
+        "nome":  "Retrato de Mario Frias",
+        "autor":  "Isac Nóbrega/PR",
+        "licenca":  "CC BY 2.0",
+        "pagina":  "https://commons.wikimedia.org/wiki/File:M%C3%A1rio_Frias_em_2020.jpg"
+    },
+    {
+        "id":  "p-zettel",
+        "nome":  "Retrato de Fabiano Zettel",
+        "autor":  "Editor Luiz",
+        "licenca":  "CC BY-SA 2.0",
+        "pagina":  "https://commons.wikimedia.org/wiki/File:Fabiano_Zettel.jpg"
+    },
+    {
+        "id":  "p-tomaz",
+        "nome":  "Retrato de Willer Tomaz",
+        "autor":  "Senado Federal",
+        "licenca":  "CC BY 2.0",
+        "pagina":  "https://commons.wikimedia.org/wiki/File:Willer_Tomaz_de_Souza.jpg"
     }
 ];

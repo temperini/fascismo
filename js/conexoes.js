@@ -3,7 +3,7 @@
 (function () {
   var N = {
     trump: ['Donald Trump', 180, 120, 'assets/p-trump.jpg'],
-    melania: ['Melania Trump', 70, 250],
+    melania: ['Melania Trump', 84, 250],
     hayden: ['Hayden Davis', 215, 315],
     milei: ['Javier Milei', 380, 230, 'assets/p-milei.jpg'],
     karina: ['Karina Milei', 520, 300],
@@ -20,20 +20,20 @@
     olimpio: ['Major Olímpio', 230, 540],
     queiroz: ['Fabrício Queiroz', 600, 820],
     adriano: ['Adriano da Nóbrega', 800, 860],
-    ronald: ['Ronald Pereira', 860, 760],
-    vorcaro: ['Daniel Vorcaro', 800, 420],
+    ronald: ['Ronald Pereira', 838, 760],
+    vorcaro: ['Daniel Vorcaro', 790, 420],
     moraes: ['Alexandre de Moraes', 640, 170],
     toffoli: ['Dias Toffoli', 840, 230],
     kassio: ['Kassio Nunes Marques', 700, 300],
     mendonca: ['André Mendonça', 900, 320],
-    nikolas: ['Nikolas Ferreira', 960, 440],
+    nikolas: ['Nikolas Ferreira', 980, 440],
     lula: ['Lula', 1040, 560, 'assets/p-lula.jpg'],
     lulinha: ['Lulinha', 1120, 680],
     careca: ['"Careca do INSS"', 1110, 800],
     dirceu: ['José Dirceu', 1120, 380],
-    palocci: ['Antonio Palocci', 1130, 470],
-    dilma: ['Dilma Rousseff', 990, 735],
-    cunha: ['Eduardo Cunha', 940, 615],
+    palocci: ['Antonio Palocci', 1112, 470],
+    dilma: ['Dilma Rousseff', 1002, 735],
+    cunha: ['Eduardo Cunha', 922, 615],
     canella: ['Márcio Canella', 430, 880],
     frias: ['Mario Frias', 700, 905],
     zettel: ['Fabiano Zettel', 640, 505],
@@ -45,15 +45,15 @@
     ['jair', 'eduardo', 'familia', 'Pai e filho.'],
     ['jair', 'carlos', 'familia', 'Pai e filho. Carlos foi eleito senador em 2026.'],
     ['jair', 'michelle', 'familia', 'Marido e mulher. Michelle foi eleita senadora em 2026.'],
-    ['flavio', 'vorcaro', 'dinheiro', 'Cerca de R$ 62 milhões do banqueiro para o filme sobre Jair; a PF investiga Flávio desde 07/2026.'],
-    ['jair', 'zettel', 'dinheiro', 'Fabiano Zettel, cunhado de Vorcaro, foi o maior doador da campanha de Jair em 2022 (R$ 2 milhões). Está preso desde 03/2026.'],
+    ['flavio', 'vorcaro', 'dinheiro', 'Cerca de R$ 62 milhões do banqueiro para o filme sobre Jair; a PF investiga Flávio desde 07/2026.', 0.62],
+    ['jair', 'zettel', 'dinheiro', 'Fabiano Zettel, cunhado de Vorcaro, foi o maior doador da campanha de Jair em 2022 (R$ 2 milhões). Está preso desde 03/2026.', 0.4],
     ['vorcaro', 'moraes', 'dinheiro', 'Contratos de cerca de R$ 129 milhões com o escritório da mulher do ministro, Viviane Barci; em 08/2025, o casal usou um jato do qual uma empresa de Vorcaro era cotista. Ele chama as mensagens de mentiras.'],
-    ['vorcaro', 'toffoli', 'dinheiro', 'Empresa de que Toffoli é sócio vendeu parte de um resort a empresa ligada ao cunhado de Vorcaro.'],
+    ['vorcaro', 'toffoli', 'dinheiro', 'Empresa de que Toffoli é sócio vendeu parte de um resort a empresa ligada ao cunhado de Vorcaro.', 0.35],
     ['vorcaro', 'kassio', 'dinheiro', 'Mensagens citam "Kassio" numa festa de Vorcaro; consultoria paga pelo banco pagou o filho do ministro. Ele nega.'],
     ['vorcaro', 'mendonca', 'poder', 'Mendonça admitiu ter se encontrado com Vorcaro em 2025 e nega ter tratado do banco.'],
     ['vorcaro', 'nikolas', 'dinheiro', 'Vorcaro escreveu que pagou "todos os voos" do deputado. Em 2024, o pastor André Valadão, da Lagoinha, intermediou um pedido de desculpas de Nikolas a Vorcaro. Nikolas nega proximidade.'],
     ['vorcaro', 'lula', 'poder', 'Lula recebeu Vorcaro no Palácio em 12/2024, sem irregularidade apontada.'],
-    ['jair', 'kassio', 'poder', 'Jair indicou Kassio ao STF em 2020.', 0.3],
+    ['jair', 'kassio', 'poder', 'Jair indicou Kassio ao STF em 2020.', 0.38],
     ['jair', 'mendonca', 'poder', 'Jair indicou Mendonça ao STF em 2021, como "terrivelmente evangélico".'],
     ['lula', 'toffoli', 'poder', 'Lula indicou Toffoli ao STF em 2009.'],
     ['moraes', 'jair', 'justica', 'Moraes foi o relator da ação em que o STF condenou Jair por tentativa de golpe.'],
@@ -148,6 +148,7 @@
     var t = el('text', { x: mx, y: my + 4 }, g); t.textContent = n;
   });
 
+  var FOTO = {melania: 'assets/p-melania.jpg', karina: 'assets/p-karina.jpg', murillo: 'assets/p-murillo.jpg', eduardo: 'assets/p-eduardo.jpg', carlos: 'assets/p-carlos.jpg', michelle: 'assets/p-michelle.jpg', moro: 'assets/p-moro.jpg', olimpio: 'assets/p-olimpio.jpg', vorcaro: 'assets/p-vorcaro.jpg', moraes: 'assets/p-moraes.jpg', toffoli: 'assets/p-toffoli.jpg', kassio: 'assets/p-kassio.jpg', mendonca: 'assets/p-mendonca.jpg', nikolas: 'assets/p-nikolas.jpg', careca: 'assets/p-careca.jpg', dirceu: 'assets/p-dirceu.jpg', palocci: 'assets/p-palocci.jpg', dilma: 'assets/p-dilma.jpg', cunha: 'assets/p-cunha.jpg', canella: 'assets/p-canella.jpg', frias: 'assets/p-frias.jpg', zettel: 'assets/p-zettel.jpg', tomaz: 'assets/p-tomaz.jpg'};
   Object.keys(N).forEach(function (id) {
     var d = N[id], g = el('g', { 'class': 'r-no' + (d[3] ? ' r-foto' : ''), 'data-id': id, tabindex: 0, role: 'button', 'aria-label': d[0] + ': ver as ligações' }, gN);
     if (d[3]) {
@@ -156,9 +157,13 @@
       el('image', { href: d[3], x: d[1] - 30, y: d[2] - 30, width: 60, height: 60, 'clip-path': 'url(#cp-' + id + ')', preserveAspectRatio: 'xMidYMin slice' }, g);
       var t = el('text', { x: d[1], y: d[2] + 52, 'class': 'r-nome' }, g); t.textContent = d[0];
     } else {
-      var w = d[0].length * 7.4 + 22;
+      var fp = FOTO[id], w = d[0].length * 7.4 + 22 + (fp ? 26 : 0);
       el('rect', { x: d[1] - w / 2, y: d[2] - 15, width: w, height: 30, rx: 15, 'class': 'r-pilula' }, g);
-      var t2 = el('text', { x: d[1], y: d[2] + 5, 'class': 'r-nome r-nome-p' }, g); t2.textContent = d[0];
+      if (fp) {
+        var ax = d[1] - w / 2 + 15, cp2 = el('clipPath', { id: 'cp-' + id }, defs); el('circle', { cx: ax, cy: d[2], r: 12 }, cp2);
+        el('image', { href: fp, x: ax - 12, y: d[2] - 12, width: 24, height: 24, 'clip-path': 'url(#cp-' + id + ')', preserveAspectRatio: 'xMidYMin slice' }, g);
+      }
+      var t2 = el('text', { x: d[1] + (fp ? 13 : 0), y: d[2] + 5, 'class': 'r-nome r-nome-p' }, g); t2.textContent = d[0];
     }
   });
 
@@ -216,7 +221,7 @@
   function balaoPessoa(id, alvo) {
     var d = N[id], minhas = [];
     L.forEach(function (l, i) { if (l[0] === id || l[1] === id) minhas.push(i); });
-    var foto = d[3] ? '<img src="' + d[3] + '" alt="">' : '<span class="r-p-ini">' + esc(d[0].replace(/"/g, '').split(' ').map(function (w) { return w[0]; }).slice(0, 2).join('')) + '</span>';
+    var foto = (d[3] || FOTO[id]) ? '<img src="' + (d[3] || FOTO[id]) + '" alt="">' : '<span class="r-p-ini">' + esc(d[0].replace(/"/g, '').split(' ').map(function (w) { return w[0]; }).slice(0, 2).join('')) + '</span>';
     abre(alvo, '<div class="r-p-cab">' + foto + '<div><p class="r-b-tit">' + esc(d[0]) + '</p><p class="r-p-papel">' + esc(PAPEL[id] || '') + '</p></div></div>' +
       '<ul class="r-p-lista">' + minhas.map(function (i) {
         var l = L[i], outro = l[0] === id ? l[1] : l[0];

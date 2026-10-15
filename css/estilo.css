@@ -762,3 +762,15 @@ img.sig { width: 38px; height: 38px; border-radius: 50%; object-fit: cover; obje
 .ap-ir:hover, .ap-ir:focus-visible { outline: 2px solid var(--sol); outline-offset: 2px; }
 .ap-atalho::after { content: ' \2193' !important; }
 .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+
+/* Quadro: bolinhas clicaveis e janelinha de resumo */
+.q-cel { font: inherit; background: none; border: 0; padding: 0; margin: 0; cursor: pointer; border-radius: 999px; color: inherit; }
+.q-cel:hover .st, .q-cel.q-on .st { outline: 2px solid currentColor; outline-offset: 2px; }
+.q-cel:focus-visible { outline: 3px solid var(--sol); outline-offset: 2px; }
+.qm-c.q-cel { width: 100%; }
+.q-balao .r-p-cab img { object-position: 50% 15%; }
+.q-crit { margin: 0; font-weight: 800; font-size: .95rem; line-height: 1.3; }
+.q-res { margin: 0; display: flex; flex-wrap: wrap; align-items: center; gap: 8px; font-size: .78rem; font-weight: 800; letter-spacing: .04em; text-transform: uppercase; justify-self: start; padding: 4px 12px 4px 4px; border-radius: 999px; }
+.q-res .st { padding: 5px; background: transparent; }
+.q-res .st i { width: 12px; height: 12px; }
+.q-res small { flex-basis: 100%; padding-left: 4px; text-transform: none; letter-spacing: 0; font-weight: 600; font-size: .82rem; }
