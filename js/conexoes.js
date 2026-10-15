@@ -37,7 +37,13 @@
     canella: ['Márcio Canella', 430, 880],
     frias: ['Mario Frias', 700, 905],
     zettel: ['Fabiano Zettel', 640, 505],
-    tomaz: ['Willer Tomaz', 250, 900]
+    tomaz: ['Willer Tomaz', 250, 900],
+    marielle: ['Marielle Franco', 1020, 960],
+    domingos: ['Domingos Brazão', 930, 1060],
+    chiquinho: ['Chiquinho Brazão', 1110, 1060],
+    rivaldo: ['Rivaldo Barbosa', 1110, 890],
+    peixe: ['Robson "Peixe" Calixto', 700, 1060],
+    wassef: ['Frederick Wassef', 420, 1010]
   };
   /* [de, para, tipo, texto, posicao do numero na linha (opcional, 0 a 1), fonte (opcional, para fatos que nao estao no resto da pagina)] */
   var L = [
@@ -86,10 +92,20 @@
     ['maduro', 'ortega', 'poder', 'Aliados: em 2021, Maduro saudou a reeleição de Ortega, feita com os sete principais rivais presos.', 0.5, ['RPP', 'https://rpp.pe/mundo/actualidad/nicaragua-tiene-quien-la-defienda-nicolas-maduro-saluda-la-segura-reeleccion-de-daniel-ortega-noticia-1367976']],
     ['lula', 'ortega', 'rompe', 'Ortega ignorou o pedido de Lula pela libertação de um bispo preso; em 08/2024, os dois países expulsaram os embaixadores um do outro.', 0.5, ['SBT News', 'https://sbtnews.sbt.com.br/noticia/politica/em-retaliacao-a-ortega-governo-lula-expulsa-embaixadora-da-nicaragua']],
     ['flavio', 'canella', 'poder', 'Flávio apoiou Canella ao Senado em 2026, com a própria mãe como suplente; Canella foi preso duas vezes na operação Unha e Carne e nega os crimes.', 0.5, ['Jornal do Brasil', 'https://www.jb.com.br/brasil/politica/2026/07/1060205-preso-pela-pf-canella-e-o-candidato-ao-senado-de-flavio-bolsonaro-no-rj.html']],
-    ['frias', 'vorcaro', 'dinheiro', 'O deputado e ator Mario Frias (PL), reeleito em 2026, criou a história do filme sobre Jair e agradeceu a Vorcaro pelo apoio; a produtora nega ter recebido dinheiro do banqueiro.', 0.16, ['O Povo (BBC)', 'https://www.opovo.com.br/agencia/bbc/2026/05/27/de-baixissimo-orcamento-a-milhoes-pedidos-a-vorcaro-os-bastidores-do-filme-sobre-bolsonaro.html']],
+    ['frias', 'vorcaro', 'dinheiro', 'O deputado e ator Mario Frias (PL), reeleito em 2026, criou a história do filme sobre Jair e agradeceu a Vorcaro pelo apoio; a produtora nega ter recebido dinheiro do banqueiro.', 0.25, ['O Povo (BBC)', 'https://www.opovo.com.br/agencia/bbc/2026/05/27/de-baixissimo-orcamento-a-milhoes-pedidos-a-vorcaro-os-bastidores-do-filme-sobre-bolsonaro.html']],
     ['vorcaro', 'zettel', 'familia', 'Cunhado e, segundo a PF, operador financeiro de Vorcaro. A igreja Lagoinha de Belo Horizonte recebeu R$ 19,2 milhões dele entre 2024 e 2025, segundo o Coaf.', 0.5, ['Correio Braziliense', 'https://www.correiobraziliense.com.br/economia/2026/01/7343481-church-bank-banco-master-lagoinha-e-as-conexoes-sob-investigacao.html']],
     ['flavio', 'tomaz', 'dinheiro', 'A PF aponta Flávio como "usuário master" da conta de uma empresa do advogado Willer Tomaz, dona de um terço do jato também usado por Vorcaro; Tomaz é investigado na fraude do INSS. Flávio nega e diz que o vínculo foi um erro corrigido. Segundo a PF, os dois conversavam pelo Confide, aplicativo de mensagens que se apagam.', 0.75, ['BPMoney', 'https://bpmoney.com.br/politica/flavio-bolsonaro-usuario-master-offshore-jato-vorcaro/']],
-    ['flavio', 'bukele', 'poder', 'Flávio e Eduardo foram a El Salvador em 11/2025 estudar o modelo de segurança de Bukele e se reuniram com o ministro da Segurança dele.', 0.5, ['CNN Brasil', 'https://www.cnnbrasil.com.br/politica/flavio-e-eduardo-vao-a-el-salvador-encontrar-bukele/']]
+    ['flavio', 'bukele', 'poder', 'Flávio e Eduardo foram a El Salvador em 11/2025 estudar o modelo de segurança de Bukele e se reuniram com o ministro da Segurança dele.', 0.5, ['CNN Brasil', 'https://www.cnnbrasil.com.br/politica/flavio-e-eduardo-vao-a-el-salvador-encontrar-bukele/']],
+    ['domingos', 'marielle', 'justica', 'Em 02/2026, o STF condenou Domingos Brazão a 76 anos e 3 meses como mandante dos assassinatos de Marielle e do motorista Anderson Gomes; cabe recurso.', 0.5, ['Agência Brasil', 'https://agenciabrasil.ebc.com.br/justica/noticia/2026-02/por-unanimidade-stf-condena-assassinos-de-marielle-e-anderson']],
+    ['chiquinho', 'marielle', 'justica', 'Irmão de Domingos, Chiquinho Brazão também foi condenado pelo STF a 76 anos e 3 meses como mandante; cabe recurso.', 0.5, ['Metrópoles', 'https://www.metropoles.com/colunas/manoela-alcantara/caso-marielle-penas-brazao-stf']],
+    ['ronald', 'marielle', 'justica', 'Em 02/2026, o STF condenou Ronald a 56 anos por participar do planejamento e do monitoramento de Marielle.', 0.5, ['CNN Brasil', 'https://www.cnnbrasil.com.br/politica/stf-condena-major-ronald-a-56-anos-pela-morte-de-marielle-franco/']],
+    ['rivaldo', 'marielle', 'justica', 'Chefe da Polícia Civil do Rio quando o crime aconteceu, Rivaldo foi absolvido do homicídio e condenado a 18 anos por obstrução de Justiça e corrupção.', 0.5, ['Metrópoles', 'https://www.metropoles.com/colunas/manoela-alcantara/caso-marielle-penas-brazao-stf']],
+    ['peixe', 'domingos', 'justica', 'Ex-assessor de Domingos na Alerj e no Tribunal de Contas do Rio, Peixe foi condenado pelo STF a 9 anos por integrar a organização criminosa dos Brazão.', 0.5, ['Estado de Minas', 'https://www.em.com.br/nacional/2026/09/7506650-quem-e-robson-calixto-o-miliciano-que-cobrou-emenda-de-flavio-bolsonaro.html']],
+    ['flavio', 'peixe', 'dinheiro', 'Em 10/2023, Peixe pediu a uma assessora de Flávio ajuda do "nosso senador" para um projeto esportivo; dias depois, uma emenda de Flávio destinou R$ 199.999,79 ao instituto indicado. O TCU viu indícios de irregularidade. Flávio diz que a destinação foi regular.', 0.2, ['Poder360', 'https://www.poder360.com.br/poder-congresso/assessora-de-flavio-tratou-de-emenda-com-miliciano-do-caso-marielle/']],
+    ['queiroz', 'adriano', 'dinheiro', 'Segundo o MP do Rio, Queiroz levou a mulher e a mãe de Adriano para o gabinete de Flávio, e parte dos salários voltou para ele. Em 2020, o advogado de Adriano assumiu a defesa de Queiroz.', 0.5, ['Correio Braziliense', 'https://www.correiobraziliense.com.br/app/noticia/politica/2020/06/18/interna_politica,864956/advogado-de-miliciano-morto-na-bahia-agora-defende-queiroz.shtml']],
+    ['jair', 'queiroz', 'dinheiro', 'Amigo de Jair desde 1984, quando foi soldado dele na brigada paraquedista. A filha de Queiroz trabalhou no gabinete de Jair na Câmara de 2016 a 2018, enquanto dava aulas de personal trainer no Rio, e repassou ao pai R$ 150 mil, 77% do que recebeu.', 0.86, ['Congresso em Foco', 'https://www.congressoemfoco.com.br/corrupcao/gabinete-de-bolsonaro-atestou-frequencia-de-filha-de-queiroz-que-era-personal-trainer-no-rj']],
+    ['michelle', 'queiroz', 'dinheiro', 'Queiroz e a mulher depositaram R$ 89 mil em 27 cheques na conta de Michelle entre 2011 e 2016. Jair disse que era o pagamento de um empréstimo de R$ 40 mil; a PGR foi contra investigar, e o pedido foi arquivado.', 0.62, ['O Povo', 'https://mais.opovo.com.br/jornal/politica/2020/08/08/queiroz-e-esposa-fizeram-27-depositos-para-michelle-bolsonaro.html']],
+    ['queiroz', 'wassef', 'justica', 'Queiroz foi preso em 06/2020 numa casa de Frederick Wassef em Atibaia (SP); Wassef era advogado de Flávio e de Jair e nega tê-lo escondido.', 0.5, ['Metrópoles', 'https://www.metropoles.com/brasil/policia-br/policia-arrombou-portao-da-casa-de-advogado-para-prender-fabricio-queiroz']],
   ];
   var TIPOS = { familia: 'Família', dinheiro: 'Dinheiro ou negócios', poder: 'Poder e alianças', justica: 'Justiça e investigação', rompe: 'Rompimento ou conflito' };
 
@@ -108,20 +124,27 @@
     'Moro deixou o governo acusando interferência na PF.', 'Rompeu dizendo que Jair quis "proteger filho bandido".', 'Lula chamou de "narrativa" as acusações a Maduro.',
     'Jair rompeu com Maduro e reconheceu Guaidó.', 'Milei chamou Maduro de "ditador criminoso".', 'Aliados; Maduro saudou a reeleição de Ortega.', 'Ortega ignorou Lula; embaixadores expulsos.',
     'Flávio apoiou Canella ao Senado; Canella foi preso.', 'Frias criou o filme sobre Jair e agradeceu Vorcaro.', 'Cunhado e operador financeiro de Vorcaro.',
-    'PF aponta Flávio como "usuário master" de conta de Tomaz; os dois conversavam por app de mensagens que se apagam.', 'Flávio foi a El Salvador estudar o modelo de Bukele.'
+    'PF aponta Flávio como "usuário master" de conta de Tomaz; os dois conversavam por app de mensagens que se apagam.', 'Flávio foi a El Salvador estudar o modelo de Bukele.',
+    'Condenado como mandante da morte de Marielle.', 'Condenado como mandante da morte de Marielle.', 'Condenado a 56 anos pela morte de Marielle.',
+    'Condenado por obstruir a investigação.', 'Condenado por integrar o grupo dos Brazão.', 'Pediu à assessora de Flávio; emenda de R$ 200 mil foi ao instituto indicado.',
+    'Mulher e mãe de Adriano no gabinete, segundo o MP.',
+    'Soldado de Jair em 1984; a filha dele esteve no gabinete de Jair.', 'R$ 89 mil em cheques para Michelle.', 'Preso numa casa do advogado da família.'
   ];
   var IR = ['crit-7', 'volta-8', 'volta-8', 'volta-7', 'crit-7', 'volta-4', 'volta-4', 'volta-4', 'volta-5', 'volta-4', 'volta-4', 'volta-4', 'volta-5', 'crit-10', 'volta-4',
     'crit-5', 'crit-7', 'crit-5', 'crit-5', 'volta-3', 'volta-12', 'volta-3', 'crit-7', 'crit-6', 'crit-7', 'crit-7', 'crit-7', 'crit-7', 'crit-7', 'crit-7', 'crit-7', 'crit-7', 'crit-7',
-    'volta-10', 'volta-10', 'volta-10', 'volta-9', 'crit-3', 'volta-9', 'lig-40', 'lig-41', 'lig-42', 'lig-43', 'lig-44', 'volta-11', 'volta-15', 'volta-6', 'crit-7', 'lig-49'];
+    'volta-10', 'volta-10', 'volta-10', 'volta-9', 'crit-3', 'volta-9', 'lig-40', 'lig-41', 'lig-42', 'lig-43', 'lig-44', 'volta-11', 'volta-15', 'volta-6', 'crit-7', 'lig-49',
+    'volta-17', 'volta-17', 'volta-17', 'volta-17', 'volta-17', 'volta-17', 'volta-17', 'lig-57', 'lig-58', 'lig-59'];
   var PAPEL = {
     trump: 'Presidente dos EUA', melania: 'Mulher de Trump', hayden: 'Empresário de criptomoedas', milei: 'Presidente da Argentina', karina: 'Irmã de Milei, secretária-geral',
     maduro: 'Ex-presidente da Venezuela, preso nos EUA', bukele: 'Presidente de El Salvador', ortega: 'Presidente da Nicarágua', murillo: 'Copresidente da Nicarágua',
     jair: 'Ex-presidente, condenado por tentativa de golpe', flavio: 'Senador, candidato do PL a presidente', eduardo: 'Filho de Jair', carlos: 'Filho de Jair, eleito senador',
-    michelle: 'Mulher de Jair, eleita senadora', moro: 'Ex-ministro de Jair, eleito governador do PR', olimpio: 'Ex-senador, morto em 2021', queiroz: 'Ex-assessor de Flávio',
+    michelle: 'Mulher de Jair, eleita senadora', moro: 'Ex-ministro de Jair, eleito governador do PR', olimpio: 'Ex-senador, morto em 2021', queiroz: 'Ex-assessor de Flávio, amigo de Jair desde 1984',
     adriano: 'Ex-PM, chefe do "Escritório do Crime"', ronald: 'Ex-PM, condenado no caso Marielle', vorcaro: 'Dono do Banco Master, preso', moraes: 'Ministro do STF',
     toffoli: 'Ministro do STF', kassio: 'Ministro do STF e presidente do TSE', mendonca: 'Ministro do STF', nikolas: 'Deputado federal (PL)', lula: 'Presidente, candidato à reeleição',
     lulinha: 'Filho de Lula', careca: 'Operador das fraudes do INSS, segundo a PF', dirceu: 'Ex-ministro de Lula', palocci: 'Ex-ministro de Lula', dilma: 'Ex-presidente',
-    cunha: 'Ex-presidente da Câmara', canella: 'Deputado estadual eleito (União)', frias: 'Deputado federal (PL) e ator', zettel: 'Cunhado de Vorcaro, preso', tomaz: 'Advogado investigado no caso do INSS'
+    cunha: 'Ex-presidente da Câmara', canella: 'Deputado estadual eleito (União)', frias: 'Deputado federal (PL) e ator', zettel: 'Cunhado de Vorcaro, preso', tomaz: 'Advogado investigado no caso do INSS',
+    marielle: 'Vereadora do Rio (PSOL), assassinada em 2018', domingos: 'Condenado como mandante da morte de Marielle', chiquinho: 'Condenado como mandante da morte de Marielle',
+    rivaldo: 'Ex-chefe da Polícia Civil do Rio, condenado', peixe: 'Ex-assessor de Domingos Brazão, condenado', wassef: 'Advogado de Flávio e de Jair até 2020'
   };
 
   var svg = document.getElementById('rede-svg');
@@ -148,7 +171,7 @@
     var t = el('text', { x: mx, y: my + 4 }, g); t.textContent = n;
   });
 
-  var FOTO = {queiroz: 'assets/p-queiroz.jpg', melania: 'assets/p-melania.jpg', karina: 'assets/p-karina.jpg', murillo: 'assets/p-murillo.jpg', eduardo: 'assets/p-eduardo.jpg', carlos: 'assets/p-carlos.jpg', michelle: 'assets/p-michelle.jpg', moro: 'assets/p-moro.jpg', olimpio: 'assets/p-olimpio.jpg', vorcaro: 'assets/p-vorcaro.jpg', moraes: 'assets/p-moraes.jpg', toffoli: 'assets/p-toffoli.jpg', kassio: 'assets/p-kassio.jpg', mendonca: 'assets/p-mendonca.jpg', nikolas: 'assets/p-nikolas.jpg', careca: 'assets/p-careca.jpg', dirceu: 'assets/p-dirceu.jpg', palocci: 'assets/p-palocci.jpg', dilma: 'assets/p-dilma.jpg', cunha: 'assets/p-cunha.jpg', canella: 'assets/p-canella.jpg', frias: 'assets/p-frias.jpg', zettel: 'assets/p-zettel.jpg', tomaz: 'assets/p-tomaz.jpg'};
+  var FOTO = {wassef: 'assets/p-wassef.jpg', marielle: 'assets/p-marielle.jpg', domingos: 'assets/p-domingos.jpg', chiquinho: 'assets/p-chiquinho.jpg', rivaldo: 'assets/p-rivaldo.jpg', queiroz: 'assets/p-queiroz.jpg', melania: 'assets/p-melania.jpg', karina: 'assets/p-karina.jpg', murillo: 'assets/p-murillo.jpg', eduardo: 'assets/p-eduardo.jpg', carlos: 'assets/p-carlos.jpg', michelle: 'assets/p-michelle.jpg', moro: 'assets/p-moro.jpg', olimpio: 'assets/p-olimpio.jpg', vorcaro: 'assets/p-vorcaro.jpg', moraes: 'assets/p-moraes.jpg', toffoli: 'assets/p-toffoli.jpg', kassio: 'assets/p-kassio.jpg', mendonca: 'assets/p-mendonca.jpg', nikolas: 'assets/p-nikolas.jpg', careca: 'assets/p-careca.jpg', dirceu: 'assets/p-dirceu.jpg', palocci: 'assets/p-palocci.jpg', dilma: 'assets/p-dilma.jpg', cunha: 'assets/p-cunha.jpg', canella: 'assets/p-canella.jpg', frias: 'assets/p-frias.jpg', zettel: 'assets/p-zettel.jpg', tomaz: 'assets/p-tomaz.jpg'};
   Object.keys(N).forEach(function (id) {
     var d = N[id], g = el('g', { 'class': 'r-no' + (d[3] ? ' r-foto' : ''), 'data-id': id, tabindex: 0, role: 'button', 'aria-label': d[0] + ': ver as ligações' }, gN);
     if (d[3]) {

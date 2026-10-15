@@ -397,5 +397,40 @@ window.CREDITOS = [
         "autor":  "TSE (dados abertos)",
         "licenca":  "CC BY 4.0",
         "pagina":  "https://dadosabertos.tse.jus.br/dataset/candidatos-2022"
+    },
+    {
+        "id":  "p-marielle",
+        "nome":  "Retrato de Marielle Franco",
+        "autor":  "Mídia Ninja",
+        "licenca":  "CC BY-SA 2.0",
+        "pagina":  "https://commons.wikimedia.org/wiki/File:Marielle_Franco.jpg"
+    },
+    {
+        "id":  "p-domingos",
+        "nome":  "Domingos Brazão, foto de candidatura, 2014",
+        "autor":  "TSE (dados abertos)",
+        "licenca":  "CC BY 4.0",
+        "pagina":  "https://commons.wikimedia.org/wiki/File:2014_DOMINGOS_BRAZ%C3%83O_CANDIDATO_DEPUTADO_ESTADUAL_RIO_DE_JANEIRO_-_TSE.jpg"
+    },
+    {
+        "id":  "p-chiquinho",
+        "nome":  "Retrato de Chiquinho Brazão",
+        "autor":  "Gabinete do deputado Chiquinho Brazão",
+        "licenca":  "CC BY 3.0",
+        "pagina":  "https://commons.wikimedia.org/wiki/File:Chiquinho_Braz%C3%A3o_(cropped).png"
+    },
+    {
+        "id":  "p-rivaldo",
+        "nome":  "Rivaldo Barbosa, relatório final do caso Marielle",
+        "autor":  "Polícia Federal",
+        "licenca":  "Domínio público",
+        "pagina":  "https://commons.wikimedia.org/wiki/File:Rivaldo_Barbosa.jpg"
+    },
+    {
+        "id":  "p-wassef",
+        "nome":  "Retrato de Frederick Wassef",
+        "autor":  "Agência Senado",
+        "licenca":  "CC BY 2.0",
+        "pagina":  "https://commons.wikimedia.org/wiki/File:Frederick_Wassef_(cropped).jpg"
     }
 ];
