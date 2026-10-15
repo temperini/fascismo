@@ -1,7 +1,7 @@
 /* Conteudo da Jornada: 7 estacoes, uma ideia por tela. Frases curtas. */
 window.JORNADA = [
   {
-    id: 'dor', titulo: 'A dor', ic: 'pao', cor: '#b35c00',
+    id: 'dor', titulo: 'A dor', ic: 'pao', cor: '#b35c00', capa: 'assets/bancos-1931.jpg', capaAlt: 'Multidão tenta sacar as economias na porta de uma caixa econômica de Berlim, na crise bancária de 1931',
     resumo: 'Tudo começa com gente sofrendo de verdade.',
     telas: [
       { tipo: 'historia', img: 'assets/guerra-1918.jpg', alt: 'Soldados alemães voltam da guerra e passam pelo Portão de Brandemburgo, em Berlim, em 1918', ic: 'casa', t: 'Depois da guerra',
@@ -16,7 +16,7 @@ window.JORNADA = [
     ]
   },
   {
-    id: 'promessa', titulo: 'A promessa', ic: 'megafone', cor: '#d9480f',
+    id: 'promessa', titulo: 'A promessa', ic: 'megafone', cor: '#d9480f', capa: 'assets/nuremberg-1934.jpg', capaAlt: 'Comício do partido nazista em Nuremberg, em 1934, com milhares de homens em fileiras',
     resumo: 'Eles ofereceram o que todo mundo queria ouvir.',
     telas: [
       { tipo: 'historia', img: 'assets/cartaz-1932.jpg', alt: 'Cartaz nazista de 1932 com as palavras Trabalho e Pão', t: 'Duas palavras',
@@ -33,7 +33,7 @@ window.JORNADA = [
     ]
   },
   {
-    id: 'porta', titulo: 'A porta aberta', ic: 'porta', cor: '#d6303b',
+    id: 'porta', titulo: 'A porta aberta', ic: 'porta', cor: '#d6303b', capa: 'assets/tochas-1933.jpg', capaAlt: 'Desfile com tochas em Berlim na noite de 30 de janeiro de 1933, quando Hitler virou chefe de governo',
     resumo: 'Ninguém chegou ao poder sozinho.',
     telas: [
       { tipo: 'historia', img: 'assets/napoles-1922.jpg', alt: 'Mussolini e chefes fascistas caminhando em 1922', t: 'Itália, 1922',
@@ -50,7 +50,7 @@ window.JORNADA = [
     ]
   },
   {
-    id: 'silencio', titulo: 'O silêncio', ic: 'radio', cor: '#a61e4d',
+    id: 'silencio', titulo: 'O silêncio', ic: 'radio', cor: '#a61e4d', capa: 'assets/reichstag-1933.jpg', capaAlt: 'O prédio do Parlamento alemão em chamas, em fevereiro de 1933',
     resumo: 'Primeiro, calaram quem podia avisar.',
     telas: [
       { tipo: 'historia', img: 'assets/livros-1933.jpg', alt: 'Multidão em volta de uma fogueira de livros em Berlim, 1933', t: 'Livros na fogueira',
@@ -67,7 +67,7 @@ window.JORNADA = [
     ]
   },
   {
-    id: 'alvo', titulo: 'O alvo', ic: 'alvo', cor: '#6741d9',
+    id: 'alvo', titulo: 'O alvo', ic: 'alvo', cor: '#6741d9', capa: 'assets/estrela-amarela.jpg', capaAlt: 'Estrela amarela com a palavra "Jude" (judeu), que os judeus eram obrigados a costurar na roupa',
     resumo: 'De vizinhos a inimigos.',
     telas: [
       { tipo: 'historia', img: 'assets/leis-1935.jpg', alt: 'Quadro oficial de 1935 que explicava as Leis de Nuremberg e classificava as pessoas pela ascendência', ic: 'carimbo', t: 'Primeiro, a lei',
@@ -84,7 +84,7 @@ window.JORNADA = [
     ]
   },
   {
-    id: 'conta', titulo: 'A conta', ic: 'balanca', cor: '#1864ab',
+    id: 'conta', titulo: 'A conta', ic: 'balanca', cor: '#1864ab', capa: 'assets/guernica-1937.jpg', capaAlt: 'Ruínas da cidade de Guernica, na Espanha, depois do bombardeio de 1937',
     resumo: 'O que foi prometido e o que foi entregue.',
     telas: [
       { tipo: 'numero', n: 'mais de 60 milhões', x: 'de pessoas morreram na Segunda Guerra Mundial.', leg: 'A guerra foi começada por esses regimes.' },
@@ -104,7 +104,7 @@ window.JORNADA = [
     ]
   },
   {
-    id: 'fim', titulo: 'O fim e a lição', ic: 'vela', cor: '#0f7a52',
+    id: 'fim', titulo: 'O fim e a lição', ic: 'vela', cor: '#0f7a52', capa: 'assets/vitoria-1945.jpg', capaAlt: 'Multidão em Londres comemora o fim da guerra na Europa, em 8 de maio de 1945',
     resumo: 'Como terminaram, e o que guardar.',
     telas: [
       { tipo: 'historia', img: 'assets/mussolini.jpg', alt: 'Retrato de Mussolini', t: 'Mussolini',

@@ -115,6 +115,7 @@
 
   function tCapa(e, i) {
     return '<section class="tela capa"><span class="num">Parada ' + (i + 1) + ' de ' + J.length + '</span>' +
+      (e.capa ? '<figure class="foto capa-foto"><img src="' + e.capa + '" alt="' + esc(e.capaAlt || '') + '"></figure>' : '') +
       '<span class="simbolo">' + ic(e.ic) + '</span>' +
       '<h1 class="tit" data-fala>' + esc(e.titulo) + '</h1><p class="txt" data-fala>' + esc(e.resumo) + '</p></section>';
   }

@@ -474,5 +474,33 @@ window.CREDITOS = [
         "autor":  "Leonhard Lenz",
         "licenca":  "CC0",
         "pagina":  "https://commons.wikimedia.org/wiki/File:Stolpersteine_Handjerystra%C3%9Fe_37_Berlin-Friedenau_01.jpg"
+    },
+    {
+        "id":  "bancos-1931",
+        "nome":  "Corrida à caixa econômica, Berlim, 1931",
+        "autor":  "Georg Pahl / Arquivo Federal da Alemanha",
+        "licenca":  "CC BY-SA 3.0 de",
+        "pagina":  "https://commons.wikimedia.org/wiki/File:Bundesarchiv_Bild_102-12023,_Berlin,_Bankenkrach,_Andrang_bei_der_Sparkasse.jpg"
+    },
+    {
+        "id":  "tochas-1933",
+        "nome":  "Desfile com tochas, Berlim, 30/01/1933",
+        "autor":  "Arquivo Federal da Alemanha",
+        "licenca":  "CC BY-SA 3.0 de",
+        "pagina":  "https://commons.wikimedia.org/wiki/File:Bundesarchiv_Bild_102-02985A,_Berlin,_Fackelzug_zur_Machtergreifung_Hitlers.jpg"
+    },
+    {
+        "id":  "estrela-amarela",
+        "nome":  "Estrela amarela, Museu Judaico de Viena",
+        "autor":  "Daniel Ullrich, Threedots",
+        "licenca":  "CC BY-SA 3.0",
+        "pagina":  "https://commons.wikimedia.org/wiki/File:Judenstern_JMW.jpg"
+    },
+    {
+        "id":  "vitoria-1945",
+        "nome":  "Fim da guerra na Europa, Londres, 08/05/1945",
+        "autor":  "Ministério da Informação do Reino Unido",
+        "licenca":  "Domínio público",
+        "pagina":  "https://commons.wikimedia.org/wiki/File:Ve_Day_Celebrations_in_London,_England,_UK,_8_May_1945_D24585.jpg"
     }
 ];
