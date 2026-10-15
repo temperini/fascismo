@@ -58,6 +58,30 @@
     });
   }
 
+
+  /* Celulas longas: o texto vira lista de fatos, com os primeiros visiveis e o resto atras de um botao */
+  function frases(s) { return String(s).replace(/([.!?]["\u201d]?)\s+(?=["\u201c(]?[A-Z\u00c0-\u00dd])/g, '$1|#|').split('|#|'); }
+  var nFatos = 0;
+  function fatos(x) {
+    var fs = frases(x);
+    if (x.length < 380 || fs.length < 3) return '<p>' + esc(x) + '</p>';
+    var id = 'fatos-' + (++nFatos), vis = 2;
+    return '<ul class="fatos" id="' + id + '">' + fs.map(function (f, i) { return '<li' + (i >= vis ? ' class="fato-mais" hidden' : '') + '>' + esc(f) + '</li>'; }).join('') + '</ul>' +
+      (fs.length > vis ? '<button type="button" class="fatos-btn" aria-controls="' + id + '" aria-expanded="false" data-n="' + (fs.length - vis) + '">Ver mais ' + (fs.length - vis) + (fs.length - vis === 1 ? ' fato' : ' fatos') + '</button>' : '');
+  }
+  function fontes(d) {
+    var fs = Object.keys(d).filter(function (k) { return /^f\d*$/.test(k); }).sort(function (a, b) { return (+a.slice(1) || 1) - (+b.slice(1) || 1); }).map(function (k) { return d[k]; });
+    if (fs.length <= 4) return '<div class="fontes-cel">' + fs.map(fonte).join('') + '</div>';
+    return '<div class="fontes-cel">' + fs.slice(0, 3).map(fonte).join('') + '</div><details class="fontes-mais"><summary>Ver todas as ' + fs.length + ' fontes</summary><div class="fontes-cel">' + fs.slice(3).map(fonte).join('') + '</div></details>';
+  }
+  document.addEventListener('click', function (ev) {
+    var b = ev.target.closest('.fatos-btn'); if (!b) return;
+    var abre = b.getAttribute('aria-expanded') !== 'true';
+    [].forEach.call(document.getElementById(b.getAttribute('aria-controls')).querySelectorAll('.fato-mais'), function (li) { li.hidden = !abre; });
+    b.setAttribute('aria-expanded', abre ? 'true' : 'false');
+    var n = +b.dataset.n; b.textContent = abre ? 'Mostrar menos' : 'Ver mais ' + n + (n === 1 ? ' fato' : ' fatos');
+  });
+
   document.getElementById('lista-crit').innerHTML = H.criterios.map(function (c) {
     return '<article class="crit rev" id="crit-' + c.n + '">' +
       '<header class="crit-cab"><span class="tec-ic">' + ic(c.ic) + '</span><h3>' + c.n + '. ' + esc(c.t) + '</h3>' +
@@ -66,8 +90,8 @@
         return '<p class="grupo-tit">' + g[1] + '</p><div class="crit-col">' + H.pessoas.filter(function (p) { return p.grupo === g[0]; }).map(function (p) {
         var d = c[p.id];
         return '<section class="crit-p"><h4>' + (p.img ? '<img class="sig" src="' + p.img + '" alt="" loading="lazy">' : '<span class="sig" aria-hidden="true">' + p.sig + '</span>') + esc(p.nome) + '</h4>' + selo(d.st) + (d.peso ? '<span class="peso">' + esc(d.peso) + '</span>' : '') +
-          '<p>' + esc(d.x) + '</p><div class="mas"><b>O que pesa contra a comparação</b>' + esc(d.mas) + '</div>' +
-          fonte(d.f) + fonte(d.f2) + fonte(d.f3) + fonte(d.f4) + fonte(d.f5) + '</section>';
+          fatos(d.x) + '<div class="mas"><b>O que pesa contra a comparação</b>' + esc(d.mas) + '</div>' +
+          fontes(d) + '</section>';
         }).join('') + '</div>';
       }).join('') + '</article>';
   }).join('');
