@@ -502,5 +502,89 @@ window.CREDITOS = [
         "autor":  "Ministério da Informação do Reino Unido",
         "licenca":  "Domínio público",
         "pagina":  "https://commons.wikimedia.org/wiki/File:Ve_Day_Celebrations_in_London,_England,_UK,_8_May_1945_D24585.jpg"
+    },
+    {
+        "id":  "putsch-1923",
+        "nome":  "Tentativa de golpe de Hitler, Munique, 1923",
+        "autor":  "Arquivo Federal da Alemanha",
+        "licenca":  "CC BY-SA 3.0 de",
+        "pagina":  "https://commons.wikimedia.org/wiki/File:Bundesarchiv_Bild_119-1486,_Hitler-Putsch,_M%C3%BCnchen,_Marienplatz.jpg"
+    },
+    {
+        "id":  "matteotti",
+        "nome":  "Giacomo Matteotti",
+        "autor":  "Autor desconhecido",
+        "licenca":  "Domínio público",
+        "pagina":  "https://commons.wikimedia.org/wiki/File:Giacomo_Matteotti_2.jpg"
+    },
+    {
+        "id":  "portugal-1926",
+        "nome":  "Desfile após o golpe de 28 de maio de 1926, Lisboa",
+        "autor":  "Joshua Benoliel (atribuída)",
+        "licenca":  "Domínio público",
+        "pagina":  "https://commons.wikimedia.org/wiki/File:Desfile_de_tropas_28_de_Maio_1926.jpg"
+    },
+    {
+        "id":  "latrao-1929",
+        "nome":  "Assinatura dos Pactos de Latrão, 1929",
+        "autor":  "Istituto Luce",
+        "licenca":  "Domínio público",
+        "pagina":  "https://commons.wikimedia.org/wiki/File:Firma_dei_Patti_Lateranensi_1929.jpg"
+    },
+    {
+        "id":  "mukden-1931",
+        "nome":  "Soldados japoneses em Mukden, 1931",
+        "autor":  "Autor desconhecido",
+        "licenca":  "Domínio público",
+        "pagina":  "https://commons.wikimedia.org/wiki/File:Japanese_soldiers_ready_to_attack_Mukden.jpg"
+    },
+    {
+        "id":  "rohm-1933",
+        "nome":  "Hitler e Ernst Röhm, Nuremberg, 1933",
+        "autor":  "Arquivo Federal da Alemanha",
+        "licenca":  "CC BY-SA 3.0 de",
+        "pagina":  "https://commons.wikimedia.org/wiki/File:Bundesarchiv_Bild_146-1982-159-21A,_N%C3%BCrnberg,_Reichsparteitag,_Hitler_und_R%C3%B6hm.jpg"
+    },
+    {
+        "id":  "milicianas-1936",
+        "nome":  "Milicianas em Madri, 1936",
+        "autor":  "Autor desconhecido",
+        "licenca":  "Domínio público",
+        "pagina":  "https://commons.wikimedia.org/wiki/File:Milicianas_Madrid.jpg"
+    },
+    {
+        "id":  "italia-1938",
+        "nome":  "Arquivo do Ministério da Defesa italiano sobre militares judeus, 1938",
+        "autor":  "Zipporo",
+        "licenca":  "CC BY-SA 4.0",
+        "pagina":  "https://commons.wikimedia.org/wiki/File:Ufficiali,_sottufficiali_e_impiegati_civili_di_razza_ebraica.jpg"
+    },
+    {
+        "id":  "polonia-1939",
+        "nome":  "Fronteira com a Polônia, setembro de 1939",
+        "autor":  "Hans Sönnke / Arquivo Federal da Alemanha",
+        "licenca":  "CC BY-SA 3.0 de",
+        "pagina":  "https://commons.wikimedia.org/wiki/File:Bundesarchiv_Bild_146-1979-056-18A,_Polen,_Schlagbaum,_deutsche_Soldaten.jpg"
+    },
+    {
+        "id":  "wannsee",
+        "nome":  "Casa da Conferência de Wannsee, Berlim",
+        "autor":  "Cederskjold",
+        "licenca":  "CC BY 4.0",
+        "pagina":  "https://commons.wikimedia.org/wiki/File:Haus_der_Wannsee-Konferenz.jpg"
+    },
+    {
+        "id":  "stalingrado-1943",
+        "nome":  "Prisioneiros alemães de Stalingrado, 1943",
+        "autor":  "Arquivo Federal da Alemanha",
+        "licenca":  "CC BY-SA 3.0 de",
+        "pagina":  "https://commons.wikimedia.org/wiki/File:Bundesarchiv_Bild_183-E0406-0022-010,_Kolonne_deutscher_Kriegsgefangener.jpg"
+    },
+    {
+        "id":  "japao-1945",
+        "nome":  "Rendição do Japão no navio Missouri, 1945",
+        "autor":  "Corpo de Sinaleiros do Exército dos EUA",
+        "licenca":  "Domínio público",
+        "pagina":  "https://commons.wikimedia.org/wiki/File:Surrender_of_Japan_-_USS_Missouri.jpg"
     }
 ];
