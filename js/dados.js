@@ -32,7 +32,7 @@
   var lideres = [
     {
       id: 'mussolini', pais: 'it', nome: 'Benito Mussolini', apelido: 'Il Duce - "o guia"',
-      rotulo: 'Fascismo', inicio: 1922, fim: 1943, poder: '1922 a 1943',
+      rotulo: 'Fascismo', inicio: 1922, fim: 1943, poder: '1922 a 1943', regime: { ini: 1943, fim: 1945, nota: 'no norte até 1945' },
       img: 'assets/mussolini.jpg',
       prometeu: 'Ordem nas ruas e uma Itália grande como o antigo Império Romano.',
       fez: 'Fechou partidos e jornais, criou uma polícia política e levou o país a guerras que não conseguia vencer.',
@@ -59,7 +59,7 @@
     },
     {
       id: 'salazar', pais: 'pt', nome: 'António de Oliveira Salazar', apelido: 'Chefe do Estado Novo',
-      rotulo: 'Ditadura com traços fascistas', inicio: 1932, fim: 1968, poder: '1932 a 1968',
+      rotulo: 'Ditadura com traços fascistas', inicio: 1932, fim: 1968, poder: '1932 a 1968', regime: { ini: 1968, fim: 1974, nota: 'regime até 1974' },
       img: 'assets/salazar.jpg',
       prometeu: 'Contas em dia, paz e os valores de "Deus, Pátria e Família".',
       fez: 'Manteve censura e polícia política por décadas, abriu o campo de prisioneiros do Tarrafal e insistiu em guerras para não perder as colônias na África.',
@@ -68,7 +68,7 @@
     },
     {
       id: 'tojo', pais: 'jp', nome: 'Hideki Tojo', apelido: 'General e primeiro-ministro',
-      rotulo: 'Militarismo aliado do Eixo', inicio: 1941, fim: 1944, poder: '1941 a 1944',
+      rotulo: 'Militarismo aliado do Eixo', inicio: 1941, fim: 1944, poder: '1941 a 1944', regime: { ini: 1944, fim: 1945, nota: 'regime até 1945' },
       img: 'assets/tojo.jpg',
       prometeu: 'Libertar a Ásia do domínio dos países ocidentais.',
       fez: 'Chefiou o governo que atacou Pearl Harbor e manteve a ocupação violenta de países vizinhos.',

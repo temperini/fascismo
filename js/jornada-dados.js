@@ -114,7 +114,7 @@ window.JORNADA = [
       { tipo: 'historia', img: 'assets/tribunal-1945.jpg', alt: 'Líderes nazistas sentados no banco dos réus', t: 'O julgamento',
         x: 'Os chefes que sobraram foram julgados. "Eu só cumpria ordens" não foi aceito como desculpa.' },
       { tipo: 'historia', img: 'assets/cravos-1974.jpg', alt: 'Pessoas comemoram na rua em Lisboa, 1974', t: 'Portugal e Espanha',
-        x: 'Salazar e Franco morreram velhos. Mas os regimes não sobreviveram a eles. Em Portugal, o povo pôs cravos nos canos das armas.' },
+        x: 'Salazar e Franco morreram velhos. Os regimes duraram pouco sem eles: o de Portugal caiu em 1974, e a Espanha votou livremente em 1977. Em Portugal, o povo pôs cravos nos canos das armas.' },
       { tipo: 'sinais', t: '5 sinais para guardar', x: 'Escolha o que você mais quer lembrar.',
         itens: ['Um culpado para todos os problemas', 'Um líder que nunca erra', 'A imprensa tratada como inimiga', 'Direitos vistos como estorvo', 'Uma emergência que nunca termina'] }
     ]
