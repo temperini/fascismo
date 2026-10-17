@@ -802,3 +802,4 @@ img.sig { width: 38px; height: 38px; border-radius: 50%; object-fit: cover; obje
 .regua-b:not(.dentro) span { left: calc(100% + var(--ext, 0%) + 8px); }
 .regua-b span .r-anos { position: static; color: inherit; font-size: inherit; }
 @media (max-width: 420px) { .regua-b span .r-anos { display: none; } }
+.regua-r.antes { border-radius: 6px 0 0 6px; }

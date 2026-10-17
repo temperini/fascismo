@@ -71,7 +71,7 @@
   $('lideres').innerHTML = D.lideres.map(function (l, i) {
     return '<article class="lider rev" style="--cor:' + cor(l.pais) + ';--d:' + i * 80 + 'ms">' +
       '<button class="lider-foto" type="button" data-zoom="' + l.img + '" data-leg="' + esc(l.nome) + '" aria-label="Ampliar foto de ' + esc(l.nome) + '">' +
-      '<img src="' + l.img + '" alt="Retrato de ' + esc(l.nome) + '" loading="lazy"><span class="lider-pais">' + D.paises[l.pais].nome + ' - ' + l.poder + (l.regime ? ' · ' + l.regime.nota : '') + '</span></button>' +
+      '<img src="' + l.img + '" alt="Retrato de ' + esc(l.nome) + '" loading="lazy"><span class="lider-pais">' + D.paises[l.pais].nome + ' - ' + l.poder + (l.regime ? ' · ' + l.regime.nota : '') + (l.antes ? ' · ' + l.antes.nota : '') + '</span></button>' +
       '<div class="lider-txt"><h3>' + esc(l.nome) + '</h3><p class="lider-ap">' + esc(l.apelido) + '</p>' +
       '<span class="rotulo">' + esc(l.rotulo) + '</span>' +
       '<ul class="tres">' +
@@ -88,10 +88,11 @@
     var w = (l.fim - l.inicio) / (R1 - R0) * 100;
     var anos = l.fim - l.inicio;
     var rg = l.regime ? '<div class="regua-r" style="--l:' + (l.regime.ini - R0) / (R1 - R0) * 100 + '%;--w:' + (l.regime.fim - l.regime.ini) / (R1 - R0) * 100 + '%;--cor:' + cor(l.pais) + '" title="' + esc(l.regime.nota) + '"></div>' : '';
+    if (l.antes) rg += '<div class="regua-r antes" style="--l:' + (l.antes.ini - R0) / (R1 - R0) * 100 + '%;--w:' + (l.antes.fim - l.antes.ini) / (R1 - R0) * 100 + '%;--cor:' + cor(l.pais) + '" title="' + esc(l.antes.nota) + '"></div>';
     return '<div class="regua-l"><span>' + esc(l.nome.split(' ').pop()) + '</span><div class="regua-t rev">' + rg +
       '<div class="regua-b cresce' + (w > 40 ? ' dentro' : '') + '" style="--l:' + left + '%;--w:' + w + '%;--cor:' + cor(l.pais) + ';--d:' + i * 120 + 'ms' + (l.regime ? ';--ext:' + (l.regime.fim - l.fim) / (l.fim - l.inicio) * 100 + '%' : '') + '">' +
       '<span>' + l.poder.replace(' a ', '-') + '<span class="r-anos"> · ' + anos + ' anos</span></span></div></div></div>';
-  }).join('') + '<p class="regua-leg"><span class="regua-leg-r" aria-hidden="true"></span>Listrado: o regime seguiu depois que o líder saiu do comando. Mussolini governou o norte da Itália, sob ocupação alemã, até 1945; o regime militar japonês durou até a rendição, em 1945; o Estado Novo português seguiu com Marcelo Caetano até 1974.</p>' + '<div class="regua-eixo" aria-hidden="true"><span></span><div><span>1920</span><span>1935</span><span>1950</span><span>1965</span><span>1980</span></div></div>';
+  }).join('') + '<p class="regua-leg"><span class="regua-leg-r" aria-hidden="true"></span>Listrado: o que a barra principal não mostra. Franco já chefiava o lado rebelde desde outubro de 1936, durante a guerra civil; Mussolini governou o norte da Itália, sob ocupação alemã, até 1945; o regime militar japonês durou até a rendição, em 1945; o Estado Novo português seguiu com Marcelo Caetano até 1974.</p>' + '<div class="regua-eixo" aria-hidden="true"><span></span><div><span>1920</span><span>1935</span><span>1950</span><span>1965</span><span>1980</span></div></div>';
 
   /* Linha do tempo */
   function graficoVotos() {

@@ -50,7 +50,7 @@
     },
     {
       id: 'franco', pais: 'es', nome: 'Francisco Franco', apelido: 'El Caudillo - "o chefe"',
-      rotulo: 'Ditadura com traços fascistas', inicio: 1939, fim: 1975, poder: '1939 a 1975',
+      rotulo: 'Ditadura com traços fascistas', inicio: 1939, fim: 1975, poder: '1939 a 1975', antes: { ini: 1936, fim: 1939, nota: 'chefe dos rebeldes desde 1936' },
       img: 'assets/franco.jpg',
       prometeu: 'Salvar a Espanha do comunismo e defender a religião e a tradição.',
       fez: 'Venceu uma guerra civil com ajuda de Hitler e Mussolini. Depois fuzilou e prendeu opositores e proibiu línguas como o catalão e o basco na vida pública.',
